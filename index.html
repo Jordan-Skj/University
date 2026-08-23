@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPK - Université Protestante de Kimpese</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- NAVBAR UPK                                   -->
+    <!-- ============================================ -->
+    <nav class="bg-blue-900 fixed w-full z-20 top-0 start-0 border-b border-blue-800 shadow-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <!-- LOGO -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
+                <span class="self-center text-xl font-bold text-white hidden sm:block">
+                    <span class="text-yellow-400">UPK</span>
+                </span>
+            </a>
+            <!-- BOUTONS -->
+            <div class="flex md:order-2 space-x-3">
+                <a href="/admissions" class="text-blue-900 bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200">
+                    S'inscrire
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
+                    <span class="sr-only">Menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- MENU -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li><a href="/" class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Accueil</a></li>
+                    <li><a href="/a-propos" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À propos</a></li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
+                            Facultés
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-56 mt-2">
+                            <ul class="py-2 text-sm text-gray-700">
+                                <li><a href="/facultes/sante" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Santé</a></li>
+                                <li><a href="/facultes/agronomie" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie & Environnement</a></li>
+                                <li><a href="/facultes/droit" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Juridiques</a></li>
+                                <li><a href="/facultes/theologie" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie & Numérique</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/admissions" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a></li>
+                    <li><a href="/actualites" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
+                    <li><a href="/partenariats" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
+                    <li><a href="/contact" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SECTION HERO UPK                            -->
+    <!-- ============================================ -->
+    <div class="relative text-white pt-20 min-h-screen" style="background: url('./src/hero.jpg') no-repeat center center; background-size: cover;">
+        
+        <!-- OVERLAY NOIR SEMI-TRANSPARENT POUR ASSOMBRIR -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <!-- CONTENU DU HERO (z-10 pour être au-dessus de l'overlay) -->
+        <div class="relative z-10">
+            <div class="max-w-screen-xl mx-auto px-6 py-24 md:py-32 lg:py-40">
+                
+                <div class="hidden sm:flex sm:justify-center mb-6">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-blue-800/50 px-4 py-1.5 text-sm font-medium text-yellow-400 border border-blue-700">
+                        🎓 Établissement d'enseignement supérieur depuis 1995
+                    </span>
+                </div>
+
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Université Protestante
+                        <br>
+                        <span class="text-yellow-400">de Kimpese</span>
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl text-blue-100 font-light tracking-wide">
+                        Foi – <span class="text-yellow-300">Science</span> – Excellence
+                    </p>
+                    <p class="mt-6 max-w-2xl mx-auto text-base md:text-lg text-blue-50/90 leading-relaxed">
+                        Depuis 1995, l'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. 
+                        Un enseignement supérieur de qualité, ancré dans des valeurs chrétiennes, au cœur du Kongo Central.
+                    </p>
+                </div>
+
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/admissions" class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-8 py-3.5 text-base font-bold text-blue-900 shadow-lg hover:bg-yellow-300 transition duration-200">
+                        S'inscrire maintenant
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="/a-propos" class="inline-flex items-center justify-center rounded-lg border border-blue-400 px-8 py-3.5 text-base font-medium text-white hover:bg-blue-700/50 transition duration-200">
+                        Découvrir l'UPK
+                    </a>
+                </div>
+
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center border-t border-blue-600/50 pt-10">
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-yellow-400">1995</p>
+                        <p class="text-sm text-blue-200">Année de fondation</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-yellow-400">400+</p>
+                        <p class="text-sm text-blue-200">Hectares de campus</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-yellow-400">4</p>
+                        <p class="text-sm text-blue-200">Facultés actives</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-yellow-400">3000</p>
+                        <p class="text-sm text-blue-200">Places en auditorium</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-gray-50 py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center md:gap-12">
+      <!-- Texte -->
+      <div>
+        <div class="max-w-prose md:max-w-none">
+          <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">
+            Pourquoi choisir l'UPK ?
+          </h2>
+          <p class="mt-2 text-yellow-500 text-sm font-semibold uppercase tracking-wider">
+            Foi – Science – Excellence
+          </p>
+          <p class="mt-4 text-pretty text-gray-700 leading-relaxed">
+            Fondée en 1995 par le Révérend Masamba Mampolo, l'Université Protestante de Kimpese 
+            est née d'une vision : offrir un enseignement supérieur de proximité aux jeunes du 
+            Kongo Central. Sur un domaine de <strong class="text-blue-700">400+ hectares</strong>, 
+            avec un auditorium de <strong class="text-blue-700">3000 places</strong>, l'UPK 
+            forme des leaders et entrepreneurs pour la RDC et l'Afrique.
+          </p>
+          <p class="mt-3 text-gray-700 leading-relaxed">
+            Nos étudiants bénéficient d'un environnement unique : hôpital partenaire (IME), 
+            laboratoires modernes, bibliothèque riche, résidences sur le campus, et un cadre 
+            naturel exceptionnel pour allier théorie et pratique.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-4">
+            <a href="/admissions" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+              S'inscrire
+            </a>
+            <a href="/a-propos" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-md transition">
+              En savoir plus
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?auto=format&fit=crop&q=80&w=1160"
+          alt="Campus de l'UPK - Université Protestante de Kimpese"
+          class="rounded-lg shadow-xl w-full h-auto object-cover"
+        />
+        <!-- Optionnel : petite légende -->
+        <p class="mt-2 text-xs text-gray-400 text-center">Campus de l'UPK – Kimpese, Kongo Central</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- En-tête de la section -->
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">
+        Nos facultés
+      </h2>
+      <p class="mt-2 text-yellow-500 text-sm font-semibold uppercase tracking-wider">
+        Des formations d'excellence pour bâtir l'avenir
+      </p>
+      <p class="mx-auto mt-3 max-w-2xl text-gray-600">
+        L'UPK propose un large éventail de formations réparties en quatre facultés, 
+        alliant rigueur académique, valeurs chrétiennes et innovation.
+      </p>
+    </div>
+
+    <!-- Grille des 4 facultés -->
+    <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Carte 1 : Santé -->
+      <a href="/facultes/sante" class="group block rounded-xl bg-white p-6 shadow-lg transition hover:shadow-2xl hover:-translate-y-1 border-t-4 border-yellow-400">
+        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-900">Santé</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Former des professionnels de santé compétents, éthiques et engagés au service de la population.
+        </p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-yellow-500">
+          En savoir plus
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Carte 2 : Agronomie & Environnement -->
+      <a href="/facultes/agronomie" class="group block rounded-xl bg-white p-6 shadow-lg transition hover:shadow-2xl hover:-translate-y-1 border-t-4 border-green-500">
+        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-900">Agronomie & Environnement</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Agriculture durable, gestion des ressources naturelles et sécurité alimentaire pour la RDC.
+        </p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-green-600">
+          En savoir plus
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Carte 3 : Sciences Juridiques -->
+      <a href="/facultes/droit" class="group block rounded-xl bg-white p-6 shadow-lg transition hover:shadow-2xl hover:-translate-y-1 border-t-4 border-blue-600">
+        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-900">Sciences Juridiques</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Droit, criminologie et gouvernance publique pour un État de droit en Afrique.
+        </p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-800">
+          En savoir plus
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Carte 4 : Théologie & Technologies Numériques -->
+      <a href="/facultes/theologie" class="group block rounded-xl bg-white p-6 shadow-lg transition hover:shadow-2xl hover:-translate-y-1 border-t-4 border-purple-500">
+        <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 text-purple-700">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-blue-900">Théologie & Numérique</h3>
+        <p class="mt-2 text-sm text-gray-600">
+          Une formation unique alliant foi chrétienne, psychologie, droit et intelligence artificielle.
+        </p>
+        <span class="mt-4 inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-purple-600">
+          En savoir plus
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+
+    </div>
+
+    <!-- Lien vers la page complète des facultés -->
+    <div class="mt-12 text-center">
+      <a href="/facultes" class="inline-flex items-center rounded-lg border-2 border-blue-600 bg-transparent px-6 py-3 font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white">
+        Voir toutes les formations
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- En-tête de la section -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">
+        Actualités de l'UPK
+      </h2>
+      <p class="mt-2 text-yellow-500 text-sm font-semibold uppercase tracking-wider">
+        Écho et Infos de l'UPK
+      </p>
+      <p class="mt-3 text-lg leading-8 text-gray-600">
+        Retrouvez toute l'actualité de l'Université Protestante de Kimpese
+      </p>
+    </div>
+
+    <!-- Grille des 3 articles -->
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      
+      <!-- Article 1 -->
+      <article class="flex flex-col items-start justify-between rounded-xl bg-white shadow-lg overflow-hidden transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="relative w-full">
+          <img
+            class="aspect-video w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+            src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Rencontre à l'UPK"
+          />
+          <div aria-hidden="true" class="absolute inset-0 ring-1 ring-inset ring-gray-900/10"></div>
+          <span class="absolute left-3 top-3 inline-block rounded-full bg-blue-900/90 px-4 py-2 text-xs font-medium text-white">
+            Vie universitaire
+          </span>
+        </div>
+        <div class="p-6 w-full">
+          <div class="flex items-center gap-x-2 text-sm text-gray-500">
+            <time datetime="2026-08-20">20 août 2026</time>
+            <span aria-hidden="true">•</span>
+            <p>3 min de lecture</p>
+          </div>
+          <div class="group relative mt-3">
+            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-700">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Rencontre entre le Recteur et les chefs de département
+              </a>
+            </h3>
+            <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+              Un échange fructueux sur l'avenir académique de l'UPK. Le Recteur a souligné l'importance de l'unité et de la collaboration entre les facultés.
+            </p>
+          </div>
+          <div class="relative mt-6 flex items-center gap-x-4">
+            <img
+              alt=""
+              class="h-10 w-10 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <div class="text-sm">
+              <p class="font-semibold text-gray-900">Prof. Jean K.</p>
+              <p class="text-gray-600">Rédacteur</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="flex flex-col items-start justify-between rounded-xl bg-white shadow-lg overflow-hidden transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="relative w-full">
+          <img
+            class="aspect-video w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Réflexion biblique UPK"
+          />
+          <div aria-hidden="true" class="absolute inset-0 ring-1 ring-inset ring-gray-900/10"></div>
+          <span class="absolute left-3 top-3 inline-block rounded-full bg-yellow-500/90 px-4 py-2 text-xs font-medium text-blue-900">
+            Réflexion
+          </span>
+        </div>
+        <div class="p-6 w-full">
+          <div class="flex items-center gap-x-2 text-sm text-gray-500">
+            <time datetime="2026-08-15">15 août 2026</time>
+            <span aria-hidden="true">•</span>
+            <p>5 min de lecture</p>
+          </div>
+          <div class="group relative mt-3">
+            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-700">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                L'unité au service de l'excellence
+              </a>
+            </h3>
+            <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+              Une réflexion biblique inspirée sur la cohésion au sein de la communauté universitaire, pilier de la formation à l'UPK.
+            </p>
+          </div>
+          <div class="relative mt-6 flex items-center gap-x-4">
+            <img
+              alt=""
+              class="h-10 w-10 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <div class="text-sm">
+              <p class="font-semibold text-gray-900">Rév. David M.</p>
+              <p class="text-gray-600">Chapelain</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="flex flex-col items-start justify-between rounded-xl bg-white shadow-lg overflow-hidden transition hover:shadow-2xl hover:-translate-y-1">
+        <div class="relative w-full">
+          <img
+            class="aspect-video w-full object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Inscriptions UPK 2026-2027"
+          />
+          <div aria-hidden="true" class="absolute inset-0 ring-1 ring-inset ring-gray-900/10"></div>
+          <span class="absolute left-3 top-3 inline-block rounded-full bg-green-600/90 px-4 py-2 text-xs font-medium text-white">
+            Annonce
+          </span>
+        </div>
+        <div class="p-6 w-full">
+          <div class="flex items-center gap-x-2 text-sm text-gray-500">
+            <time datetime="2026-08-10">10 août 2026</time>
+            <span aria-hidden="true">•</span>
+            <p>2 min de lecture</p>
+          </div>
+          <div class="group relative mt-3">
+            <h3 class="text-lg font-semibold leading-6 text-gray-900 group-hover:text-blue-700">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Lancement des inscriptions 2026-2027
+              </a>
+            </h3>
+            <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+              Les inscriptions pour l'année académique 2026-2027 sont officiellement ouvertes. Toutes les facultés recrutent.
+            </p>
+          </div>
+          <div class="relative mt-6 flex items-center gap-x-4">
+            <img
+              alt=""
+              class="h-10 w-10 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+            <div class="text-sm">
+              <p class="font-semibold text-gray-900">Marie L.</p>
+              <p class="text-gray-600">Responsable admissions</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Lien vers toutes les actualités -->
+    <div class="mt-12 text-center">
+      <a href="/actualites" class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-700">
+        Voir toutes les actualités
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="relative isolate overflow-hidden bg-blue-900 shadow-2xl sm:rounded-3xl">
+      
+      <!-- Effet de fond (dégradé bleu/or) -->
+      <div
+        aria-hidden="true"
+        class="absolute left-1/2 top-0 -z-10 aspect-square w-[42rem] -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]"
+      ></div>
+      <div
+        aria-hidden="true"
+        class="absolute -right-20 -bottom-20 -z-10 aspect-square w-[30rem] rounded-full bg-blue-600/40 blur-[8rem]"
+      ></div>
+
+      <div class="px-6 py-20 text-center sm:px-16">
+        <!-- Devise en or -->
+        <p class="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Foi – Science – Excellence
+        </p>
+        
+        <!-- Titre principal -->
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          Rejoignez l'UPK
+        </h2>
+        
+        <!-- Sous-titre -->
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-gray-200">
+          Une formation d'excellence ancrée dans la foi, au cœur du Kongo Central. 
+          Devenez un leader pour la RDC et l'Afrique.
+        </p>
+
+        <!-- Boutons d'action -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/admissions"
+            class="rounded-lg bg-yellow-400 px-8 py-3 text-sm font-semibold text-blue-900 shadow-md transition hover:bg-yellow-300 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+          >
+            S'inscrire maintenant
+          </a>
+          <a
+            href="/facultes"
+            class="rounded-lg border-2 border-white px-8 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-blue-900"
+          >
+            Découvrir nos facultés
+          </a>
+        </div>
+
+        <!-- Petite information complémentaire -->
+        <p class="mt-6 text-xs text-gray-300">
+          Inscriptions ouvertes pour l'année académique 2026-2027
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-blue-900 text-white">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- Grille principale -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Colonne 1 : Logo & devise -->
+      <div>
+        <h2 class="text-2xl font-bold text-yellow-400">
+          UPK
+        </h2>
+        <p class="mt-2 text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Foi – Science – Excellence
+        </p>
+        <p class="mt-4 text-sm text-gray-300">
+          Université Protestante de Kimpese<br />
+          Former des leaders pour la RDC et l'Afrique.
+        </p>
+        <!-- Réseaux sociaux -->
+        <div class="mt-6 flex gap-4">
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400" aria-label="Facebook">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400" aria-label="Twitter">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400" aria-label="LinkedIn">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400" aria-label="YouTube">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Colonne 2 : Navigation rapide -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Navigation
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a href="/" class="text-gray-300 transition hover:text-yellow-400">Accueil</a>
+          </li>
+          <li>
+            <a href="/a-propos" class="text-gray-300 transition hover:text-yellow-400">À propos</a>
+          </li>
+          <li>
+            <a href="/facultes" class="text-gray-300 transition hover:text-yellow-400">Facultés</a>
+          </li>
+          <li>
+            <a href="/admissions" class="text-gray-300 transition hover:text-yellow-400">Admissions</a>
+          </li>
+          <li>
+            <a href="/actualites" class="text-gray-300 transition hover:text-yellow-400">Actualités</a>
+          </li>
+          <li>
+            <a href="/contact" class="text-gray-300 transition hover:text-yellow-400">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Facultés -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Nos facultés
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a href="/facultes/sante" class="text-gray-300 transition hover:text-yellow-400">Santé</a>
+          </li>
+          <li>
+            <a href="/facultes/agronomie" class="text-gray-300 transition hover:text-yellow-400">Agronomie & Environnement</a>
+          </li>
+          <li>
+            <a href="/facultes/droit" class="text-gray-300 transition hover:text-yellow-400">Sciences Juridiques</a>
+          </li>
+          <li>
+            <a href="/facultes/theologie" class="text-gray-300 transition hover:text-yellow-400">Théologie & Numérique</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Contact & infos -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Contact
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm text-gray-300">
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Kimpese, Kongo Central<br />République Démocratique du Congo</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>+243 [Numéro de téléphone]</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>info@upk.cd</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Lun–Ven : 8h00 – 17h00<br />Sam : 8h00 – 13h00</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barre de séparation -->
+    <div class="mt-12 border-t border-blue-800 pt-8">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <!-- Copyright -->
+        <p class="text-sm text-gray-400">
+          &copy; 2026 Université Protestante de Kimpese (UPK). Tous droits réservés.
+        </p>
+        
+        <!-- Mentions légales -->
+        <div class="flex flex-wrap items-center gap-4 text-sm">
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400">
+            Mentions légales
+          </a>
+          <span class="text-gray-600">|</span>
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400">
+            Politique de confidentialité
+          </a>
+          <span class="text-gray-600">|</span>
+          <a href="#" class="text-gray-400 transition hover:text-yellow-400">
+            Plan du site
+          </a>
+        </div>
+      </div>
+
+      <!-- Crédit technique (optionnel) -->
+      <div class="mt-4 text-center">
+        <p class="text-xs text-gray-500">
+          Conçu avec ❤️ pour l'UPK – Foi · Science · Excellence
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- JavaScript Flowbite -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+</body>
+</html>
