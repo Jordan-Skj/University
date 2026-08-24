@@ -13,13 +13,3 @@
     100% { transform: rotate(360deg); }
 }
 
-/* Le contenu principal est invisible au départ */
-.page-content {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Une fois chargé, il devient visible */
-.page-content.loaded {
-    opacity: 1;
-}
