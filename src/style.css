@@ -1,3 +1,6 @@
+:root {
+  color-scheme: light;
+}
 /* ========== SPINNER DU SCREEN LOADER ========== */
 .loader-spinner {
     width: 65px;
