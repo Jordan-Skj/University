@@ -1,0 +1,25 @@
+/* ========== SPINNER DU SCREEN LOADER ========== */
+.loader-spinner {
+    width: 65px;
+    height: 65px;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    border-top: 6px solid #facc15; /* Jaune UPK */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Le contenu principal est invisible au départ */
+.page-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Une fois chargé, il devient visible */
+.page-content.loaded {
+    opacity: 1;
+}
