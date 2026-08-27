@@ -1,18 +1,94 @@
 :root {
   color-scheme: light;
 }
-/* ========== SPINNER DU SCREEN LOADER ========== */
-.loader-spinner {
-    width: 65px;
-    height: 65px;
-    border: 6px solid rgba(255, 255, 255, 0.15);
-    border-top: 6px solid #facc15; /* Jaune UPK */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+/* ============================================================ */
+/* SCREEN LOADER - Option 1                                      */
+/* ============================================================ */
+
+/* Animation pulse pour le logo */
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
 }
 
+/* Animation de la barre de progression (smooth) */
+#progress-bar {
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Respect des préférences de l'utilisateur pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse {
+    animation: none;
+  }
+  #progress-bar {
+    transition: none;
+  }
+}
+
+
+
+/* ============================================================ */
+/* BARRE DE PROGRESSION DE DÉFILEMENT                            */
+/* ============================================================ */
+#scroll-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px; /* plus épaisse pour être bien visible */
+  background: linear-gradient(90deg, #facc15, #fbbf24); /* dégradé jaune */
+  z-index: 100;
+  transition: width 0.15s ease-out;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.6);
+}
+
+/* ============================================================ */
+/* NAVBAR – MASK AU SCROLL                                       */
+/* ============================================================ */
+#navbar {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#navbar.hidden-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+#navbar.visible-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+/* ============================================================ */
+/* MENU MOBILE OVERLAY                                          */
+/* ============================================================ */
+#mobileMenuOverlay {
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+#mobileMenuOverlay.open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+/* ============================================================ */
+/* MENU MOBILE ANCIEN (désactivé)                               */
+/* ============================================================ */
+/* On cache l'ancien menu mobile pour éviter les conflits */
+#mobileMenu {
+  display: none !important;
+}

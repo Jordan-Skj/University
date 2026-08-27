@@ -4,28 +4,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UPK - Université Protestante de Kimpese</title>
-  <link href="./dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css">
-  <meta name="color-scheme" content="light only">
+
+  <!-- ========== TITRE ET DESCRIPTION ========== -->
+  <title>UPK - Université Protestante de Kimpese | Foi – Science – Excellence</title>
+  <meta name="description"
+    content="L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Formez-vous dans une institution d'excellence en RDC. Découvrez nos facultés, admissions et formations." />
+
+  <!-- ========== META DE BASE ========== -->
+  <meta name="keywords"
+    content="Université Kimpese, UPK, enseignement supérieur RDC, Kongo Central, facultés, Foi Science Excellence, Université protestante, Kimpese, études supérieures RDC, campus Kimpese" />
+  <meta name="author" content="Université Protestante de Kimpese (UPK)" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ========== CANONICAL ========== -->
+  <!-- 🔧 À modifier une fois le domaine acheté -->
+  <link rel="canonical" href="https://www.upk.cd/" />
+
+  <!-- ========== LANGUE ========== -->
+  <meta http-equiv="Content-Language" content="fr, fr-CD" />
+  <meta name="language" content="French" />
+
+  <!-- ========== GÉOLOCALISATION (SEO local) ========== -->
+  <meta name="geo.region" content="CD-KN" />
+  <meta name="geo.placename" content="Kimpese, Kongo Central" />
+
+  <!-- 🔧 AJOUT : Coordonnées GPS -->
+  <meta name="geo.position" content="-5.5549;14.4159" />
+  <meta name="ICBM" content="-5.5549, 14.4159" />
+
+  <!-- ========== OPEN GRAPH (OG) – Partage social ========== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
+  <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
+  <meta property="og:description"
+    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
+  <meta property="og:url" content="https://www.upk.cd/" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- 🔧 Image OG : utilisez un chemin relatif temporairement -->
+  <meta property="og:image" content="/src/og-upk-social.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Logo de l'Université Protestante de Kimpese (UPK) et campus" />
+
+  <!-- ========== TWITTER CARDS ========== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UPK - Université Protestante de Kimpese" />
+  <meta name="twitter:description"
+    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Foi - Science - Excellence." />
+  <meta name="twitter:image" content="/src/og-upk-social.jpg" />
+
+  <!-- 🔧 AJOUT : Comptes Twitter (si vous en avez) -->
+  <meta name="twitter:site" content="@UPK" />
+  <meta name="twitter:creator" content="@UPK" />
+
+  <!-- ========== THÈME / COULEUR (mobile) ========== -->
+  <meta name="theme-color" content="#1e3a8a" /> <!-- Bleu UPK (blue-900) -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- ========== DONNÉES STRUCTURÉES JSON-LD ========== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Université Protestante de Kimpese (UPK)",
+      "alternateName": "UPK",
+      "description": "L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Elle forme des leaders et entrepreneurs pour la RDC et l'Afrique.",
+      "url": "https://www.upk.cd",
+      "logo": "https://www.upk.cd/src/logo.png",
+      "foundingDate": "1995",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kimpese",
+        "addressRegion": "Kongo Central",
+        "addressCountry": "CD"
+      },
+      "sameAs": [
+        "https://www.facebook.com/UPK",
+        "https://twitter.com/UPK",
+        "https://www.linkedin.com/school/UPK",
+        "https://www.youtube.com/UPK"
+      ],
+      "telephone": "+243XXXXXXXX",
+      "email": "contact@upk.cd",
+      "motto": "Foi – Science – Excellence",
+      "numberOfStudents": "2000+",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Église Protestante de la RDC"
+      }
+    }
+  </script>
+
+  <!-- ========== FAVICON (icône de l'onglet) ========== -->
+  <!-- 🔧 CORRECTION : favicon complet -->
+  <link rel="icon" type="image/x-icon" href="/src/logo.png" />
+  <link rel="apple-touch-icon" href="/src/logo.png" />
+
+  <!-- ========== CSS ========== -->
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <!-- ========== FORCER LE MODE CLAIR ========== -->
+  <meta name="color-scheme" content="light only" />
+
+  <!-- ========== VÉRIFICATION (Google / Facebook) ========== -->
+  <!-- 🔧 Décommentez quand vous aurez les codes -->
+  <!-- 
+  <meta name="google-site-verification" content="VOTRE_CODE_GOOGLE" />
+  <meta name="facebook-domain-verification" content="VOTRE_CODE_FACEBOOK" />
+  -->
 </head>
 
 <body>
- 
+
   <!-- SCREEN LOADER -->
- 
   <div id="screen-loader"
     class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-blue-900 transition-opacity duration-700">
-    <img src="/src/logo.png" class="h-20 w-auto" alt="Logo UPK">
-     <div class="loader-spinner mb-8 mt-8"></div>  
-    <p class="text-sm text-yellow-400 mt-3 font-light tracking-[0.3em]">CHARGEMENT...</p>
+
+    <!-- Logo avec animation pulse -->
+    <div class="logo-reveal">
+      <img src="/src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
+    </div>
+
+    <!-- Barre de progression -->
+    <div class="w-48 sm:w-64 h-1 bg-blue-700 rounded-full mt-6 overflow-hidden">
+      <div id="progress-bar" class="h-full bg-yellow-400 rounded-full transition-all duration-300 ease-out"
+        style="width: 0%"></div>
+    </div>
+
+    <!-- Pourcentage -->
+    <p id="progress-text" class="text-sm text-yellow-400 mt-2 font-light tracking-[0.3em]">0%</p>
+
+    <!-- Sous-titre institutionnel -->
+    <p class="text-xs text-blue-300 mt-4 font-light tracking-[0.2em] uppercase">Université Protestante de Kimpese</p>
+    <p class="text-[10px] text-blue-400/70 mt-1 font-light tracking-[0.3em]">Foi · Science · Excellence</p>
   </div>
 
 
   <div class="page-content">
-    <!-- Navbar -->
 
-    <nav class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg">
+    <!-- NAVBAR -->
+    <nav id="navbar"
+      class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
+
       <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
         <!-- LOGO -->
@@ -35,22 +158,29 @@
             <span class="text-yellow-400">UPK</span>
           </span>
         </a>
-        <!-- BOUTONS -->
+
+        <!-- BOUTONS DROITE (CTA + Hamburger) -->
         <div class="flex md:order-2 space-x-3">
-          <a href="/admissions"
-            class="black bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200">
+          <a href="/admission.html"
+            class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
             S'inscrire
           </a>
-          <button data-collapse-toggle="navbar-sticky" type="button"
+          <button id="menuToggle" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
             <span class="sr-only">Menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M1 1h15M1 7h15M1 13h15" />
             </svg>
+            <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
-        <!-- MENU -->
+
+        <!-- MENU DESKTOP -->
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
@@ -63,8 +193,7 @@
               <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
                 class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
                 Facultés
-                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                  viewBox="0 0 10 6">
+                <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="m1 1 4 4 4-4" />
                 </svg>
@@ -72,40 +201,99 @@
               <div id="dropdownNavbar"
                 class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-56 mt-2">
                 <ul class="py-2 text-sm text-gray-700">
-                  <li><a href="/facultes/sante" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Santé</a>
+                  <li><a href="/facultes/sante.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Santé</a>
                   </li>
-                  <li><a href="/facultes/agronomie"
+                  <li><a href="/facultes/agronomie.html"
                       class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie & Environnement</a></li>
                   <li><a href="/facultes/droit" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
                       Juridiques</a></li>
-                  <li><a href="/facultes/theologie"
+                  <li><a href="/facultes/theologie.html"
                       class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie & Numérique</a></li>
                 </ul>
               </div>
             </li>
-            <li><a href="/admissions"
+            <li><a href="/admission.html"
                 class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a></li>
-            <li><a href="/actualites"
+            <li><a href="/actualites.html"
                 class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
-            <li><a href="/partenariats"
+            <li><a href="/partenariat.html"
                 class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
-            <li><a href="/contact"
+            <li><a href="/contact.html"
                 class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- ============================================ -->
+    <!-- MENU MOBILE DÉROULANT -->
+    <div id="mobileMenuOverlay"
+      class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
+      <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
+        <!-- Bouton de fermeture (X) -->
+        <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK">
+
+        <!-- Liens -->
+        <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
+          <li><a href="/" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">Accueil</a></li>
+          <li><a href="/about.html" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">À
+              propos</a></li>
+          <li class="relative">
+            <button id="mobileFacultesOverlayToggle"
+              class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
+              Facultés
+              <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <ul id="mobileFacultesOverlaySub" class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
+              <li><a href="/facultes/sante.html" onclick="closeMobileMenu()"
+                  class="hover:text-yellow-400 transition-colors">Santé</a></li>
+              <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()"
+                  class="hover:text-yellow-400 transition-colors">Agronomie & Environnement</a></li>
+              <li><a href="/facultes/droit.html" onclick="closeMobileMenu()"
+                  class="hover:text-yellow-400 transition-colors">Sciences Juridiques</a></li>
+              <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()"
+                  class="hover:text-yellow-400 transition-colors">Théologie & Numérique</a></li>
+            </ul>
+          </li>
+          <li><a href="/admission.html" class="hover:text-yellow-400 transition-colors"
+              onclick="closeMobileMenu()">Admissions</a></li>
+          <li><a href="/actualites.html" class="hover:text-yellow-400 transition-colors"
+              onclick="closeMobileMenu()">Actualités</a></li>
+          <li><a href="/partenariat.html" class="hover:text-yellow-400 transition-colors"
+              onclick="closeMobileMenu()">Partenariats</a></li>
+          <li><a href="/contact.html" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">Contact</a>
+          </li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="mt-10">
+          <a href="/admission.html"
+            class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
+            onclick="closeMobileMenu()">
+            S'inscrire maintenant
+          </a>
+        </div>
+      </div>
+    </div>
+  
+
     <!-- SECTION HERO UPK                            -->
-    <!-- ============================================ -->
-    <div class="relative text-white pt-20 min-h-screen"
-      style="background: url('./src/hero.jpg') no-repeat center center; background-size: cover;">
+    <section class="relative text-white pt-20 min-h-screen"
+      style="background: url('./src/images/hero.jpg') no-repeat center center; background-size: cover;">
 
       <!-- OVERLAY NOIR SEMI-TRANSPARENT POUR ASSOMBRIR -->
       <div class="absolute inset-0 bg-black/40"></div>
 
-      <!-- CONTENU DU HERO (z-10 pour être au-dessus de l'overlay) -->
+      <!-- CONTENU DU HERO -->
       <div class="relative z-10">
         <div class="max-w-screen-xl mx-auto px-6 py-24 md:py-32 lg:py-40">
 
@@ -132,14 +320,14 @@
           </div>
 
           <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/admissions"
+            <a href="/admission.html"
               class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-8 py-3.5 text-base font-bold text-blue-900 shadow-lg hover:bg-yellow-300 transition duration-200">
               S'inscrire maintenant
               <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
-            <a href="/a-propos"
+            <a href="/about.html"
               class="inline-flex items-center justify-center rounded-lg border border-blue-400 px-8 py-3.5 text-base font-medium text-white hover:bg-blue-700/50 transition duration-200">
               Découvrir l'UPK
             </a>
@@ -167,7 +355,7 @@
 
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="bg-gray-50 py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -194,11 +382,11 @@
                 naturel exceptionnel pour allier théorie et pratique.
               </p>
               <div class="mt-6 flex flex-wrap gap-4">
-                <a href="/admissions"
+                <a href="/admission.html"
                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
                   S'inscrire
                 </a>
-                <a href="/a-propos"
+                <a href="/about.html"
                   class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-md transition">
                   En savoir plus
                 </a>
@@ -221,7 +409,7 @@
 
     <!-- Section nos facultés-->
 
-    <section class="bg-gray-50 py-16">
+    <section class="bg-white py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <!-- En-tête de la section -->
         <div class="text-center">
@@ -244,7 +432,7 @@
           <div
             class="bg-white border border-slate-200 shadow-sm w-full max-w-sm rounded-lg mx-auto mt-6 overflow-hidden">
             <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/santé.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
+              <img src="/src/images/santé.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
                 alt="Faculté de Santé - UPK" />
             </div>
             <div class="p-4 sm:p-6 text-center">
@@ -264,7 +452,7 @@
           <div
             class="bg-white border border-slate-200 shadow-sm w-full max-w-sm rounded-lg mx-auto mt-6 overflow-hidden">
             <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/agronomie.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
+              <img src="/src/images/agronomie.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
                 alt="Agronomie et Environnement - UPK" />
             </div>
             <div class="p-4 sm:p-6 text-center">
@@ -283,7 +471,7 @@
           <div
             class="bg-white border border-slate-200 shadow-sm w-full max-w-sm rounded-lg mx-auto mt-6 overflow-hidden">
             <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="./src/science_juridique.jpeg"
+              <img src="./src/images/science_juridique.jpeg"
                 class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Sciences Juridiques - UPK" />
             </div>
             <div class="p-4 sm:p-6 text-center">
@@ -302,7 +490,7 @@
           <div
             class="bg-white border border-slate-200 shadow-sm w-full max-w-sm rounded-lg mx-auto mt-6 overflow-hidden">
             <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/théologie.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
+              <img src="/src/images/théologie.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
                 alt="Théologie et Numérique - UPK" />
             </div>
             <div class="p-4 sm:p-6 text-center">
@@ -325,7 +513,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Carte 1 -->
         <article class="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg">
-          <img alt="Rencontre à l'UPK" src="/src/rencontre.jpeg" class="absolute inset-0 h-full w-full object-cover" />
+          <img alt="Rencontre à l'UPK" src="/src/images/rencontre.jpeg" class="absolute inset-0 h-full w-full object-cover" />
           <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
             <div class="p-4 sm:p-6">
               <time datetime="2026-02-15" class="block text-xs text-yellow-400">15 Février 2026</time>
@@ -342,7 +530,7 @@
 
         <!-- Carte 2 -->
         <article class="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg">
-          <img alt="Réflexion biblique UPK" src="/src/bible.jpeg" class="absolute inset-0 h-full w-full object-cover" />
+          <img alt="Réflexion biblique UPK" src="/src/images/bible.jpeg" class="absolute inset-0 h-full w-full object-cover" />
           <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
             <div class="p-4 sm:p-6">
               <time datetime="2026-02-10" class="block text-xs text-yellow-400">10 Février 2026</time>
@@ -359,7 +547,7 @@
 
         <!-- Carte 3 -->
         <article class="relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg">
-          <img alt="Inscriptions UPK 2026-2027" src="/src/inscription.jpeg"
+          <img alt="Inscriptions UPK 2026-2027" src="/src/images/inscription.jpeg"
             class="absolute inset-0 h-full w-full object-cover" />
           <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
             <div class="p-4 sm:p-6">
@@ -384,7 +572,8 @@
       </div>
     </section>
 
-    <div class="bg-white py-24 sm:py-32">
+    <!-- Call to action -->
+    <section class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl">
           <div aria-hidden="true"
@@ -399,11 +588,11 @@
               pour leur formation. Une université qui forme des leaders pour la RDC et l'Afrique.
             </p>
             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
-              <a href="/admissions"
+              <a href="/admission.html"
                 class="rounded-md bg-yellow-400 px-8 py-3.5 text-base font-semibold text-blue-900 hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
                 S'inscrire maintenant
               </a>
-              <a href="/a-propos"
+              <a href="/about.html"
                 class="text-sm font-semibold leading-6 text-white hover:text-yellow-400 transition-colors">
                 En savoir plus sur l'UPK →
               </a>
@@ -411,7 +600,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <footer class="bg-blue-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -436,17 +625,17 @@
               <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Navigation</h2>
               <ul class="text-gray-300 font-medium space-y-3">
                 <li><a href="/" class="hover:text-yellow-400 transition-colors">Accueil</a></li>
-                <li><a href="/a-propos" class="hover:text-yellow-400 transition-colors">À propos</a></li>
-                <li><a href="/facultes" class="hover:text-yellow-400 transition-colors">Facultés</a></li>
-                <li><a href="/actualites" class="hover:text-yellow-400 transition-colors">Actualités</a></li>
-                <li><a href="/contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+                <li><a href="/about.html" class="hover:text-yellow-400 transition-colors">À propos</a></li>
+                <li><a href="/faculete.html" class="hover:text-yellow-400 transition-colors">Facultés</a></li>
+                <li><a href="/actualites.html" class="hover:text-yellow-400 transition-colors">Actualités</a></li>
+                <li><a href="/contact.html" class="hover:text-yellow-400 transition-colors">Contact</a></li>
               </ul>
             </div>
 
             <div>
               <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Admissions</h2>
               <ul class="text-gray-300 font-medium space-y-3">
-                <li><a href="/admissions" class="hover:text-yellow-400 transition-colors">Inscription</a></li>
+                <li><a href="/admission.html" class="hover:text-yellow-400 transition-colors">Inscription</a></li>
                 <li><a href="/admissions#conditions" class="hover:text-yellow-400 transition-colors">Conditions</a></li>
                 <li><a href="/admissions#formulaire" class="hover:text-yellow-400 transition-colors">Formulaire</a></li>
               </ul>
