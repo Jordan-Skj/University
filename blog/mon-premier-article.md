@@ -18,5 +18,3 @@ Cette rencontre a permis d'aborder plusieurs thèmes essentiels :
 Les échanges ont été constructifs et ont permis de dégager une vision commune pour l'avenir de l'université.
 
 > "L'UPK doit rester un pôle d'excellence au service de la formation des leaders pour la RDC et l'Afrique." - Recteur
-
-[Lire l'article complet...]

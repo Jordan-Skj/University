@@ -317,7 +317,7 @@
         try {
           // Récupérer la liste des fichiers Markdown depuis le dossier blog/
           // REMPLACEZ "VOTRE_USERNAME" et "VOTRE_REPO" par vos vraies valeurs
-          const repoUrl = 'https://api.github.com/repos/VOTRE_USERNAME/VOTRE_REPO/contents/blog';
+          const repoUrl = 'https://api.github.com/repos/Jordan-Skj/University/contents/blog';
           const response = await fetch(repoUrl);
 
           if (!response.ok) throw new Error('Impossible de charger les articles');
