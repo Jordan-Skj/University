@@ -1,14 +1,33 @@
 ---
-title: inscription année academique
-date: 2026-08-29T15:22:00.000+01:00
-image: /src/images/blog/marvels-spider-man-5120x2880-13495.jpg
+title: "Lancement des inscriptions 2026-2027"
+date: "2026-08-29"
+image: "/src/images/inscription.jpeg"
 ---
-# isnjsoilns
 
-**sklnlslkslks**
+## Les inscriptions sont officiellement ouvertes
 
-slknslsnnsnlsk
+L'Université Protestante de Kimpese (UPK) annonce l'ouverture des inscriptions pour l'année académique 2026-2027.
 
-sipsj,lks
+### Conditions d'admission
 
-$smoisnslkns
+- Être titulaire d'un Diplôme d'État ou équivalent
+- Déposer un dossier complet
+- S'acquitter des frais académiques
+
+### Pièces à fournir
+
+1. Fiche d'inscription dûment remplie
+2. Copie du diplôme d'État
+3. Bulletins des Humanités
+4. Photos d'identité
+5. Copie de la carte d'identité
+
+### Frais académiques
+
+- Frais d'inscription : 10 USD
+- Fiche d'identification : 10 USD
+- Frais académiques annuels : 450 USD
+
+Pour plus d'informations, consultez la page [Admissions](/admission.html).
+
+**Rejoignez l'UPK dès maintenant !**
