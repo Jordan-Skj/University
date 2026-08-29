@@ -129,6 +129,7 @@
     });
   }
 </script>
+
 <body>
 
   <!-- ===== SCREEN LOADER ===== -->
@@ -602,64 +603,32 @@
     <!-- ===== ACTUALITÉS ===== -->
     <section class="bg-white py-16">
       <div class="max-w-screen-xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-blue-900 mb-8">Actualités de l'UPK</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/rencontre.jpeg" alt="Rencontre à l'UPK"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-15" class="block text-xs text-yellow-400">15 Février 2026</time>
-                <a href="/actualites/rencontre-recteur">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Rencontre entre le Recteur et les chefs de département
-                  </h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Un échange fructueux sur l'avenir académique de l'UPK.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/bible.jpeg" alt="Réflexion biblique"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-10" class="block text-xs text-yellow-400">10 Février 2026</time>
-                <a href="/actualites/reflexion-biblique">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Réflexion biblique : l'unité au service de
-                    l'excellence</h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Message inspiré sur la cohésion au sein de la communauté universitaire.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/inscription.jpeg" alt="Inscriptions"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-05" class="block text-xs text-yellow-400">5 Février 2026</time>
-                <a href="/actualites/inscriptions">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Lancement des inscriptions 2026-2027</h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Les inscriptions pour l'année académique sont officiellement ouvertes.
-                </p>
-              </div>
-            </div>
-          </article>
+        <div class=" mb-8">
+          <h2 class="text-3xl font-bold text-blue-900">Actualités de l'UPK</h2>
+
         </div>
-        <div class="text-center mt-10">
-          <a href="/actualites.html"
-            class="inline-block bg-blue-900 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors">
-            Voir toutes les actualités
-          </a>
+
+        <!-- Messages de statut -->
+        <div id="loading-home" class="text-center text-gray-500 py-8">
+          Chargement des actualités...
         </div>
+        <div id="error-home" class="hidden text-center text-red-500 py-8">
+          Une erreur est survenue.
+        </div>
+        <div id="no-articles-home" class="hidden text-center text-gray-500 py-8">
+          Aucune actualité pour le moment.
+        </div>
+
+        <div id="home-articles-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
+          <!-- Les 3 derniers articles seront chargés ici -->
+        </div>
+
+        <a href="/actualites.html" class="text-yellow-400 hover:text-yellow-500 font-semibold transition">
+          Voir toutes les actualités →
+        </a>
       </div>
     </section>
+
 
     <!-- ===== CTA FINAL ===== -->
     <section class="bg-white py-24 sm:py-32">
@@ -767,6 +736,114 @@
   <!-- JavaScript Flowbite -->
   <script src="/src/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script>
+    // ============================================================
+    // CHARGER LES 3 DERNIERS ARTICLES (POUR LA PAGE D'ACCUEIL)
+    // ============================================================
+    async function loadHomeArticles() {
+      const container = document.getElementById('home-articles-list');
+      const loading = document.getElementById('loading-home');
+      const error = document.getElementById('error-home');
+      const noArticles = document.getElementById('no-articles-home');
+
+      try {
+        const repoUrl = 'https://api.github.com/repos/Jordan-Skj/University/contents/blog';
+        const response = await fetch(repoUrl);
+
+        if (!response.ok) throw new Error('Impossible de charger les articles');
+
+        const files = await response.json();
+        const mdFiles = files.filter(file => file.name.endsWith('.md'));
+
+        if (mdFiles.length === 0) {
+          loading.classList.add('hidden');
+          noArticles.classList.remove('hidden');
+          return;
+        }
+
+        // Charger le contenu de chaque fichier
+        const articles = await Promise.all(mdFiles.map(async (file) => {
+          const contentResponse = await fetch(file.download_url);
+          const content = await contentResponse.text();
+
+          const titleMatch = content.match(/title:\s*(.+)/);
+          const dateMatch = content.match(/date:\s*(.+)/);
+          const imageMatch = content.match(/image:\s*(.+)/);
+
+          const body = content.replace(/---[\s\S]*?---/, '').trim();
+          const excerpt = body.substring(0, 120) + (body.length > 120 ? '...' : '');
+
+          return {
+            title: titleMatch ? titleMatch[1] : 'Sans titre',
+            date: dateMatch ? dateMatch[1] : '',
+            image: imageMatch ? imageMatch[1] : null,
+            excerpt: excerpt,
+            slug: file.name.replace('.md', '')
+          };
+        }));
+
+        // Trier par date (du plus récent au plus ancien)
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Ne garder que les 3 derniers
+        const latestArticles = articles.slice(0, 3);
+
+        loading.classList.add('hidden');
+
+        if (latestArticles.length === 0) {
+          noArticles.classList.remove('hidden');
+          return;
+        }
+
+        container.innerHTML = latestArticles.map(article => `
+        <article class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+          <img 
+            src="${article.image ? article.image : '/src/images/default-article.jpg'}" 
+            alt="${article.title}" 
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <time class="text-sm text-yellow-400 font-semibold">${formatDate(article.date)}</time>
+            <h3 class="text-xl font-bold text-blue-900 mt-2">${article.title}</h3>
+            <p class="text-gray-600 text-sm mt-2">${article.excerpt}</p>
+            <a href="/article.html?slug=${article.slug}" class="inline-block mt-4 text-blue-900 font-semibold hover:text-yellow-400 transition">
+              Lire la suite →
+            </a>
+          </div>
+        </article>
+      `).join('');
+
+      } catch (err) {
+        console.error('Erreur:', err);
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+      }
+    }
+
+    // ============================================================
+    // FORMATER LA DATE
+    // ============================================================
+    function formatDate(dateString) {
+      if (!dateString) return 'Date inconnue';
+      try {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('fr-FR', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+      } catch {
+        return dateString;
+      }
+    }
+
+    // ============================================================
+    // CHARGER AU CHARGEMENT DE LA PAGE
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', loadHomeArticles);
+  </script>
+
 </body>
 
 </html>
