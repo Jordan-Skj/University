@@ -376,9 +376,9 @@
             <time class="text-sm text-yellow-400 font-semibold">${formatDate(article.date)}</time>
             <h3 class="text-xl font-bold text-blue-900 mt-2">${article.title}</h3>
             <p class="text-gray-600 text-sm mt-2">${article.excerpt}</p>
-            <a href="/blog/${article.slug}.html" class="inline-block mt-4 text-blue-900 font-semibold hover:text-yellow-400 transition">
-              Lire la suite →
-            </a>
+            <a href="/article.html?slug=${article.slug}" class="inline-block mt-4 text-blue-900 font-semibold hover:text-yellow-400 transition">
+  Lire la suite →
+</a>
           </div>
         </article>
       `).join('');
