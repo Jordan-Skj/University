@@ -301,7 +301,7 @@
           <div class="hidden sm:flex sm:justify-center mb-6">
             <span
               class="inline-flex items-center gap-2 rounded-full bg-blue-800/50 px-4 py-1.5 text-sm font-medium text-yellow-400 border border-blue-700">
-              🎓 Établissement d'enseignement supérieur depuis 1995
+              Établissement d'enseignement supérieur depuis 1995
             </span>
           </div>
 
@@ -752,122 +752,8 @@
     </footer>
 
   </div> <!-- fin page-content -->
-
-  <script>
-    // ===== LOADER =====
-    let progress = 0;
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-
-    const interval = setInterval(() => {
-      progress += Math.random() * 15 + 5;
-      if (progress > 100) progress = 100;
-      progressBar.style.width = progress + '%';
-      progressText.textContent = Math.round(progress) + '%';
-      if (progress === 100) clearInterval(interval);
-    }, 200);
-
-    function hideLoaderAndShowContent() {
-      const content = document.querySelector('.page-content');
-      if (content) content.classList.add('loaded');
-      const loader = document.getElementById('screen-loader');
-      if (loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => { loader.style.display = 'none'; }, 700);
-      }
-    }
-
-    window.addEventListener('load', function () {
-      setTimeout(hideLoaderAndShowContent, 1500);
-    });
-
-    // ===== NAVBAR SCROLL =====
-    let lastScrollY = window.scrollY;
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('visible-nav');
-
-    function handleNavbarVisibility() {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 10) {
-        navbar.classList.remove('visible-nav');
-        navbar.classList.add('hidden-nav');
-      } else if (currentScrollY < lastScrollY || currentScrollY <= 10) {
-        navbar.classList.remove('hidden-nav');
-        navbar.classList.add('visible-nav');
-      }
-      lastScrollY = currentScrollY;
-    }
-
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleNavbarVisibility();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // ===== MENU MOBILE =====
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileOverlay = document.getElementById('mobileMenuOverlay');
-    const closeBtn = document.getElementById('closeMobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    function openMobileMenu() {
-      mobileOverlay.classList.remove('pointer-events-none', 'opacity-0');
-      mobileOverlay.classList.add('pointer-events-auto', 'opacity-100');
-      hamburgerIcon.classList.add('hidden');
-      closeIcon.classList.remove('hidden');
-    }
-
-    function closeMobileMenu() {
-      mobileOverlay.classList.add('pointer-events-none', 'opacity-0');
-      mobileOverlay.classList.remove('pointer-events-auto', 'opacity-100');
-      hamburgerIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    }
-
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        if (mobileOverlay.classList.contains('pointer-events-auto')) {
-          closeMobileMenu();
-        } else {
-          openMobileMenu();
-        }
-      });
-    }
-
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeMobileMenu);
-    }
-
-    document.querySelectorAll('#mobileMenuOverlay a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    // ===== SOUS-MENU FACULTÉS OVERLAY =====
-    const facToggle = document.getElementById('mobileFacultesOverlayToggle');
-    const facSub = document.getElementById('mobileFacultesOverlaySub');
-    const arrow = document.getElementById('mobileArrowOverlay');
-
-    if (facToggle) {
-      facToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        facSub.classList.toggle('hidden');
-        arrow.style.transform = facSub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-      });
-    }
-
-    // ===== FLOWBITE =====
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof window.flowbite !== 'undefined') {
-        // Flowbite est déjà chargé
-      }
-    });
-  </script>
+  <!-- JavaScript Flowbite -->
+  <script src="/src/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>
 

@@ -1,874 +1,116 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="fr" data-theme="black">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ========== TITRE ET DESCRIPTION ========== -->
-  <title>UPK - Université Protestante de Kimpese | Foi – Science – Excellence</title>
-  <meta name="description"
-    content="L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Formez-vous dans une institution d'excellence en RDC. Découvrez nos facultés, admissions et formations." />
-
-  <!-- ========== META DE BASE ========== -->
-  <meta name="keywords"
-    content="Université Kimpese, UPK, enseignement supérieur RDC, Kongo Central, facultés, Foi Science Excellence, Université protestante, Kimpese, études supérieures RDC, campus Kimpese" />
-  <meta name="author" content="Université Protestante de Kimpese (UPK)" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- ========== CANONICAL ========== -->
-  <!-- 🔧 À modifier une fois le domaine acheté -->
-  <link rel="canonical" href="https://www.upk.cd/" />
-
-  <!-- ========== LANGUE ========== -->
-  <meta http-equiv="Content-Language" content="fr, fr-CD" />
-  <meta name="language" content="French" />
-
-  <!-- ========== GÉOLOCALISATION (SEO local) ========== -->
-  <meta name="geo.region" content="CD-KN" />
-  <meta name="geo.placename" content="Kimpese, Kongo Central" />
-
-  <!-- 🔧 AJOUT : Coordonnées GPS -->
-  <meta name="geo.position" content="-5.5549;14.4159" />
-  <meta name="ICBM" content="-5.5549, 14.4159" />
-
-  <!-- ========== OPEN GRAPH (OG) – Partage social ========== -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
-  <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
-  <meta property="og:description"
-    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
-  <meta property="og:url" content="https://www.upk.cd/" />
-  <meta property="og:locale" content="fr_FR" />
-
-  <!-- 🔧 Image OG : utilisez un chemin relatif temporairement -->
-  <meta property="og:image" content="/src/og-upk-social.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Logo de l'Université Protestante de Kimpese (UPK) et campus" />
-
-  <!-- ========== TWITTER CARDS ========== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="UPK - Université Protestante de Kimpese" />
-  <meta name="twitter:description"
-    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Foi - Science - Excellence." />
-  <meta name="twitter:image" content="/src/og-upk-social.jpg" />
-
-  <!-- 🔧 AJOUT : Comptes Twitter (si vous en avez) -->
-  <meta name="twitter:site" content="@UPK" />
-  <meta name="twitter:creator" content="@UPK" />
-
-  <!-- ========== THÈME / COULEUR (mobile) ========== -->
-  <meta name="theme-color" content="#1e3a8a" /> <!-- Bleu UPK (blue-900) -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-  <!-- ========== DONNÉES STRUCTURÉES JSON-LD ========== -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Université Protestante de Kimpese (UPK)",
-      "alternateName": "UPK",
-      "description": "L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Elle forme des leaders et entrepreneurs pour la RDC et l'Afrique.",
-      "url": "https://www.upk.cd",
-      "logo": "https://www.upk.cd/src/logo.png",
-      "foundingDate": "1995",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kimpese",
-        "addressRegion": "Kongo Central",
-        "addressCountry": "CD"
-      },
-      "sameAs": [
-        "https://www.facebook.com/UPK",
-        "https://twitter.com/UPK",
-        "https://www.linkedin.com/school/UPK",
-        "https://www.youtube.com/UPK"
-      ],
-      "telephone": "+243XXXXXXXX",
-      "email": "contact@upk.cd",
-      "motto": "Foi – Science – Excellence",
-      "numberOfStudents": "2000+",
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Église Protestante de la RDC"
-      }
-    }
-  </script>
-
-  <!-- ========== FAVICON (icône de l'onglet) ========== -->
-  <!-- 🔧 CORRECTION : favicon complet -->
-  <link rel="icon" type="image/x-icon" href="/src/logo.png" />
-  <link rel="apple-touch-icon" href="/src/logo.png" />
-
-  <!-- ========== CSS ========== -->
-  <link href="./dist/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/style.css" />
-
-  <!-- ========== FORCER LE MODE CLAIR ========== -->
-  <meta name="color-scheme" content="light only" />
-
-  <!-- ========== VÉRIFICATION (Google / Facebook) ========== -->
-  <!-- 🔧 Décommentez quand vous aurez les codes -->
-  <!-- 
-  <meta name="google-site-verification" content="VOTRE_CODE_GOOGLE" />
-  <meta name="facebook-domain-verification" content="VOTRE_CODE_FACEBOOK" />
-  -->
-</head>
-
-<body>
-
-  <!-- ===== SCREEN LOADER ===== -->
-  <div id="screen-loader"
-    class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-blue-900 transition-opacity duration-700">
-
-    <!-- Logo avec animation pulse -->
-    <div class="logo-reveal">
-      <img src="/src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
-    </div>
-
-    <!-- Barre de progression -->
-    <div class="w-48 sm:w-64 h-1 bg-blue-700 rounded-full mt-6 overflow-hidden">
-      <div id="progress-bar" class="h-full bg-yellow-400 rounded-full transition-all duration-300 ease-out"
-        style="width: 0%"></div>
-    </div>
-
-    <!-- Pourcentage -->
-    <p id="progress-text" class="text-sm text-yellow-400 mt-2 font-light tracking-[0.3em]">0%</p>
-
-    <!-- Sous-titre institutionnel -->
-    <p class="text-xs text-blue-300 mt-4 font-light tracking-[0.2em] uppercase">Université Protestante de Kimpese</p>
-    <p class="text-[10px] text-blue-400/70 mt-1 font-light tracking-[0.3em]">Foi · Science · Excellence</p>
-  </div>
-
-  <div class="page-content">
-
-    <!-- ===== NAVBAR ===== -->
-    <nav id="navbar"
-      class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
-
-      <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-        <!-- LOGO -->
-        <a href="/" class="flex items-center space-x-3">
-          <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
-          <span class="self-center text-xl font-bold text-white hidden sm:block">
-            <span class="text-yellow-400">UPK</span>
-          </span>
-        </a>
-
-        <!-- BOUTONS DROITE (CTA + Hamburger) -->
-        <div class="flex md:order-2 space-x-3">
-          <a href="/admission.html"
-            class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
-            S'inscrire
-          </a>
-          <button id="menuToggle" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
-            <span class="sr-only">Menu</span>
-            <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
-            <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- MENU DESKTOP -->
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul
-            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-            <li><a href="/"
-                class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Accueil</a>
-            </li>
-            <li><a href="/about.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À
-                propos</a></li>
-            <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
-                Facultés
-                <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 4 4 4-4" />
-                </svg>
-              </button>
-              <div id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-56 mt-2">
-                <ul class="py-2 text-sm text-gray-700">
-                  <li><a href="/facultes/sante.html"
-                      class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Santé</a>
-                  </li>
-                  <li><a href="/facultes/agronomie.html"
-                      class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie & Environnement</a></li>
-                  <li><a href="/facultes/droit" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
-                      Juridiques</a></li>
-                  <li><a href="/facultes/theologie.html"
-                      class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie & Numérique</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a href="/admission.html"
-                class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a></li>
-            <li><a href="/actualites.html"
-                class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
-            <li><a href="/partenariat.html"
-                class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
-            <li><a href="/contact.html"
-                class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- MENU MOBILE DÉROULANT -->
-    <div id="mobileMenuOverlay"
-      class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
-      <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
-        <!-- Bouton de fermeture (X) -->
-        <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        <!-- Logo -->
-        <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK">
-
-        <!-- Liens -->
-        <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
-          <li><a href="/" class="text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
-          <li><a href="/about.html" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">À
-              propos</a></li>
-          <li class="relative">
-            <button id="mobileFacultesOverlayToggle"
-              class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
-              Facultés
-              <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <ul id="mobileFacultesOverlaySub" class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
-              <li><a href="/facultes/sante.html" onclick="closeMobileMenu()"
-                  class="hover:text-yellow-400 transition-colors">Santé</a></li>
-              <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()"
-                  class="hover:text-yellow-400 transition-colors">Agronomie & Environnement</a></li>
-              <li><a href="/facultes/droit.html" onclick="closeMobileMenu()"
-                  class="hover:text-yellow-400 transition-colors">Sciences Juridiques</a></li>
-              <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()"
-                  class="hover:text-yellow-400 transition-colors">Théologie & Numérique</a></li>
-            </ul>
-          </li>
-          <li><a href="/admission.html" class="hover:text-yellow-400 transition-colors"
-              onclick="closeMobileMenu()">Admissions</a></li>
-          <li><a href="/actualites.html" class="hover:text-yellow-400 transition-colors"
-              onclick="closeMobileMenu()">Actualités</a></li>
-          <li><a href="/partenariat.html" class="hover:text-yellow-400 transition-colors"
-              onclick="closeMobileMenu()">Partenariats</a></li>
-          <li><a href="/contact.html" class="hover:text-yellow-400 transition-colors"
-              onclick="closeMobileMenu()">Contact</a>
-          </li>
-        </ul>
-
-        <!-- CTA -->
-        <div class="mt-10">
-          <a href="/admission.html"
-            class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
-            onclick="closeMobileMenu()">
-            S'inscrire maintenant
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ===== HERO ===== -->
-    <section class="relative text-white pt-20 min-h-screen"
-      style="background: url('./src/images/hero.jpg') no-repeat center center; background-size: cover;">
-
-      <!-- OVERLAY NOIR SEMI-TRANSPARENT POUR ASSOMBRIR -->
-      <div class="absolute inset-0 bg-black/40"></div>
-
-      <!-- CONTENU DU HERO -->
-      <div class="relative z-10">
-        <div class="max-w-screen-xl mx-auto px-6 py-24 md:py-32 lg:py-40">
-
-          <div class="hidden sm:flex sm:justify-center mb-6">
-            <span
-              class="inline-flex items-center gap-2 rounded-full bg-blue-800/50 px-4 py-1.5 text-sm font-medium text-yellow-400 border border-blue-700">
-              🎓 Établissement d'enseignement supérieur depuis 1995
-            </span>
-          </div>
-
-          <div class="text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Université Protestante
-              <br>
-              <span class="text-yellow-400">de Kimpese</span>
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-blue-100 font-light tracking-wide">
-              Foi – <span class="text-yellow-300">Science</span> – Excellence
-            </p>
-            <p class="mt-6 max-w-2xl mx-auto text-base md:text-lg text-blue-50/90 leading-relaxed">
-              Depuis 1995, l'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique.
-              Un enseignement supérieur de qualité, ancré dans des valeurs chrétiennes, au cœur du Kongo Central.
-            </p>
-          </div>
-
-          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/admission.html"
-              class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-8 py-3.5 text-base font-bold text-blue-900 shadow-lg hover:bg-yellow-300 transition duration-200">
-              S'inscrire maintenant
-              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </a>
-            <a href="/about.html"
-              class="inline-flex items-center justify-center rounded-lg border border-blue-400 px-8 py-3.5 text-base font-medium text-white hover:bg-blue-700/50 transition duration-200">
-              Découvrir l'UPK
-            </a>
-          </div>
-
-          <div
-            class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center border-t border-blue-600/50 pt-10">
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-yellow-400">1995</p>
-              <p class="text-sm text-blue-200">Année de fondation</p>
-            </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-yellow-400">400+</p>
-              <p class="text-sm text-blue-200">Hectares de campus</p>
-            </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-yellow-400">4</p>
-              <p class="text-sm text-blue-200">Facultés actives</p>
-            </div>
-            <div>
-              <p class="text-3xl md:text-4xl font-bold text-yellow-400">3000</p>
-              <p class="text-sm text-blue-200">Places en auditorium</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ===== MESSAGE DU RECTEUR ===== -->
-    <section class="bg-blue-900 py-16">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-          <div class="md:w-1/3">
-            <img src="/src/images/Recteur.jpeg" alt="Prof. Dr Jean-Claude MVEMBA N'SAMBA, Recteur de l'UPK"
-              class="rounded-full w-48 h-48 object-cover border-4 border-yellow-400 shadow-lg">
-          </div>
-          <div class="md:w-2/3 text-center md:text-left">
-            <p class="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Message du Recteur</p>
-            <h2 class="text-2xl md:text-3xl font-bold text-white mt-2">Prof. Dr Jean-Claude MVEMBA N'SAMBA</h2>
-            <p class="text-gray-300 italic text-lg mt-4 leading-relaxed">
-              « À l’UPK, nous ne formons pas seulement des diplômés ; nous formons des bâtisseurs de la société,
-              des entrepreneurs, des chercheurs, des dirigeants et des serviteurs de la communauté.
-              Notre devise, Foi – Science – Excellence, est un engagement que nous portons chaque jour. »
-            </p>
-            <a href="/about.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-300 transition-colors">
-              Lire la suite →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== POURQUOI L'UPK ===== -->
-    <section class="bg-gray-50 py-16">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center md:gap-12">
-          <!-- Texte -->
-          <div>
-            <div class="max-w-prose md:max-w-none">
-              <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">
-                Pourquoi choisir l'UPK ?
-              </h2>
-              <p class="mt-2 text-yellow-500 text-sm font-semibold uppercase tracking-wider">
-                Foi – Science – Excellence
-              </p>
-              <p class="mt-4 text-pretty text-gray-700 leading-relaxed">
-                Fondée en 1995 par le Révérend Masamba Mampolo, l'Université Protestante de Kimpese
-                est née d'une vision : offrir un enseignement supérieur de proximité aux jeunes du
-                Kongo Central. Sur un domaine de <strong class="text-blue-700">400+ hectares</strong>,
-                avec un auditorium de <strong class="text-blue-700">3000 places</strong>, l'UPK
-                forme des leaders et entrepreneurs pour la RDC et l'Afrique.
-              </p>
-              <p class="mt-3 text-gray-700 leading-relaxed">
-                Nos étudiants bénéficient d'un environnement unique : hôpital partenaire (IME),
-                laboratoires modernes, bibliothèque riche, résidences sur le campus, et un cadre
-                naturel exceptionnel pour allier théorie et pratique.
-              </p>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <a href="/admission.html"
-                  class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
-                  S'inscrire
-                </a>
-                <a href="/about.html"
-                  class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-md transition">
-                  En savoir plus
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Image -->
-          <div>
-            <img src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?auto=format&fit=crop&q=80&w=1160"
-              alt="Campus de l'UPK - Université Protestante de Kimpese"
-              class="rounded-lg shadow-xl w-full h-auto object-cover" />
-            <!-- Optionnel : petite légende -->
-            <p class="mt-2 text-xs text-gray-400 text-center">Campus de l'UPK – Kimpese, Kongo Central</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TÉMOIGNAGES ===== -->
-    <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">Ils ont choisi l'UPK</h2>
-          <p class="text-yellow-500 text-sm font-semibold uppercase tracking-wider mt-2">Ce qu'ils disent de leur
-            université</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
-            <div class="flex items-start gap-4">
-              <img src="/src/logo.png" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
-              <div>
-                <p class="text-gray-700 italic text-sm leading-relaxed">
-                  « L'UPK m'a donné les outils pour devenir médecin, mais aussi l'humanité pour servir. »
-                </p>
-                <p class="text-blue-900 font-semibold mt-2">Grace T.</p>
-                <p class="text-xs text-gray-400">Faculté de Santé, 3ᵉ année</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
-            <div class="flex items-start gap-4">
-              <img src="/src/images/etudiant2.jpg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover">
-              <div>
-                <p class="text-gray-700 italic text-sm leading-relaxed">
-                  « Ici, j'ai appris à allier ma foi et ma passion pour le numérique. Une expérience unique. »
-                </p>
-                <p class="text-blue-900 font-semibold mt-2">David K.</p>
-                <p class="text-xs text-gray-400">Faculté de Théologie & Numérique, 2ᵉ année</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
-            <div class="flex items-start gap-4">
-              <img src="/src/images/etudiant3.jpg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
-              <div>
-                <p class="text-gray-700 italic text-sm leading-relaxed">
-                  « L'UPK est une famille. Les professeurs nous accompagnent, les étudiants s'entraident. »
-                </p>
-                <p class="text-blue-900 font-semibold mt-2">Marie-Louise K.</p>
-                <p class="text-xs text-gray-400">Faculté d'Agronomie, Master 1</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== LA VIE SUR LE CAMPUS ===== -->
-    <section class="bg-white py-16">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <span class="text-yellow-400 text-sm font-semibold tracking-widest uppercase">La vie sur le campus</span>
-            <h2 class="text-3xl font-bold text-blue-900 mt-2">Bien plus qu'une université</h2>
-            <p class="text-gray-600 mt-4 leading-relaxed">
-              À l'UPK, chaque jour est une occasion d'apprendre, de partager et de grandir.
-              Entre les cours, les activités sportives, les moments de prière et les rencontres,
-              nos étudiants vivent une expérience humaine inoubliable.
-            </p>
-            <ul class="mt-4 space-y-2 text-gray-600">
-              <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Auditorium de 3000 places</li>
-              <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Résidences universitaires
-                confortables</li>
-              <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Bibliothèque riche en
-                ressources</li>
-              <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Clubs et associations
-                étudiantes</li>
-            </ul>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <img src="/src/images/Campus.jpg" alt="Campus" class="rounded-xl shadow-lg h-48 w-full object-cover">
-            <img src="/src/images/Auditorium.jpg" alt="Auditorium"
-              class="rounded-xl shadow-lg h-48 w-full object-cover">
-            <img src="/src/images/Bibliothèque.jpg" alt="Bibliothèque"
-              class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== NOS FACULTÉS ===== -->
-    <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">Nos facultés</h2>
-          <p class="text-yellow-500 text-sm font-semibold uppercase tracking-wider mt-2">Des formations d'excellence</p>
-          <p class="max-w-2xl mx-auto text-gray-600 mt-2">
-            L'UPK propose un large éventail de formations réparties en quatre facultés,
-            alliant rigueur académique, valeurs chrétiennes et innovation.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
-            <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/images/santé.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
-                alt="Faculté de Santé">
-            </div>
-            <div class="p-4 text-center">
-              <h3 class="text-lg font-bold text-blue-900">Faculté de Santé</h3>
-              <p class="text-sm text-gray-600 mt-1">Former des professionnels compétents et engagés.</p>
-              <a href="/facultes/sante.html"
-                class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-                En savoir plus
-              </a>
-            </div>
-          </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
-            <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/images/agronomie.jpeg"
-                class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Agronomie">
-            </div>
-            <div class="p-4 text-center">
-              <h3 class="text-lg font-bold text-blue-900">Agronomie & Environnement</h3>
-              <p class="text-sm text-gray-600 mt-1">Des experts pour répondre aux défis agricoles.</p>
-              <a href="/facultes/agronomie.html"
-                class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-                En savoir plus
-              </a>
-            </div>
-          </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
-            <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/images/science_juridique.jpeg"
-                class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Sciences Juridiques">
-            </div>
-            <div class="p-4 text-center">
-              <h3 class="text-lg font-bold text-blue-900">Sciences Juridiques</h3>
-              <p class="text-sm text-gray-600 mt-1">Former des juristes pour un État de droit.</p>
-              <a href="/facultes/droit.html"
-                class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-                En savoir plus
-              </a>
-            </div>
-          </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
-            <div class="aspect-[3/2] w-full p-2 pb-0">
-              <img src="/src/images/théologie.jpeg"
-                class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Théologie">
-            </div>
-            <div class="p-4 text-center">
-              <h3 class="text-lg font-bold text-blue-900">Théologie & Numérique</h3>
-              <p class="text-sm text-gray-600 mt-1">Allier foi chrétienne et technologies digitales.</p>
-              <a href="/facultes/theologie.html"
-                class="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
-                En savoir plus
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ACTUALITÉS ===== -->
-    <section class="bg-white py-16">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-blue-900 mb-8">Actualités de l'UPK</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/rencontre.jpeg" alt="Rencontre à l'UPK"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-15" class="block text-xs text-yellow-400">15 Février 2026</time>
-                <a href="/actualites/rencontre-recteur">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Rencontre entre le Recteur et les chefs de département
-                  </h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Un échange fructueux sur l'avenir académique de l'UPK.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/bible.jpeg" alt="Réflexion biblique"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-10" class="block text-xs text-yellow-400">10 Février 2026</time>
-                <a href="/actualites/reflexion-biblique">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Réflexion biblique : l'unité au service de
-                    l'excellence</h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Message inspiré sur la cohésion au sein de la communauté universitaire.
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="relative overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition">
-            <img src="/src/images/inscription.jpeg" alt="Inscriptions"
-              class="absolute inset-0 h-full w-full object-cover" />
-            <div class="relative bg-gradient-to-t from-blue-900/90 to-blue-900/30 pt-32 sm:pt-48 lg:pt-64">
-              <div class="p-4 sm:p-6">
-                <time datetime="2026-02-05" class="block text-xs text-yellow-400">5 Février 2026</time>
-                <a href="/actualites/inscriptions">
-                  <h3 class="mt-0.5 text-lg font-bold text-white">Lancement des inscriptions 2026-2027</h3>
-                </a>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/90">
-                  Les inscriptions pour l'année académique sont officiellement ouvertes.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="text-center mt-10">
-          <a href="/actualites.html"
-            class="inline-block bg-blue-900 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors">
-            Voir toutes les actualités
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CTA FINAL ===== -->
-    <section class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl">
-          <div aria-hidden="true"
-            class="absolute left-1/2 top-0 -z-10 aspect-square w-[42rem] -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]">
-          </div>
-          <div class="px-6 py-24 text-center sm:px-16">
-            <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Prêt à construire votre avenir ?
-            </h2>
-            <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">
-              Rejoignez plus de <span class="text-yellow-400 font-bold">2 000 étudiants</span> qui ont choisi l'UPK
-              pour leur formation. Une université qui forme des leaders pour la RDC et l'Afrique.
-            </p>
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
-              <a href="/admission.html"
-                class="rounded-md bg-yellow-400 px-8 py-3.5 text-base font-semibold text-blue-900 hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
-                S'inscrire maintenant
-              </a>
-              <a href="/about.html"
-                class="text-sm font-semibold leading-6 text-white hover:text-yellow-400 transition-colors">
-                En savoir plus sur l'UPK →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="bg-blue-900">
-      <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a href="/" class="flex items-center">
-              <img src="/src/logo.png" class="h-12 w-auto me-3" alt="Logo UPK">
-              <span class="self-center text-2xl font-semibold text-white"><span
-                  class="text-yellow-400">UPK</span></span>
-            </a>
-            <p class="text-gray-400 text-sm mt-2">Université Protestante de Kimpese<br>Foi - Science - Excellence</p>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Navigation</h2>
-              <ul class="text-gray-300 font-medium space-y-3">
-                <li><a href="/" class="hover:text-yellow-400 transition">Accueil</a></li>
-                <li><a href="/about.html" class="hover:text-yellow-400 transition">À propos</a></li>
-                <li><a href="/faculte.html" class="hover:text-yellow-400 transition">Facultés</a></li>
-                <li><a href="/actualites.html" class="hover:text-yellow-400 transition">Actualités</a></li>
-                <li><a href="/contact.html" class="hover:text-yellow-400 transition">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Admissions</h2>
-              <ul class="text-gray-300 font-medium space-y-3">
-                <li><a href="/admission.html" class="hover:text-yellow-400 transition">Inscription</a></li>
-                <li><a href="/admission.html#conditions" class="hover:text-yellow-400 transition">Conditions</a></li>
-                <li><a href="/admission.html#formulaire" class="hover:text-yellow-400 transition">Formulaire</a></li>
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Contact</h2>
-              <ul class="text-gray-300 font-medium space-y-3">
-                <li><a href="/contact.html" class="hover:text-yellow-400 transition">Nous contacter</a></li>
-                <li class="text-gray-400 text-sm">Kimpese, Kongo Central</li>
-                <li class="text-gray-400 text-sm">RDC</li>
-                <li><a href="mailto:contact@upk.cd" class="hover:text-yellow-400 transition text-sm">contact@upk.cd</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr class="my-6 border-blue-800">
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-400">© 2026 UPK. Tous droits réservés.</span>
-          <div class="flex mt-4 sm:mt-0 space-x-5">
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" />
-              </svg></a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Z" />
-              </svg></a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" />
-              </svg></a>
-            <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor"
-                viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" />
-              </svg></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </div> <!-- fin page-content -->
-
-  <script>
-    // ===== LOADER =====
-    let progress = 0;
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-
-    const interval = setInterval(() => {
-      progress += Math.random() * 15 + 5;
-      if (progress > 100) progress = 100;
-      progressBar.style.width = progress + '%';
-      progressText.textContent = Math.round(progress) + '%';
-      if (progress === 100) clearInterval(interval);
-    }, 200);
-
-    function hideLoaderAndShowContent() {
-      const content = document.querySelector('.page-content');
-      if (content) content.classList.add('loaded');
-      const loader = document.getElementById('screen-loader');
-      if (loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => { loader.style.display = 'none'; }, 700);
-      }
-    }
-
-    window.addEventListener('load', function () {
-      setTimeout(hideLoaderAndShowContent, 1500);
-    });
-
-    // ===== NAVBAR SCROLL =====
-    let lastScrollY = window.scrollY;
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('visible-nav');
-
-    function handleNavbarVisibility() {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 10) {
-        navbar.classList.remove('visible-nav');
-        navbar.classList.add('hidden-nav');
-      } else if (currentScrollY < lastScrollY || currentScrollY <= 10) {
-        navbar.classList.remove('hidden-nav');
-        navbar.classList.add('visible-nav');
-      }
-      lastScrollY = currentScrollY;
-    }
-
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          handleNavbarVisibility();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // ===== MENU MOBILE =====
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileOverlay = document.getElementById('mobileMenuOverlay');
-    const closeBtn = document.getElementById('closeMobileMenu');
-    const hamburgerIcon = document.getElementById('hamburgerIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    function openMobileMenu() {
-      mobileOverlay.classList.remove('pointer-events-none', 'opacity-0');
-      mobileOverlay.classList.add('pointer-events-auto', 'opacity-100');
-      hamburgerIcon.classList.add('hidden');
-      closeIcon.classList.remove('hidden');
-    }
-
-    function closeMobileMenu() {
-      mobileOverlay.classList.add('pointer-events-none', 'opacity-0');
-      mobileOverlay.classList.remove('pointer-events-auto', 'opacity-100');
-      hamburgerIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    }
-
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        if (mobileOverlay.classList.contains('pointer-events-auto')) {
-          closeMobileMenu();
-        } else {
-          openMobileMenu();
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargement - Dunia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+        /* Animation de flottement pour le logo */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
-      });
-    }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        /* Effet de lueur bleue */
+        .glow {
+            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen overflow-hidden">
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeMobileMenu);
-    }
+    <!-- ÉCRAN DE CHARGEMENT -->
+    <div id="loader-screen" class="fixed inset-0 z-50 bg-slate-950 flex items-center justify-center transition-opacity duration-500 ease-in-out">
+        
+        <div class="text-center max-w-md px-6">
+            
+            <!-- Logo (SVG ou Image) -->
+            <div class="animate-float glow mx-auto mb-8 w-28 h-28">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 50 10 C 20 10 10 40 10 50 C 10 50 10 80 50 80 C 75 80 85 60 85 50 C 85 30 75 10 50 10" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+                    <path d="M 30 55 L 45 70" stroke="#1E90FF" stroke-width="14" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="8" fill="#1E90FF" />
+                </svg>
+            </div>
 
-    document.querySelectorAll('#mobileMenuOverlay a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
+            <!-- Titre -->
+            <h1 class="text-5xl font-extrabold tracking-tight text-white mb-2">Dunia</h1>
+            <p class="text-slate-400 tracking-[0.2em] uppercase text-sm mb-10">E-Learning Platform</p>
 
-    // ===== SOUS-MENU FACULTÉS OVERLAY =====
-    const facToggle = document.getElementById('mobileFacultesOverlayToggle');
-    const facSub = document.getElementById('mobileFacultesOverlaySub');
-    const arrow = document.getElementById('mobileArrowOverlay');
+            <!-- Barre de progression dynamique -->
+            <div class="flex flex-col items-center gap-4">
+                <progress id="progress-bar" class="progress progress-primary w-56" value="0" max="100"></progress>
+                <p id="status-text" class="text-xs text-slate-500 font-medium">Chargement de vos cours... 0%</p>
+            </div>
 
-    if (facToggle) {
-      facToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        facSub.classList.toggle('hidden');
-        arrow.style.transform = facSub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-      });
-    }
+        </div>
+    </div>
 
-    // ===== FLOWBITE =====
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof window.flowbite !== 'undefined') {
-        // Flowbite est déjà chargé
-      }
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <!-- CONTENU PRINCIPAL DE L'APP (Caché au début) -->
+    <div id="main-content" class="hidden min-h-screen flex items-center justify-center">
+        <div class="bg-slate-900 p-10 rounded-box shadow-2xl border border-slate-800 text-center">
+            <h2 class="text-3xl font-bold text-blue-500 mb-4">Bienvenue sur Dunia !</h2>
+            <p class="text-slate-300">Votre application est prête. Le chargement est terminé.</p>
+        </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // Attendre que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const progressBar = document.getElementById('progress-bar');
+            const statusText = document.getElementById('status-text');
+            const loaderScreen = document.getElementById('loader-screen');
+            const mainContent = document.getElementById('main-content');
+
+            let progress = 0;
+
+            // Simulation du chargement (increments aléatoires pour un effet naturel)
+            const interval = setInterval(() => {
+                
+                // On ajoute entre 1 et 5 points de pourcentage à chaque tick
+                progress += Math.floor(Math.random() * 5) + 1;
+                
+                // Si on dépasse 100, on bloque à 100
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+
+                    // On change le texte de fin
+                    statusText.textContent = "Préparation de votre espace... 100%";
+                    statusText.classList.add('text-blue-400'); // Petit changement de couleur
+                    
+                    // Petite pause avant la transition (500ms)
+                    setTimeout(() => {
+                        // Disparition en fondu de l'écran de chargement
+                        loaderScreen.classList.add('opacity-0');
+                        
+                        // Une fois le fondu terminé (500ms), on cache totalement et on affiche le contenu
+                        setTimeout(() => {
+                            loaderScreen.classList.add('hidden');
+                            mainContent.classList.remove('hidden');
+                            mainContent.classList.add('flex'); // Pour recentrer le contenu
+                        }, 500);
+
+                    }, 600);
+
+                } else {
+                    // Mise à jour en temps réel
+                    progressBar.value = progress;
+                    statusText.textContent = `Chargement de vos cours... ${progress}%`;
+                }
+                
+            }, 100); // Mise à jour toutes les 100ms
+        });
+    </script>
+
 </body>
-
 </html>
