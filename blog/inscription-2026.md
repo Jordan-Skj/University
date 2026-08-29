@@ -28,6 +28,12 @@ L'Université Protestante de Kimpese (UPK) annonce l'ouverture des inscriptions 
 - Fiche d'identification : 10 USD
 - Frais académiques annuels : 450 USD
 
-Pour plus d'informations, consultez la page [Admissions](/admission.html).
+### Modalités de paiement
+
+- 1ère tranche : 250 USD à l'inscription
+- 2ème tranche : 100 USD
+- 3ème tranche : 100 USD
+
+---
 
 **Rejoignez l'UPK dès maintenant !**
