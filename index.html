@@ -99,12 +99,15 @@
 
   <!-- ========== FAVICON (icône de l'onglet) ========== -->
   <!-- 🔧 CORRECTION : favicon complet -->
-  <link rel="icon" type="image/x-icon" href="/src/logo.png" />
-  <link rel="apple-touch-icon" href="/src/logo.png" />
+  <link rel="icon" type="image/x-icon" href="src/logo.png" />
+  <link rel="apple-touch-icon" href="src/logo.png" />
 
   <!-- ========== CSS ========== -->
-  <link href="./dist/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/style.css" />
+  <link href="dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+
+  <!-- ========== AOS (Animate On Scroll) ========== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <!-- ========== FORCER LE MODE CLAIR ========== -->
   <meta name="color-scheme" content="light only" />
@@ -138,7 +141,7 @@
 
     <!-- Logo avec animation pulse -->
     <div class="logo-reveal">
-      <img src="/src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
+      <img src="src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
     </div>
 
     <!-- Barre de progression -->
@@ -164,15 +167,15 @@
       <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
         <!-- LOGO -->
-        <a href="/" class="flex items-center space-x-3">
-          <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
+        <a href="/" class="flex items-center space-x-3" data-aos="fade-down" data-aos-duration="800">
+          <img src="src/logo.png" class="h-12 w-auto" alt="Logo UPK">
           <span class="self-center text-xl font-bold text-white hidden sm:block">
             <span class="text-yellow-400">UPK</span>
           </span>
         </a>
 
         <!-- BOUTONS DROITE (CTA + Hamburger) -->
-        <div class="flex md:order-2 space-x-3">
+        <div class="flex md:order-2 space-x-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
           <a href="/admission.html"
             class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
             S'inscrire
@@ -193,7 +196,8 @@
         </div>
 
         <!-- MENU DESKTOP -->
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+          data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
             <li><a href="/"
@@ -311,14 +315,14 @@
       <div class="relative z-10">
         <div class="max-w-screen-xl mx-auto px-6 py-24 md:py-32 lg:py-40">
 
-          <div class="hidden sm:flex sm:justify-center mb-6">
+          <div class="hidden sm:flex sm:justify-center mb-6" data-aos="fade-down" data-aos-duration="800">
             <span
               class="inline-flex items-center gap-2 rounded-full bg-blue-800/50 px-4 py-1.5 text-sm font-medium text-yellow-400 border border-blue-700">
               Établissement d'enseignement supérieur depuis 1995
             </span>
           </div>
 
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Université Protestante
               <br>
@@ -333,7 +337,8 @@
             </p>
           </div>
 
-          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up"
+            data-aos-duration="800" data-aos-delay="200">
             <a href="/admission.html"
               class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-8 py-3.5 text-base font-bold text-blue-900 shadow-lg hover:bg-yellow-300 transition duration-200">
               S'inscrire maintenant
@@ -347,8 +352,8 @@
             </a>
           </div>
 
-          <div
-            class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center border-t border-blue-600/50 pt-10">
+          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center border-t border-blue-600/50 pt-10"
+            data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
             <div>
               <p class="text-3xl md:text-4xl font-bold text-yellow-400">1995</p>
               <p class="text-sm text-blue-200">Année de fondation</p>
@@ -376,11 +381,12 @@
     <section class="bg-blue-900 py-16">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8">
-          <div class="md:w-1/3">
+          <div class="md:w-1/3" data-aos="fade-right" data-aos-duration="800">
             <img src="/src/images/Recteur.jpeg" alt="Prof. Dr Jean-Claude MVEMBA N'SAMBA, Recteur de l'UPK"
               class="rounded-full w-48 h-48 object-cover border-4 border-yellow-400 shadow-lg">
           </div>
-          <div class="md:w-2/3 text-center md:text-left">
+          <div class="md:w-2/3 text-center md:text-left" data-aos="fade-left" data-aos-duration="800"
+            data-aos-delay="100">
             <p class="text-yellow-400 text-sm font-semibold tracking-widest uppercase">Message du Recteur</p>
             <h2 class="text-2xl md:text-3xl font-bold text-white mt-2">Prof. Dr Jean-Claude MVEMBA N'SAMBA</h2>
             <p class="text-gray-300 italic text-lg mt-4 leading-relaxed">
@@ -401,7 +407,7 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center md:gap-12">
           <!-- Texte -->
-          <div>
+          <div data-aos="fade-right" data-aos-duration="800">
             <div class="max-w-prose md:max-w-none">
               <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">
                 Pourquoi choisir l'UPK ?
@@ -435,7 +441,7 @@
           </div>
 
           <!-- Image -->
-          <div>
+          <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
             <img src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?auto=format&fit=crop&q=80&w=1160"
               alt="Campus de l'UPK - Université Protestante de Kimpese"
               class="rounded-lg shadow-xl w-full h-auto object-cover" />
@@ -449,13 +455,14 @@
     <!-- ===== TÉMOIGNAGES ===== -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-xl mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
           <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">Ils ont choisi l'UPK</h2>
           <p class="text-yellow-500 text-sm font-semibold uppercase tracking-wider mt-2">Ce qu'ils disent de leur
             université</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
+            data-aos-duration="600" data-aos-delay="0">
             <div class="flex items-start gap-4">
               <img src="/src/logo.png" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
               <div>
@@ -467,7 +474,8 @@
               </div>
             </div>
           </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
+            data-aos-duration="600" data-aos-delay="100">
             <div class="flex items-start gap-4">
               <img src="/src/images/etudiant2.jpg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover">
               <div>
@@ -479,7 +487,8 @@
               </div>
             </div>
           </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
+          <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
+            data-aos-duration="600" data-aos-delay="200">
             <div class="flex items-start gap-4">
               <img src="/src/images/etudiant3.jpg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
               <div>
@@ -499,7 +508,7 @@
     <section class="bg-white py-16">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
+          <div data-aos="fade-right" data-aos-duration="800">
             <span class="text-yellow-400 text-sm font-semibold tracking-widest uppercase">La vie sur le campus</span>
             <h2 class="text-3xl font-bold text-blue-900 mt-2">Bien plus qu'une université</h2>
             <p class="text-gray-600 mt-4 leading-relaxed">
@@ -517,12 +526,14 @@
                 étudiantes</li>
             </ul>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <img src="/src/images/Campus.jpg" alt="Campus" class="rounded-xl shadow-lg h-48 w-full object-cover">
+          <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+            <img src="/src/images/Campus.jpg" alt="Campus" class="rounded-xl shadow-lg h-48 w-full object-cover"
+              data-aos="fade-up" data-aos-delay="0">
             <img src="/src/images/Auditorium.jpg" alt="Auditorium"
-              class="rounded-xl shadow-lg h-48 w-full object-cover">
+              class="rounded-xl shadow-lg h-48 w-full object-cover" data-aos="fade-up" data-aos-delay="150">
             <img src="/src/images/Bibliothèque.jpg" alt="Bibliothèque"
-              class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2">
+              class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2" data-aos="fade-up"
+              data-aos-delay="300">
           </div>
         </div>
       </div>
@@ -531,7 +542,7 @@
     <!-- ===== NOS FACULTÉS ===== -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-xl mx-auto px-4">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
           <h2 class="text-3xl font-bold text-blue-900 sm:text-4xl">Nos facultés</h2>
           <p class="text-yellow-500 text-sm font-semibold uppercase tracking-wider mt-2">Des formations d'excellence</p>
           <p class="max-w-2xl mx-auto text-gray-600 mt-2">
@@ -540,7 +551,8 @@
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
+          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
             <div class="aspect-[3/2] w-full p-2 pb-0">
               <img src="/src/images/santé.jpeg" class="w-full h-full object-cover rounded-lg border border-slate-100"
                 alt="Faculté de Santé">
@@ -554,7 +566,8 @@
               </a>
             </div>
           </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
+          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <div class="aspect-[3/2] w-full p-2 pb-0">
               <img src="/src/images/agronomie.jpeg"
                 class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Agronomie">
@@ -568,7 +581,8 @@
               </a>
             </div>
           </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
+          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
             <div class="aspect-[3/2] w-full p-2 pb-0">
               <img src="/src/images/science_juridique.jpeg"
                 class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Sciences Juridiques">
@@ -582,7 +596,8 @@
               </a>
             </div>
           </div>
-          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition">
+          <div class="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+            data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
             <div class="aspect-[3/2] w-full p-2 pb-0">
               <img src="/src/images/théologie.jpeg"
                 class="w-full h-full object-cover rounded-lg border border-slate-100" alt="Théologie">
@@ -603,9 +618,8 @@
     <!-- ===== ACTUALITÉS ===== -->
     <section class="bg-white py-16">
       <div class="max-w-screen-xl mx-auto px-4">
-        <div class=" mb-8">
+        <div class="mb-8" data-aos="fade-up" data-aos-duration="800">
           <h2 class="text-3xl font-bold text-blue-900">Actualités de l'UPK</h2>
-
         </div>
 
         <!-- Messages de statut -->
@@ -623,7 +637,8 @@
           <!-- Les 3 derniers articles seront chargés ici -->
         </div>
 
-        <a href="/actualites.html" class="text-yellow-400 hover:text-yellow-500 font-semibold transition">
+        <a href="/actualites.html" class="text-yellow-400 hover:text-yellow-500 font-semibold transition"
+          data-aos="fade-up" data-aos-duration="800">
           Voir toutes les actualités →
         </a>
       </div>
@@ -633,7 +648,8 @@
     <!-- ===== CTA FINAL ===== -->
     <section class="bg-white py-24 sm:py-32">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl">
+        <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl" data-aos="zoom-in-up"
+          data-aos-duration="800">
           <div aria-hidden="true"
             class="absolute left-1/2 top-0 -z-10 aspect-square w-[42rem] -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]">
           </div>
@@ -661,7 +677,7 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-blue-900">
+    <footer class="bg-blue-900" data-aos="fade-in" data-aos-duration="800">
       <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -733,10 +749,24 @@
     </footer>
 
   </div> <!-- fin page-content -->
+
+  <!-- JavaScript AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- JavaScript Flowbite -->
   <script src="/src/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
   <script>
+    // ============================================================
+    // INITIALISER AOS (Animate On Scroll)
+    // ============================================================
+    AOS.init({
+      duration: 800,       // durée de l'animation en ms
+      easing: 'ease-in-out', // courbe d'animation
+      once: true,          // ne jouer l'animation qu'une seule fois
+      offset: 100,         // déclencher après 100px de scroll
+    });
+
     // ============================================================
     // CHARGER LES 3 DERNIERS ARTICLES (POUR LA PAGE D'ACCUEIL)
     // ============================================================
@@ -796,7 +826,7 @@
         }
 
         container.innerHTML = latestArticles.map(article => `
-        <article class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+        <article class="bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-duration="600">
           <img 
             src="${article.image ? article.image : '/src/images/default-article.jpg'}" 
             alt="${article.title}" 
@@ -813,6 +843,9 @@
           </div>
         </article>
       `).join('');
+
+        // Réinitialiser AOS pour les éléments ajoutés dynamiquement
+        AOS.refresh();
 
       } catch (err) {
         console.error('Erreur:', err);

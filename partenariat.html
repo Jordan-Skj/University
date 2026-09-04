@@ -106,6 +106,9 @@
   <link href="./dist/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
 
+  <!-- ========== AOS (Animate On Scroll) CSS ========== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <!-- ========== FORCER LE MODE CLAIR ========== -->
   <meta name="color-scheme" content="light only" />
 
@@ -126,7 +129,7 @@
     <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
       <!-- LOGO -->
-      <a href="/" class="flex items-center space-x-3">
+      <a href="/" class="flex items-center space-x-3" data-aos="fade-down" data-aos-duration="800">
         <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
         <span class="self-center text-xl font-bold text-white hidden sm:block">
           <span class="text-yellow-400">UPK</span>
@@ -134,7 +137,7 @@
       </a>
 
       <!-- BOUTONS DROITE (CTA + Hamburger) -->
-      <div class="flex md:order-2 space-x-3">
+      <div class="flex md:order-2 space-x-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
         <a href="/admission.html"
           class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
           S'inscrire
@@ -154,7 +157,8 @@
       </div>
 
       <!-- MENU DESKTOP -->
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+        data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
         <ul
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
           <li><a href="/index.html"
@@ -267,20 +271,24 @@
 
     <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
       <span
-        class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6">
+        class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6"
+        data-aos="fade-down" data-aos-duration="800">
         Partenariat
       </span>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6"
+        data-aos="fade-up" data-aos-duration="1000">
         Coopération <span class="text-yellow-400">et ouvertures</span>
       </h1>
-      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed"
+        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         L'UPK est ouverte au monde. Découvrez nos partenariats et notre réseau d'alumni.
       </p>
     </div>
   </section>
 
   <!-- Breadcrumb -->
-  <nav class="flex-warp md:flex justify-betwee mx-auto px-4 max-w-screen-xl mt-4" aria-label="Breadcrumb">
+  <nav class="flex-warp md:flex justify-betwee mx-auto px-4 max-w-screen-xl mt-4" aria-label="Breadcrumb"
+    data-aos="fade-in" data-aos-duration="800">
     <ol class="inline-flex items-center mb-3 space-x-2.5 md:space-x-2 rtl:space-x-reverse sm:mb-0">
       <li>
         <div class="flex items-center">
@@ -307,7 +315,7 @@
   <section class="py-10 bg-white">
     <div class="max-w-screen-xl mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="800">
           <h2 class="text-3xl font-bold text-blue-900 mb-4">Notre vision</h2>
           <p class="text-gray-600 leading-relaxed mb-6">
             Depuis sa création, l'UPK entretient une tradition de coopération avec les institutions publiques, les
@@ -316,18 +324,24 @@
           </p>
           <h3 class="text-xl font-bold text-blue-900 mb-3">Domaines prioritaires</h3>
           <ul class="space-y-2 text-gray-600">
-            <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> Recherche scientifique</li>
-            <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> Formations diplômantes et
-              certifiantes</li>
-            <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> Échanges académiques et doubles
-              diplômes</li>
-            <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> Innovation et entrepreneuriat
+            <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="0">
+              <span class="text-yellow-400">✓</span> Recherche scientifique
             </li>
-            <li class="flex items-start gap-2"><span class="text-yellow-400">✓</span> Infrastructures universitaires
+            <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="100">
+              <span class="text-yellow-400">✓</span> Formations diplômantes et certifiantes
+            </li>
+            <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="200">
+              <span class="text-yellow-400">✓</span> Échanges académiques et doubles diplômes
+            </li>
+            <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="300">
+              <span class="text-yellow-400">✓</span> Innovation et entrepreneuriat
+            </li>
+            <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="400">
+              <span class="text-yellow-400">✓</span> Infrastructures universitaires
             </li>
           </ul>
         </div>
-        <div>
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
           <h2 class="text-3xl font-bold text-blue-900 mb-4">Réseau Alumni</h2>
           <p class="text-gray-600 leading-relaxed mb-6">
             Les anciens étudiants de l'UPK constituent un capital humain précieux. La cellule de coopération met en
@@ -335,7 +349,7 @@
             l'insertion professionnelle et le développement de l'université.
           </p>
           <a href="#"
-            class="inline-block bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 transition">Rejoindre
+            class="inline-block bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 transition hover:shadow-lg hover:-translate-y-0.5">Rejoindre
             le réseau</a>
         </div>
       </div>
@@ -343,7 +357,7 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-blue-900">
+  <footer class="bg-blue-900" data-aos="fade-in" data-aos-duration="800">
     <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -413,10 +427,22 @@
     </div>
   </footer>
 
-  </div>
+  <!-- ===== SCRIPTS ===== -->
+  <!-- JavaScript AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JavaScript Flowbite -->
   <script src="/src/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
+  <script>
+    // Initialisation de AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+  </script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
   <!-- ========== TITRE ET DESCRIPTION ========== -->
   <title>À propos - Université Protestante de Kimpese</title>
   <meta name="description"
-    content="L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Formez-vous dans une institution d'excellence en RDC. Découvrez nos facultés, admissions et formations." />
+    content="Découvrez l'histoire, la mission et les valeurs de l'UPK. Fondée en 1995, l'UPK forme des leaders et entrepreneurs au service de la RDC." />
 
   <!-- ========== META DE BASE ========== -->
   <meta name="keywords"
@@ -18,7 +18,7 @@
 
   <!-- ========== CANONICAL ========== -->
   <!-- 🔧 À modifier une fois le domaine acheté -->
-  <link rel="canonical" href="https://www.upk.cd/" />
+  <link rel="canonical" href="https://www.upk.cd/about.html" />
 
   <!-- ========== LANGUE ========== -->
   <meta http-equiv="Content-Language" content="fr, fr-CD" />
@@ -35,10 +35,10 @@
   <!-- ========== OPEN GRAPH (OG) – Partage social ========== -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
-  <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
+  <meta property="og:title" content="À propos - Université Protestante de Kimpese" />
   <meta property="og:description"
-    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
-  <meta property="og:url" content="https://www.upk.cd/" />
+    content="Découvrez l'histoire, la mission et les valeurs de l'UPK. Fondée en 1995, l'UPK forme des leaders et entrepreneurs au service de la RDC.w" />
+  <meta property="og:url" content="https://www.upk.cd/about.html" />
   <meta property="og:locale" content="fr_FR" />
 
   <!-- 🔧 Image OG : utilisez un chemin relatif temporairement -->
@@ -49,9 +49,8 @@
 
   <!-- ========== TWITTER CARDS ========== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="UPK - Université Protestante de Kimpese" />
-  <meta name="twitter:description"
-    content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Foi - Science - Excellence." />
+  <meta name="twitter:title" content="À propos - Université Protestante de Kimpese" />
+  <meta name="twitter:description" content="Découvrez l'histoire, la mission et les valeurs de l'UPK." />
   <meta name="twitter:image" content="/src/og-upk-social.jpg" />
 
   <!-- 🔧 AJOUT : Comptes Twitter (si vous en avez) -->
@@ -106,6 +105,9 @@
   <link href="./dist/output.css" rel="stylesheet" />
   <link rel="stylesheet" href="/src/style.css" />
 
+  <!-- ========== AOS (Animate On Scroll) CSS ========== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <!-- ========== FORCER LE MODE CLAIR ========== -->
   <meta name="color-scheme" content="light only" />
 
@@ -125,7 +127,7 @@
     <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
 
       <!-- LOGO -->
-      <a href="/" class="flex items-center space-x-3">
+      <a href="/" class="flex items-center space-x-3" data-aos="fade-down" data-aos-duration="800">
         <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
         <span class="self-center text-xl font-bold text-white hidden sm:block">
           <span class="text-yellow-400">UPK</span>
@@ -133,7 +135,7 @@
       </a>
 
       <!-- BOUTONS DROITE (CTA + Hamburger) -->
-      <div class="flex md:order-2 space-x-3">
+      <div class="flex md:order-2 space-x-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
         <a href="/admission.html"
           class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
           S'inscrire
@@ -153,13 +155,14 @@
       </div>
 
       <!-- MENU DESKTOP -->
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+        data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
         <ul
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-          <li><a href="/"
-              class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a>
+          <li><a href="/" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a>
           </li>
-          <li><a href="/about.html" class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">À
+          <li><a href="/about.html"
+              class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">À
               propos</a></li>
           <li>
             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
@@ -214,7 +217,7 @@
 
       <!-- Liens -->
       <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
-        <li><a href="/" class="text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
+        <li><a href="/" class="text-gray-300 hover:text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
         <li><a href="/about.html" class="text-yellow-400" onclick="closeMobileMenu()">À
             propos</a></li>
         <li class="relative">
@@ -227,15 +230,22 @@
             </svg>
           </button>
           <ul id="mobileFacultesOverlaySub" class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
-            <li><a href="/facultes/sante.html" onclick="closeMobileMenu()"
-                class="hover:text-yellow-400 transition-colors">Santé</a></li>
+            <li><a href="/facultes/medecine.html" onclick="closeMobileMenu()"
+                class="hover:text-yellow-400 transition-colors">Médecine Humaine</a></li>
             <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()"
-                class="hover:text-yellow-400 transition-colors">Agronomie & Environnement</a></li>
+                class="hover:text-yellow-400 transition-colors">Sciences Agronomiques</a></li>
             <li><a href="/facultes/droit.html" onclick="closeMobileMenu()"
                 class="hover:text-yellow-400 transition-colors">Sciences Juridiques</a></li>
             <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()"
-                class="hover:text-yellow-400 transition-colors">Théologie & Numérique</a></li>
-          </ul>
+                class="hover:text-yellow-400 transition-colors">Théologie</a></li>
+            <li><a href="/facultes/economie.html" onclick="closeMobileMenu()"
+                class="hover:text-yellow-400 transition-colors">Sciences Economiques</a></li>
+            <li><a href="/facultes/sciences-technologies.html" onclick="closeMobileMenu()"
+                class="hover:text-yellow-400 transition-colors">Sciencs & Technologies</a></li>
+            <li><a href="/facultes/sciences-social.html" onclick="closeMobileMenu()"
+                class="hover:text-yellow-400 transition-colors">Sciences Sociales</a></li>
+                          <li><a href="/facultes/psychologie.html" onclick="closeMobileMenu()"
+                class="hover:text-yellow-400 transition-colors">Psychologie</a></li> </ul>
         </li>
         <li><a href="/admission.html" class="hover:text-yellow-400 transition-colors"
             onclick="closeMobileMenu()">Admissions</a></li>
@@ -267,23 +277,28 @@
 
     <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
       <span
-        class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6">
+        class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6"
+        data-aos="fade-down" data-aos-duration="800">
         À propos de l'UPK
       </span>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6" data-aos="fade-up"
+        data-aos-duration="1000">
         Une université <br />
         <span class="text-yellow-400">au service de la RDC</span>
       </h1>
-      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
+        data-aos-duration="1000" data-aos-delay="200">
         Fondée en 1995, l'Université Protestante de Kimpese forme des leaders
         et entrepreneurs pour l'Afrique, ancrée dans les valeurs chrétiennes.
       </p>
-      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4" data-aos="fade-up"
+        data-aos-duration="800" data-aos-delay="400">
         <a href="/admission.html"
           class="bg-yellow-400 text-blue-900 font-bold px-8 py-3.5 rounded-lg hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
           S'inscrire maintenant
         </a>
-        <a href="#histoire" class="group inline-flex items-center gap-2 text-white/90 hover:text-yellow-400 font-medium transition-colors">
+        <a href="#histoire"
+          class="group inline-flex items-center gap-2 text-white/90 hover:text-yellow-400 font-medium transition-colors">
           Découvrir notre histoire
           <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
         </a>
@@ -292,7 +307,8 @@
   </section>
 
   <!-- Breadcrumb -->
-  <nav class="flex flex-wrap items-center mx-auto px-4 max-w-7xl py-4" aria-label="Breadcrumb">
+  <nav class="flex flex-wrap items-center mx-auto px-4 max-w-7xl py-4" aria-label="Breadcrumb" data-aos="fade-in"
+    data-aos-duration="800">
     <ol class="inline-flex items-center space-x-2.5 rtl:space-x-reverse">
       <li>
         <div class="flex items-center">
@@ -317,14 +333,16 @@
     <div class="max-w-screen-xl mx-auto px-4">
 
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Notre histoire</span>
+        <div data-aos="fade-right" data-aos-duration="800">
+          <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Notre
+            histoire</span>
           <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6 leading-tight">
             Une vision née d'une tragédie
           </h2>
           <div class="space-y-4 text-gray-600 leading-relaxed border-l-4 border-yellow-400/40 pl-6">
             <p>
-              En <strong class="text-blue-900">1990</strong>, une caravane de jeunes du Kongo Central se rendait à Kinshasa
+              En <strong class="text-blue-900">1990</strong>, une caravane de jeunes du Kongo Central se rendait à
+              Kinshasa
               pour s'inscrire à l'université. Un accident tragique coûta la vie à plusieurs d'entre eux.
             </p>
             <p>
@@ -333,7 +351,8 @@
               et ses environs une université de proximité.
             </p>
             <p>
-              C'est ainsi qu'en <strong class="text-blue-900">1995</strong>, l'UPK ouvrit ses portes sur un site historique
+              C'est ainsi qu'en <strong class="text-blue-900">1995</strong>, l'UPK ouvrit ses portes sur un site
+              historique
               hérité du CECO/KETI, avec pour devise :
               <span class="text-yellow-500 font-bold">Foi – Science – Excellence</span>.
             </p>
@@ -343,7 +362,8 @@
             </p>
           </div>
         </div>
-        <div class="group relative bg-gradient-to-br from-blue-900 to-blue-950 p-2 rounded-[2rem] shadow-2xl">
+        <div class="group relative bg-gradient-to-br from-blue-900 to-blue-950 p-2 rounded-[2rem] shadow-2xl"
+          data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
           <div class="rounded-[1.5rem] overflow-hidden">
             <img src="/src/images/fondateur.jpg" alt="Révérend Masamba Mampolo - Fondateur"
               class="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -362,7 +382,7 @@
     <div class="max-w-screen-xl mx-auto px-4">
 
       <!-- En-tête -->
-      <div class="text-center mb-16 max-w-2xl mx-auto">
+      <div class="text-center mb-16 max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="800">
         <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
           Notre mission
         </span>
@@ -379,31 +399,41 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Carte : La Foi -->
-        <div class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+        <div
+          class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+          <div
+            class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path stroke="#facc15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 6.603c1.667-1.271 5.5-2.86 9 0V19c-3.5-2.86-7.333-1.271-9 0m0-12.397c-1.667-1.271-5.5-2.86-9 0V19c3.5-2.86 7.333-1.271 9 0m0-12.397V19">
               </path>
             </svg>
           </div>
-          <span class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
+          <span
+            class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
           <h4 class="text-xl font-bold text-blue-900 mb-3">La Foi</h4>
           <p class="text-sm text-gray-600 leading-6">
-            Une éducation enracinée dans les valeurs chrétiennes protestantes, qui guide chaque aspect de notre enseignement.
+            Une éducation enracinée dans les valeurs chrétiennes protestantes, qui guide chaque aspect de notre
+            enseignement.
           </p>
           <p class="text-xs text-gray-400 italic mt-4">— Hébreux 11:1</p>
         </div>
 
         <!-- Carte : La Science -->
-        <div class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+        <div
+          class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+          <div
+            class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 20C2.44772 20 2 20.4477 2 21C2 21.5523 2.44772 22 3 22V20ZM21 22C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20V22ZM7 17C6.44772 17 6 17.4477 6 18C6 18.5523 6.44772 19 7 19V17ZM14 19C14.5523 19 15 18.5523 15 18C15 17.4477 14.5523 17 14 17V19ZM9 14C8.44772 14 8 14.4477 8 15C8 15.5523 8.44772 16 9 16V14ZM12 16C12.5523 16 13 15.5523 13 15C13 14.4477 12.5523 14 12 14V16ZM8 5V4C7.44772 4 7 4.44772 7 5H8ZM13 5H14C14 4.44772 13.5523 4 13 4V5ZM13 12V13C13.5523 13 14 12.5523 14 12H13ZM8 12H7C7 12.5523 7.44772 13 8 13V12ZM9 5V6C9.45887 6 9.85885 5.6877 9.97014 5.24254L9 5ZM11.5 3L12.4701 2.75746C12.3589 2.3123 11.9589 2 11.5 2V3ZM9.5 3V2C9.04113 2 8.64115 2.3123 8.52986 2.75746L9.5 3ZM12 5L11.0299 5.24254C11.1411 5.6877 11.5411 6 12 6V5ZM13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9V7ZM16.0915 20.1435C15.6184 20.4285 15.466 21.0431 15.7511 21.5161C16.0361 21.9892 16.6506 22.1416 17.1237 21.8565L16.0915 20.1435Z"
+              <path
+                d="M3 20C2.44772 20 2 20.4477 2 21C2 21.5523 2.44772 22 3 22V20ZM21 22C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20V22ZM7 17C6.44772 17 6 17.4477 6 18C6 18.5523 6.44772 19 7 19V17ZM14 19C14.5523 19 15 18.5523 15 18C15 17.4477 14.5523 17 14 17V19ZM9 14C8.44772 14 8 14.4477 8 15C8 15.5523 8.44772 16 9 16V14ZM12 16C12.5523 16 13 15.5523 13 15C13 14.4477 12.5523 14 12 14V16ZM8 5V4C7.44772 4 7 4.44772 7 5H8ZM13 5H14C14 4.44772 13.5523 4 13 4V5ZM13 12V13C13.5523 13 14 12.5523 14 12H13ZM8 12H7C7 12.5523 7.44772 13 8 13V12ZM9 5V6C9.45887 6 9.85885 5.6877 9.97014 5.24254L9 5ZM11.5 3L12.4701 2.75746C12.3589 2.3123 11.9589 2 11.5 2V3ZM9.5 3V2C9.04113 2 8.64115 2.3123 8.52986 2.75746L9.5 3ZM12 5L11.0299 5.24254C11.1411 5.6877 11.5411 6 12 6V5ZM13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9V7ZM16.0915 20.1435C15.6184 20.4285 15.466 21.0431 15.7511 21.5161C16.0361 21.9892 16.6506 22.1416 17.1237 21.8565L16.0915 20.1435Z"
                 fill="#facc15"></path>
             </svg>
           </div>
-          <span class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
+          <span
+            class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
           <h4 class="text-xl font-bold text-blue-900 mb-3">La Science</h4>
           <p class="text-sm text-gray-600 leading-6">
             Une formation académique de qualité, rigoureuse et innovante, qui prépare aux défis du XXIe siècle.
@@ -412,15 +442,19 @@
         </div>
 
         <!-- Carte : L'Excellence -->
-        <div class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+        <div
+          class="group relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+          <div
+            class="w-14 h-14 rounded-2xl bg-blue-900 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.245 4.174C11.4765 3.50808 11.5922 3.17513 11.7634 3.08285C11.9115 3.00298 12.0898 3.00298 12.238 3.08285C12.4091 3.17513 12.5248 3.50808 12.7563 4.174L14.2866 8.57639C14.3525 8.76592 14.3854 8.86068 14.4448 8.93125C14.4972 8.99359 14.5641 9.04218 14.6396 9.07278C14.725 9.10743 14.8253 9.10947 15.0259 9.11356L19.6857 9.20852C20.3906 9.22288 20.743 9.23007 20.8837 9.36432C21.0054 9.48051 21.0605 9.65014 21.0303 9.81569C20.9955 10.007 20.7146 10.2199 20.1528 10.6459L16.4387 13.4616C16.2788 13.5829 16.1989 13.6435 16.1501 13.7217C16.107 13.7909 16.0815 13.8695 16.0757 13.9507C16.0692 14.0427 16.0982 14.1387 16.1563 14.3308L17.506 18.7919C17.7101 19.4667 17.8122 19.8041 17.728 19.9793C17.6551 20.131 17.5108 20.2358 17.344 20.2583C17.1513 20.2842 16.862 20.0829 16.2833 19.6802L12.4576 17.0181C12.2929 16.9035 12.2106 16.8462 12.1211 16.8239C12.042 16.8043 11.9593 16.8043 11.8803 16.8239C11.7908 16.8462 11.7084 16.9035 11.5437 17.0181L7.71805 19.6802C7.13937 20.0829 6.85003 20.2842 6.65733 20.2583C6.49056 20.2358 6.34626 20.131 6.27337 19.9793C6.18915 19.8041 6.29123 19.4667 6.49538 18.7919L7.84503 14.3308C7.90313 14.1387 7.93218 14.0427 7.92564 13.9507C7.91986 13.8695 7.89432 13.7909 7.85123 13.7217C7.80246 13.6435 7.72251 13.5829 7.56262 13.4616L3.84858 10.6459C3.28678 10.2199 3.00588 10.007 2.97101 9.81569C2.94082 9.65014 2.99594 9.48051 3.11767 9.36432C3.25831 9.23007 3.61074 9.22289 4.31559 9.20852L8.9754 9.11356C9.176 9.10947 9.27631 9.10743 9.36177 9.07278C9.43726 9.04218 9.50414 8.99359 9.55657 8.93125C9.61593 8.86068 9.64887 8.76592 9.71475 8.57639L11.245 4.174Z"
                 stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
-          <span class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
+          <span
+            class="block w-10 h-1 rounded-full bg-yellow-400 mb-4 transition-all duration-300 group-hover:w-16"></span>
           <h4 class="text-xl font-bold text-blue-900 mb-3">L'Excellence</h4>
           <p class="text-sm text-gray-600 leading-6">
             Une conduite irréprochable et un service rendu à la communauté, pour former des leaders intègres.
@@ -435,26 +469,27 @@
   <!-- ========== 4. CHIFFRES CLÉS ========== -->
   <section class="py-20 bg-blue-900">
     <div class="max-w-screen-xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <span class="inline-block text-yellow-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">L'UPK en chiffres</span>
+      <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+        <span class="inline-block text-yellow-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">L'UPK en
+          chiffres</span>
         <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
           Une université qui grandit
         </h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 md:divide-x md:divide-blue-800/60">
-        <div class="text-center px-4">
+        <div class="text-center px-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
           <div class="text-4xl md:text-5xl font-extrabold text-yellow-400">1995</div>
           <p class="text-gray-400 text-xs uppercase tracking-wider mt-3">Année de fondation</p>
         </div>
-        <div class="text-center px-4">
+        <div class="text-center px-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
           <div class="text-4xl md:text-5xl font-extrabold text-yellow-400">400+</div>
           <p class="text-gray-400 text-xs uppercase tracking-wider mt-3">Hectares de campus</p>
         </div>
-        <div class="text-center px-4">
+        <div class="text-center px-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
           <div class="text-4xl md:text-5xl font-extrabold text-yellow-400">3000</div>
           <p class="text-gray-400 text-xs uppercase tracking-wider mt-3">Places dans l'auditorium</p>
         </div>
-        <div class="text-center px-4">
+        <div class="text-center px-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
           <div class="text-4xl md:text-5xl font-extrabold text-yellow-400">4</div>
           <p class="text-gray-400 text-xs uppercase tracking-wider mt-3">Facultés actives</p>
         </div>
@@ -465,16 +500,18 @@
   <!-- ========== 5. ENVIRONNEMENT EXCEPTIONNEL ========== -->
   <section class="py-24 bg-white">
     <div class="max-w-screen-xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Notre campus</span>
+      <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+        <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Notre
+          campus</span>
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">
           Un environnement académique exceptionnel
         </h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="800">
           <p class="text-gray-600 leading-relaxed mb-4">
-            Située à <strong class="text-blue-900">Kimpese</strong>, au cœur du Kongo Central, l'UPK bénéficie d'un environnement
+            Située à <strong class="text-blue-900">Kimpese</strong>, au cœur du Kongo Central, l'UPK bénéficie d'un
+            environnement
             privilégié qui constitue un véritable laboratoire de formation et de recherche.
           </p>
           <p class="text-gray-600 leading-relaxed mb-4">
@@ -483,121 +520,63 @@
             réseaux ferroviaires, axes routiers, installations hydrauliques et énergétiques.
           </p>
           <p class="text-gray-600 leading-relaxed">
-            Le domaine universitaire de <strong class="text-blue-900">plus de 400 hectares</strong> comprend des bâtiments
+            Le domaine universitaire de <strong class="text-blue-900">plus de 400 hectares</strong> comprend des
+            bâtiments
             académiques modernes, des salles de cours, des résidences, un auditorium de 3000 places,
             des laboratoires, une bibliothèque et des infrastructures sportives.
           </p>
           <div class="flex flex-wrap gap-3 mt-6">
-            <span class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">400+ hectares</span>
-            <span class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Auditorium 3000 places</span>
-            <span class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Bibliothèque</span>
-            <span class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Laboratoires</span>
+            <span
+              class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">400+
+              hectares</span>
+            <span
+              class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Auditorium
+              3000 places</span>
+            <span
+              class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Bibliothèque</span>
+            <span
+              class="inline-flex items-center bg-blue-50 text-blue-900 text-sm font-semibold px-4 py-2 rounded-full">Laboratoires</span>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="rounded-2xl overflow-hidden shadow-lg h-48 group">
-            <img src="/src/images/Campus.jpg" alt="Campus UPK" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden shadow-lg h-48 group" data-aos="fade-up" data-aos-delay="0">
+            <img src="/src/images/Campus.jpg" alt="Campus UPK"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg h-48 group">
-            <img src="/src/images/Auditorium.jpg" alt="Auditorium UPK" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="rounded-2xl overflow-hidden shadow-lg h-48 group" data-aos="fade-up" data-aos-delay="150">
+            <img src="/src/images/Auditorium.jpg" alt="Auditorium UPK"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg h-48 col-span-2 group">
-            <img src="/src/images/Bibliothèque.jpg" alt="Bibliothèque UPK" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="rounded-2xl overflow-hidden shadow-lg h-48 col-span-2 group" data-aos="fade-up"
+            data-aos-delay="300">
+            <img src="/src/images/Bibliothèque.jpg" alt="Bibliothèque UPK"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== 6. GOUVERNANCE ========== -->
-  <section class="py-24 bg-gray-50">
-    <div class="max-w-screen-xl mx-auto px-4">
 
-      <div class="text-center mb-16 max-w-2xl mx-auto">
-        <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-          Gouvernance
-        </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
-          Une institution bien structurée
-        </h2>
-        <p class="text-gray-600 mt-4 leading-relaxed">
-          L'UPK repose sur une gouvernance participative garantissant une gestion responsable,
-          transparente et efficace.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- 1. Assemblée Générale -->
-        <div class="group bg-white p-7 rounded-3xl text-center border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="relative w-16 h-16 rounded-2xl bg-blue-900 flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110">
-            <svg class="w-7 h-7 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z" />
-            </svg>
-            <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-400 text-blue-900 text-xs font-bold flex items-center justify-center">1</span>
-          </div>
-          <h3 class="font-bold text-blue-900">Assemblée Générale</h3>
-          <p class="text-sm text-gray-600 mt-2">Instance décisionnelle suprême</p>
-        </div>
-
-        <!-- 2. Conseil d'Administration -->
-        <div class="group bg-white p-7 rounded-3xl text-center border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="relative w-16 h-16 rounded-2xl bg-blue-900 flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110">
-            <svg class="w-7 h-7 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1" />
-            </svg>
-            <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-400 text-blue-900 text-xs font-bold flex items-center justify-center">2</span>
-          </div>
-          <h3 class="font-bold text-blue-900">Conseil d'Administration</h3>
-          <p class="text-sm text-gray-600 mt-2">Gestion des ressources</p>
-        </div>
-
-        <!-- 3. Conseil de l'Université -->
-        <div class="group bg-white p-7 rounded-3xl text-center border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="relative w-16 h-16 rounded-2xl bg-blue-900 flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110">
-            <svg class="w-7 h-7 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-400 text-blue-900 text-xs font-bold flex items-center justify-center">3</span>
-          </div>
-          <h3 class="font-bold text-blue-900">Conseil de l'Université</h3>
-          <p class="text-sm text-gray-600 mt-2">Orientation stratégique</p>
-        </div>
-
-        <!-- 4. Conseil Scientifique -->
-        <div class="group bg-white p-7 rounded-3xl text-center border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="relative w-16 h-16 rounded-2xl bg-blue-900 flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110">
-            <svg class="w-7 h-7 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-            <span class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-400 text-blue-900 text-xs font-bold flex items-center justify-center">4</span>
-          </div>
-          <h3 class="font-bold text-blue-900">Conseil Scientifique</h3>
-          <p class="text-sm text-gray-600 mt-2">Veille académique et recherche</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ========== 7. ÉQUIPE DIRIGEANTE ========== -->
   <section class="py-24 bg-white">
     <div class="max-w-screen-xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Équipe dirigeante</span>
+      <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+        <span class="inline-block text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Équipe
+          dirigeante</span>
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mt-2">
           Notre direction
         </h2>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Recteur -->
-        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div
+          class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
           <div class="overflow-hidden">
-            <img src="/src/images/Recteur.jpeg" alt="Recteur de l'UPK" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="/src/images/Recteur.jpeg" alt="Recteur de l'UPK"
+              class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
           <div class="p-6 text-center">
             <h3 class="text-xl font-bold text-blue-900">Prof. Dr Jean-Claude MVEMBA N'SAMBA</h3>
@@ -608,27 +587,34 @@
           </div>
         </div>
         <!-- SGA -->
-        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div
+          class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
           <div class="overflow-hidden">
-            <img src="/src/images/Secretaire.jpeg" alt="Secrétaire Général Académique" class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="/src/images/Secretaire.jpeg" alt="Secrétaire Général Académique"
+              class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
           <div class="p-6 text-center">
             <h3 class="text-xl font-bold text-blue-900">Prof. Dr DIANGITUKULU NDIMBA SAMUEL</h3>
-            <p class="text-yellow-500 font-semibold text-sm uppercase tracking-wide mt-1">Secrétaire Général Académique</p>
+            <p class="text-yellow-500 font-semibold text-sm uppercase tracking-wide mt-1">Secrétaire Général Académique
+            </p>
             <p class="text-gray-500 mt-3 italic text-sm">
               « L'excellence académique au service de la foi »
             </p>
           </div>
         </div>
         <!-- Président CA -->
-        <div class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div
+          class="group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
           <div class="overflow-hidden">
             <img src="/src/images/president-ca.jpeg" alt="Président du Conseil d'Administration"
               class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
           <div class="p-6 text-center">
             <h3 class="text-xl font-bold text-blue-900">Son Éminence l'Évêque Émérite Dia Fwila Diambwangi</h3>
-            <p class="text-yellow-500 font-semibold text-sm uppercase tracking-wide mt-1">Président du Conseil d'Administration</p>
+            <p class="text-yellow-500 font-semibold text-sm uppercase tracking-wide mt-1">Président du Conseil
+              d'Administration</p>
             <p class="text-gray-500 mt-3 italic text-sm">
               « L'excellence académique au service de Dieu et de la Nation »
             </p>
@@ -641,14 +627,15 @@
   <!-- ========== 8. VISION & DÉVELOPPEMENT ========== -->
   <section class="py-24 bg-blue-900">
     <div class="max-w-screen-xl mx-auto px-4">
-      <div class="text-center mb-12">
+      <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
         <span class="inline-block text-yellow-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">Vision</span>
         <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">
           Une université de développement
         </h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-blue-800/40 border border-blue-700/50 p-8 rounded-3xl">
+        <div class="bg-blue-800/40 border border-blue-700/50 p-8 rounded-3xl" data-aos="fade-right"
+          data-aos-duration="800">
           <h3 class="text-xl font-bold text-yellow-400 mb-4">Notre ambition</h3>
           <p class="text-gray-300 leading-relaxed">
             L'UPK ne se limite pas à transmettre des connaissances ; elle se veut un véritable
@@ -657,11 +644,13 @@
             favoriser l'appropriation des connaissances par les communautés locales.
           </p>
         </div>
-        <div class="bg-blue-800/40 border border-blue-700/50 p-8 rounded-3xl">
+        <div class="bg-blue-800/40 border border-blue-700/50 p-8 rounded-3xl" data-aos="fade-left"
+          data-aos-duration="800" data-aos-delay="100">
           <h3 class="text-xl font-bold text-yellow-400 mb-4">Projets de développement</h3>
           <ul class="space-y-3 text-gray-300">
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -669,7 +658,8 @@
               Nouvelles facultés
             </li>
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -677,7 +667,8 @@
               Écoles spécialisées
             </li>
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -685,7 +676,8 @@
               Centres d'excellence
             </li>
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -693,7 +685,8 @@
               Instituts de recherche
             </li>
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -701,7 +694,8 @@
               Centres d'innovation et d'entrepreneuriat
             </li>
             <li class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
+              <span
+                class="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400/20 text-yellow-400 flex items-center justify-center mt-0.5">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
@@ -717,7 +711,8 @@
   <!-- ===== CTA FINAL ===== -->
   <section class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl">
+      <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl" data-aos="zoom-in-up"
+        data-aos-duration="800">
         <div aria-hidden="true"
           class="absolute left-1/2 top-0 -z-10 aspect-square w-[42rem] -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]">
         </div>
@@ -725,7 +720,8 @@
           <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Rejoignez la communauté UPK
           </h2>
-          <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">Formez-vous dans une université d'excellence, ancrée dans les valeurs chrétiennes.
+          <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">Formez-vous dans une université d'excellence, ancrée
+            dans les valeurs chrétiennes.
           </p>
           <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
             <a href="/admission.html"
@@ -734,7 +730,7 @@
             </a>
             <a href="/contact.html"
               class="text-sm font-semibold leading-6 text-white hover:text-yellow-400 transition-colors">
-               Nous contacter →
+              Nous contacter →
             </a>
           </div>
         </div>
@@ -743,7 +739,7 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-blue-900">
+  <footer class="bg-blue-900" data-aos="fade-in" data-aos-duration="800">
     <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
@@ -812,11 +808,23 @@
       </div>
     </div>
   </footer>
-  <!-- SCRIPTS -->
+
+  <!-- ========== SCRIPTS ========== -->
+  <!-- JavaScript AOS (Animate On Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- JavaScript Flowbite -->
   <script src="/src/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
+  <script>
+    // Initialisation de AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+  </script>
 </body>
 
 </html>

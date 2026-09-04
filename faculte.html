@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultés - Université Protestante de Kimpese</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <meta name="color-scheme" content="light only">
+    <style>
+        .faculty-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR (à copier de votre index.html) ===== -->
+    <!-- ... votre navbar existante ... -->
+    <!-- Pensez à mettre la classe "active" sur le lien Facultés -->
+
+    <!-- ===== HERO ===== -->
+    <section class="relative bg-blue-900 pt-28 pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-yellow-400/5 rounded-full blur-3xl"></div>
+        <div class="relative max-w-screen-xl mx-auto px-4 text-center z-10">
+            <span class="inline-block text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-4">Formations</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Nos <span class="text-yellow-400">Facultés</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                L'UPK propose un large éventail de formations réparties en huit facultés,
+                alliant rigueur académique, valeurs chrétiennes et innovation.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="flex-wrap md:flex justify-between mx-auto px-4 max-w-screen-xl mt-4">
+        <ol class="inline-flex items-center mb-3 space-x-2.5">
+            <li><a href="/index.html" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a></li>
+            <li><span class="text-sm font-medium text-yellow-400">Facultés</span></li>
+        </ol>
+    </nav>
+
+    <!-- ===== LISTE DES FACULTÉS ===== -->
+    <section class="py-12 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4">
+            
+            <!-- Faculté de Médecine Humaine -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/medecine.jpg" alt="Faculté de Médecine" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté de Médecine Humaine</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté de Médecine Humaine forme des professionnels de santé compétents, éthiques et engagés dans la promotion, la prévention et la prise en charge de la santé des populations.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Médecine humaine</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Doctorat</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/medecine.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté des Sciences Agronomiques -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/agronomie.jpg" alt="Faculté d'Agronomie" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté des Sciences Agronomiques et de l'Environnement</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté forme des cadres capables de contribuer au développement durable de l'agriculture, à la gestion des ressources naturelles et à la protection de l'environnement.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Phytotechnie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/agronomie.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté des Sciences Juridiques -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/droit.jpg" alt="Faculté de Droit" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté des Sciences Juridiques</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté des Sciences Juridiques forme des professionnels capables de maîtriser les principes du droit et de contribuer à l'administration de la justice et à la gouvernance.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Droit</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/droit.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté de Théologie et Sciences Connexes -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/theologie.jpg" alt="Faculté de Théologie" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté de Théologie et Sciences Connexes</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté de Théologie et Sciences Connexes assure une formation théologique et académique destinée à former des cadres engagés dans la réflexion, l'enseignement et le service au sein de l'Église et de la société.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Théologie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sciences connexes</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence/Master/Doctorat</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/theologie.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté des Sciences Economiques et de Gestion -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/economie.jpg" alt="Faculté d'Économie" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté des Sciences Economiques et de Gestion</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté des Sciences Économiques et de Gestion forme des cadres compétents dans les domaines de l'économie, de la gestion et de l'administration des organisations.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Gestion Financière</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/economie.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté des Sciences et Technologies -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/geologie.jpg" alt="Faculté des Sciences et Technologies" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté des Sciences et Technologies</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté des Sciences et Technologies forme des spécialistes capables d'étudier, d'explorer et de valoriser durablement les ressources naturelles grâce aux sciences de la Terre et aux technologies modernes.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Géologie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Mines</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Télédétection</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence/Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/sciences-technologies.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté des Sciences Sociales, Administratives et Politiques -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/sciences-sociales.jpg" alt="Faculté des Sciences Sociales" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté des Sciences Sociales, Administratives et Politiques</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté des Sciences Sociales, Administratives et Politiques forme des cadres capables d'analyser les réalités sociales, administratives et politiques et de contribuer à la bonne gouvernance.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sciences sociales</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sciences administratives</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sciences politiques</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence/Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/sciences-sociales.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculté de Psychologie et des Sciences de l'Éducation -->
+            <div class="faculty-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm mb-8">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-1">
+                        <img src="/src/images/psychologie.jpg" alt="Faculté de Psychologie" class="w-full h-full object-cover min-h-[200px]">
+                    </div>
+                    <div class="md:col-span-2 p-6">
+                        <span class="text-yellow-400 text-xs font-semibold tracking-widest uppercase">Faculté</span>
+                        <h2 class="text-2xl font-bold text-blue-900 mt-1">Faculté de Psychologie et des Sciences de l'Éducation</h2>
+                        <p class="text-gray-600 mt-2 text-sm">La Faculté de Psychologie et des Sciences de l'Éducation forme des professionnels capables de comprendre les comportements humains et de contribuer à l'éducation, à l'accompagnement et au développement des personnes.</p>
+                        <div class="flex flex-wrap gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Psychologie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Sciences de l'éducation</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Licence/Master</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Présentiel</span>
+                        </div>
+                        <a href="/facultes/psychologie.html" class="inline-block mt-4 text-yellow-400 hover:text-yellow-500 font-semibold">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900 to-blue-800 p-12 text-center">
+                <h2 class="text-3xl font-bold text-white">Prêt à rejoindre l'UPK ?</h2>
+                <p class="text-gray-300 mt-4 max-w-xl mx-auto">Découvrez nos formations et inscrivez-vous dès maintenant.</p>
+                <a href="/admission.html" class="inline-block mt-6 bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition">
+                    S'inscrire maintenant
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <!-- ... votre footer existant ... -->
+
+    <script src="/src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+</html>
