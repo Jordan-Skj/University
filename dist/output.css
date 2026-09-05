@@ -17,6 +17,7 @@
   --color-body: var(--color-stone-600);
   --color-heading: var(--color-stone-900);
   --color-fg-brand: var(--color-stone-950);
+  --color-fg-success: var(--color-green-700);
   --color-fg-disabled: var(--color-stone-400);
   --color-neutral-primary: var(--color-white);
   --color-neutral-primary-medium: var(--color-white);
@@ -26,7 +27,6 @@
   --color-neutral-tertiary: var(--color-stone-100);
   --color-neutral-tertiary-medium: var(--color-stone-100);
   --color-neutral-quaternary: var(--color-stone-200);
-  --color-gray: var(--color-stone-300);
   --color-brand: var(--color-stone-900);
   --color-brand-medium: var(--color-stone-200);
   --color-brand-strong: var(--color-stone-800);
@@ -243,6 +243,7 @@
   --container-2xl: 42rem;
   --container-3xl: 48rem;
   --container-4xl: 56rem;
+  --container-5xl: 64rem;
   --container-6xl: 72rem;
   --container-7xl: 80rem;
   --text-xs: 0.75rem;
@@ -1398,6 +1399,10 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
   .h-1 {
     height: var(--spacing);
   }
@@ -1442,6 +1447,9 @@
   }
   .h-48 {
     height: calc(var(--spacing) * 48);
+  }
+  .h-56 {
+    height: calc(var(--spacing) * 56);
   }
   .h-64 {
     height: calc(var(--spacing) * 64);
@@ -1830,6 +1838,9 @@
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
+  }
+  .gap-y-10 {
+    row-gap: calc(var(--spacing) * 10);
   }
   :where(.divide-y > :not(:last-child)) {
     --tw-divide-y-reverse: 0;
@@ -2502,11 +2513,17 @@
   .pb-0 {
     padding-bottom: 0px;
   }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
   .pb-16 {
     padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
   }
   .pb-24 {
     padding-bottom: calc(var(--spacing) * 24);
@@ -2516,6 +2533,9 @@
   }
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
+  }
+  .pl-16 {
+    padding-left: calc(var(--spacing) * 16);
   }
   .datatable-wrapper .datatable-table .datatable-empty {
     text-align: center;
@@ -2538,6 +2558,10 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-base\/7 {
+    font-size: var(--text-base);
+    line-height: var(--leading-7);
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -2717,9 +2741,6 @@
   }
   .text-fg-disabled {
     color: var(--color-fg-disabled);
-  }
-  .text-gray {
-    color: var(--color-gray);
   }
   .text-gray-200 {
     color: var(--color-gray-200);
@@ -3104,6 +3125,9 @@
     .sm\:mt-0 {
       margin-top: 0px;
     }
+    .sm\:mt-20 {
+      margin-top: calc(var(--spacing) * 20);
+    }
     .sm\:mb-0 {
       margin-bottom: 0px;
     }
@@ -3157,6 +3181,9 @@
     }
     .sm\:py-10 {
       padding-block: calc(var(--spacing) * 10);
+    }
+    .sm\:py-20 {
+      padding-block: calc(var(--spacing) * 20);
     }
     .sm\:py-32 {
       padding-block: calc(var(--spacing) * 32);
@@ -3239,6 +3266,9 @@
     .md\:justify-between {
       justify-content: space-between;
     }
+    .md\:gap-10 {
+      gap: calc(var(--spacing) * 10);
+    }
     .md\:gap-12 {
       gap: calc(var(--spacing) * 12);
     }
@@ -3316,8 +3346,14 @@
     .lg\:mx-0 {
       margin-inline: 0px;
     }
+    .lg\:mt-24 {
+      margin-top: calc(var(--spacing) * 24);
+    }
     .lg\:max-w-2xl {
       max-width: var(--container-2xl);
+    }
+    .lg\:max-w-4xl {
+      max-width: var(--container-4xl);
     }
     .lg\:max-w-none {
       max-width: none;
@@ -3331,6 +3367,9 @@
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+    .lg\:gap-y-16 {
+      row-gap: calc(var(--spacing) * 16);
+    }
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
     }
@@ -3339,6 +3378,9 @@
     }
     .lg\:py-40 {
       padding-block: calc(var(--spacing) * 40);
+    }
+    .lg\:text-center {
+      text-align: center;
     }
     .lg\:text-6xl {
       font-size: var(--text-6xl);

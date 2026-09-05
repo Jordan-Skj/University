@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Faculté de Médecine - UPK</title>
+  <meta name="description" content="Faculté de Médecine Humaine de l'UPK. Formations, conditions d'admission et informations pratiques." />
+
+  <meta name="author" content="Université Protestante de Kimpese (UPK)" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.upk.cd/facultes/medecine.html" />
+
+  <meta http-equiv="Content-Language" content="fr, fr-CD" />
+  <meta name="language" content="French" />
+  <meta name="geo.region" content="CD-KN" />
+  <meta name="geo.placename" content="Kimpese, Kongo Central" />
+  <meta name="geo.position" content="-5.5549;14.4159" />
+  <meta name="ICBM" content="-5.5549, 14.4159" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
+  <meta property="og:title" content="Faculté de Médecine - UPK" />
+  <meta property="og:description" content="Formation médicale d'excellence à l'UPK. Découvrez la Faculté de Médecine Humaine." />
+  <meta property="og:url" content="https://www.upk.cd/facultes/medecine.html" />
+  <meta property="og:image" content="/src/og-upk-social.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Faculté de Médecine - UPK" />
+  <meta name="twitter:description" content="Formation médicale d'excellence à l'UPK." />
+  <meta name="twitter:image" content="/src/og-upk-social.jpg" />
+  <meta name="twitter:site" content="@UPK" />
+
+  <meta name="theme-color" content="#1e3a8a" />
+  <link rel="icon" type="image/x-icon" href="/src/logo.png" />
+  <link rel="apple-touch-icon" href="/src/logo.png" />
+
+  <link href="../dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta name="color-scheme" content="light only" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar"
+    class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="../src/logo.png" class="h-12 w-auto" alt="Logo UPK">
+        <span class="self-center text-xl font-bold text-white hidden sm:block">
+          <span class="text-yellow-400">UPK</span>
+        </span>
+      </a>
+      <div class="flex md:order-2 space-x-3">
+        <a href="/admission.html"
+          class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
+          S'inscrire
+        </a>
+        <button id="menuToggle" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
+          <span class="sr-only">Menu</span>
+          <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+          <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+          <li><a href="/index.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a></li>
+          <li><a href="/about.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À propos</a></li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="flex items-center py-2 px-3 text-gray-200 hover:text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">
+              Facultés
+              <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+            <div id="dropdownNavbar"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-xl border border-gray-100 shadow-xl w-56 mt-2">
+              <ul class="py-2 text-sm text-gray-700">
+                <li><a href="/facultes/medecine.html" class="block px-4 py-2 bg-blue-50 text-blue-700">Médecine Humaine</a></li>
+                <li><a href="/facultes/agronomie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Agronomiques</a></li>
+                <li><a href="/facultes/droit.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Juridiques</a></li>
+                <li><a href="/facultes/theologie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie</a></li>
+                <li><a href="/facultes/economie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Economiques</a></li>
+                <li><a href="/facultes/sciences-technologies.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences et Technologies</a></li>
+                <li><a href="/facultes/sciences-social.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Sociales</a></li>
+                <li><a href="/facultes/psychologie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Psychologie</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="/admission.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a></li>
+          <li><a href="/actualites.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
+          <li><a href="/partenariat.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
+          <li><a href="/contact.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MENU MOBILE ===== -->
+  <div id="mobileMenuOverlay"
+    class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
+    <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
+      <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK">
+      <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
+        <li><a href="/" onclick="closeMobileMenu()">Accueil</a></li>
+        <li><a href="/about.html" onclick="closeMobileMenu()">À propos</a></li>
+        <li class="relative">
+          <button id="mobileFacultesOverlayToggle" class="flex items-center gap-2 text-yellow-400 transition-colors">
+            Facultés
+            <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul id="mobileFacultesOverlaySub" class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
+            <li><a href="/facultes/medecine.html" onclick="closeMobileMenu()" class="text-yellow-400">Médecine Humaine</a></li>
+            <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciences Agronomiques</a></li>
+            <li><a href="/facultes/droit.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciences Juridiques</a></li>
+            <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Théologie</a></li>
+            <li><a href="/facultes/economie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciences Economiques</a></li>
+            <li><a href="/facultes/sciences-technologies.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciencs & Technologies</a></li>
+            <li><a href="/facultes/sciences-social.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciences Sociales</a></li>
+            <li><a href="/facultes/psychologie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Psychologie</a></li>
+          </ul>
+        </li>
+        <li><a href="/admission.html" onclick="closeMobileMenu()">Admissions</a></li>
+        <li><a href="/actualites.html" onclick="closeMobileMenu()">Actualités</a></li>
+        <li><a href="/partenariat.html" onclick="closeMobileMenu()">Partenariats</a></li>
+        <li><a href="/contact.html" onclick="closeMobileMenu()">Contact</a></li>
+      </ul>
+      <div class="mt-10">
+        <a href="/admission.html"
+          class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
+          onclick="closeMobileMenu()">
+          S'inscrire maintenant
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="relative text-white pt-32 pb-20 overflow-hidden bg-blue-900">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-yellow-400/10 rounded-full blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-up">
+        Faculté de <span class="text-yellow-400">Médecine</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">
+        Former des professionnels de santé compétents, éthiques et engagés.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+        <a href="#admission" class="bg-yellow-400 text-blue-900 font-bold px-6 py-2.5 rounded-lg hover:bg-yellow-300 transition">S'inscrire</a>
+        <a href="#infos" class="border border-blue-400 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700/50 transition">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="flex flex-wrap items-center mx-auto px-4 max-w-7xl py-4" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-2.5">
+      <li><a href="/index.html" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a></li>
+      <li><span class="text-sm font-medium text-gray-400">/</span></li>
+      <li><a href="/facultes.html" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Facultés</a></li>
+      <li><span class="text-sm font-medium text-gray-400">/</span></li>
+      <li><span class="text-sm font-medium text-yellow-500">Médecine</span></li>
+    </ol>
+  </nav>
+
+  <!-- ===== CONTENU MINIMAL ===== -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+
+      <!-- PRÉSENTATION RAPIDE -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16" id="infos">
+        <div data-aos="fade-right">
+          <h2 class="text-3xl font-bold text-blue-900 mb-4">Médecine Humaine</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Formation médicale fondée sur les sciences, la pratique clinique et l'éthique. Enseignements théoriques, travaux pratiques, stages et activités cliniques conformément au système LMD.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="../src/images/medecine-faculty.jpeg" alt="Faculté de Médecine" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- INFOS CLÉS (cartes minimalistes) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" id="infos">
+        <div class="bg-gray-50 p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition" data-aos="fade-up">
+          <div class="text-4xl mb-3">🎓</div>
+          <h3 class="font-bold text-blue-900 text-lg">Niveaux</h3>
+          <p class="text-gray-600 text-sm">Licence (3 ans)<br>Doctorat (3 ans + 1 an stage)</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-3">📚</div>
+          <h3 class="font-bold text-blue-900 text-lg">Filières</h3>
+          <p class="text-gray-600 text-sm">Médecine Humaine</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-3">🏥</div>
+          <h3 class="font-bold text-blue-900 text-lg">Stages</h3>
+          <p class="text-gray-600 text-sm">Hôpital IME, Hôpital de l'Amitié, Hôpital Général, Hôpital Militaire</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-2xl text-center shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-3">💼</div>
+          <h3 class="font-bold text-blue-900 text-lg">Débouchés</h3>
+          <p class="text-gray-600 text-sm">Médecin, hospitalier, santé publique, humanitaire, recherche, spécialisation</p>
+        </div>
+      </div>
+
+      <!-- OBJECTIFS (simple liste) -->
+      <div class="bg-gray-50 rounded-2xl p-8 mb-16" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4 text-center">Objectifs de la formation</h2>
+        <div class="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-yellow-400 text-lg">✓</span> Médecins généralistes compétents</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-yellow-400 text-lg">✓</span> Pratique fondée sur les preuves</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-yellow-400 text-lg">✓</span> Éthique et déontologie</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-yellow-400 text-lg">✓</span> Recherche biomédicale</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-yellow-400 text-lg">✓</span> Répondre aux défis sanitaires de la RDC</div>
+        </div>
+      </div>
+
+      <!-- RECHERCHE -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div data-aos="fade-right">
+          <h2 class="text-2xl font-bold text-blue-900 mb-3">🔬 Recherche biomédicale</h2>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Santé publique et épidémiologie</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Maladies tropicales</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Santé maternelle et infantile</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Recherche clinique</li>
+          </ul>
+        </div>
+        <div data-aos="fade-left">
+          <img src="../src/images/medecine-recherche.jpg" alt="Recherche médicale" class="w-full h-56 object-cover rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- ADMISSION & FRAIS -->
+      <div id="admission" class="bg-blue-900 text-white rounded-2xl p-8 mb-16" data-aos="fade-up">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold mb-4">📝 Admission</h2>
+            <ul class="space-y-3 text-gray-200">
+              <li class="flex items-start gap-3"><span class="text-yellow-400 font-bold">1.</span> Diplôme d'État ou équivalent</li>
+              <li class="flex items-start gap-3"><span class="text-yellow-400 font-bold">2.</span> Bonne moyenne en sciences (bio, chimie, physique)</li>
+              <li class="flex items-start gap-3"><span class="text-yellow-400 font-bold">3.</span> Réussir le concours d'entrée</li>
+              <li class="flex items-start gap-3"><span class="text-yellow-400 font-bold">4.</span> Certificat d'aptitude physique</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4">💰 Frais académiques</h2>
+            <div class="space-y-3">
+              <div class="flex justify-between border-b border-blue-700 pb-2"><span>Inscription</span><span class="text-yellow-400 font-bold">10 USD</span></div>
+              <div class="flex justify-between border-b border-blue-700 pb-2"><span>Concours</span><span class="text-yellow-400 font-bold">10 USD</span></div>
+              <div class="flex justify-between border-b border-blue-700 pb-2"><span>Frais annuels</span><span class="text-yellow-400 font-bold">550 USD</span></div>
+              <div class="flex justify-between border-b border-blue-700 pb-2"><span>Logement</span><span class="text-yellow-400 font-bold">100 USD</span></div>
+              <p class="text-sm text-gray-400 mt-2">Payable en 2 tranches (frais) / 3 tranches (logement)</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-6">
+          <a href="/admission.html" class="bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors">S'inscrire maintenant</a>
+        </div>
+      </div>
+
+      <!-- CONTACT RAPIDE -->
+      <div class="text-center" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">📞 Contact</h2>
+        <div class="flex flex-wrap justify-center gap-6 text-gray-700">
+          <a href="mailto:universiteprotestantedekimpese@gmail.com" class="hover:text-yellow-400 transition">✉️ universiteprotestantedekimpese@gmail.com</a>
+          <span>📞 +243 846 831 140 / +243 89 71 367 77 / +243 85 87 51 797</span>
+          <span>📍 UPK, B.P. 67, CECO/Kimpese, Kongo-Central</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="bg-blue-900 rounded-2xl p-8 text-white">
+        <h2 class="text-2xl font-bold">Rejoignez la Faculté de Médecine</h2>
+        <p class="text-gray-300 mt-2">Formez-vous dans une faculté d'excellence.</p>
+        <a href="/admission.html" class="inline-block mt-4 bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition">S'inscrire maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-blue-900 border-t border-blue-800">
+    <div class="max-w-7xl mx-auto px-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+          <a href="/" class="flex items-center">
+            <img src="/src/logo.png" class="h-12 w-auto me-3" alt="Logo UPK">
+            <span class="self-center text-2xl font-semibold text-white"><span class="text-yellow-400">UPK</span></span>
+          </a>
+          <p class="text-gray-400 text-sm mt-2">Université Protestante de Kimpese<br>Foi - Science - Excellence</p>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Navigation</h2>
+            <ul class="text-gray-300 font-medium space-y-3">
+              <li><a href="/" class="hover:text-yellow-400 transition">Accueil</a></li>
+              <li><a href="/about.html" class="hover:text-yellow-400 transition">À propos</a></li>
+              <li><a href="/facultes.html" class="hover:text-yellow-400 transition">Facultés</a></li>
+              <li><a href="/actualites.html" class="hover:text-yellow-400 transition">Actualités</a></li>
+              <li><a href="/contact.html" class="hover:text-yellow-400 transition">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Admissions</h2>
+            <ul class="text-gray-300 font-medium space-y-3">
+              <li><a href="/admission.html" class="hover:text-yellow-400 transition">Inscription</a></li>
+              <li><a href="/admission.html#conditions" class="hover:text-yellow-400 transition">Conditions</a></li>
+              <li><a href="/admission.html#formulaire" class="hover:text-yellow-400 transition">Formulaire</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Contact</h2>
+            <ul class="text-gray-300 font-medium space-y-3">
+              <li><a href="/contact.html" class="hover:text-yellow-400 transition">Nous contacter</a></li>
+              <li class="text-gray-400 text-sm">Kimpese, Kongo Central</li>
+              <li class="text-gray-400 text-sm">RDC</li>
+              <li><a href="mailto:contact@upk.cd" class="hover:text-yellow-400 transition text-sm">contact@upk.cd</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-blue-800">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-400">© 2026 UPK. Tous droits réservés.</span>
+        <div class="flex mt-4 sm:mt-0 space-x-5">
+          <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"/></svg></a>
+          <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Z"/></svg></a>
+          <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"/></svg></a>
+          <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/src/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 100 });
+  </script>
+  <script>
+    // Menu mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileOverlay = document.getElementById('mobileMenuOverlay');
+    const closeBtn = document.getElementById('closeMobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMobileMenu() {
+      mobileOverlay.classList.remove('pointer-events-none', 'opacity-0');
+      mobileOverlay.classList.add('pointer-events-auto', 'opacity-100');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    }
+
+    function closeMobileMenu() {
+      mobileOverlay.classList.add('pointer-events-none', 'opacity-0');
+      mobileOverlay.classList.remove('pointer-events-auto', 'opacity-100');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        if (mobileOverlay.classList.contains('pointer-events-auto')) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMobileMenu);
+    }
+
+    document.querySelectorAll('#mobileMenuOverlay a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Sous-menu facultés overlay
+    const facToggle = document.getElementById('mobileFacultesOverlayToggle');
+    const facSub = document.getElementById('mobileFacultesOverlaySub');
+    const arrow = document.getElementById('mobileArrowOverlay');
+    if (facToggle) {
+      facToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        facSub.classList.toggle('hidden');
+        arrow.style.transform = facSub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    }
+  </script>
+</body>
+
+</html>
