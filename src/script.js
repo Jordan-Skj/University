@@ -23,6 +23,8 @@ function startLoaderProgress() {
   const progressBar = document.getElementById('progress-bar');
   const progressText = document.getElementById('progress-text');
 
+  if (!progressBar || !progressText) return null;
+
   // Simulation de progression aléatoire mais réaliste
   const interval = setInterval(() => {
     // Plus on approche de 100%, plus la progression ralentit

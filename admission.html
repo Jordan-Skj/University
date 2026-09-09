@@ -1,787 +1,356 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Admissions - Université Protestante de Kimpese</title>
-    <meta name="description"
-        content="L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Formez-vous dans une institution d'excellence en RDC. Découvrez nos facultés, admissions et formations." />
-
-    <meta name="keywords"
-        content="Université Kimpese, UPK, enseignement supérieur RDC, Kongo Central, facultés, Foi Science Excellence, Université protestante, Kimpese, études supérieures RDC, campus Kimpese" />
-    <meta name="author" content="Université Protestante de Kimpese (UPK)" />
-    <meta name="robots" content="index, follow" />
-
-
-
-    <link rel="canonical" href="https://www.upk.cd/" />
-
-
-    <meta http-equiv="Content-Language" content="fr, fr-CD" />
-    <meta name="language" content="French" />
-
-    <meta name="geo.region" content="CD-KN" />
-    <meta name="geo.placename" content="Kimpese, Kongo Central" />
-
-    <meta name="geo.position" content="-5.5549;14.4159" />
-    <meta name="ICBM" content="-5.5549, 14.4159" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
-    <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
-    <meta property="og:description"
-        content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
-    <meta property="og:url" content="https://www.upk.cd/" />
-    <meta property="og:locale" content="fr_FR" />
-
-    <meta property="og:image" content="/src/og-upk-social.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Logo de l'Université Protestante de Kimpese (UPK) et campus" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="UPK - Université Protestante de Kimpese" />
-    <meta name="twitter:description"
-        content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Foi - Science - Excellence." />
-    <meta name="twitter:image" content="/src/og-upk-social.jpg" />
-
-
-    <meta name="theme-color" content="#1e3a8a" /> <!-- Bleu UPK (blue-900) -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-    <!-- ========== DONNÉES STRUCTURÉES JSON-LD ========== -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Université Protestante de Kimpese (UPK)",
-      "alternateName": "UPK",
-      "description": "L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Elle forme des leaders et entrepreneurs pour la RDC et l'Afrique.",
-      "url": "https://www.upk.cd",
-      "logo": "https://www.upk.cd/src/logo.png",
-      "foundingDate": "1995",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kimpese",
-        "addressRegion": "Kongo Central",
-        "addressCountry": "CD"
-      },
-      "sameAs": [
-        "https://www.facebook.com/UPK",
-        "https://twitter.com/UPK",
-        "https://www.linkedin.com/school/UPK",
-        "https://www.youtube.com/UPK"
-      ],
-      "telephone": "+243XXXXXXXX",
-      "email": "contact@upk.cd",
-      "motto": "Foi – Science – Excellence",
-      "numberOfStudents": "2000+",
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Église Protestante de la RDC"
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions - Université Protestante de Kimpese</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <meta name="color-scheme" content="light only" />
+  <style>
+    .section-admission {
+      scroll-margin-top: 80px;
     }
-  </script>
-
-    <!-- ========== FAVICON (icône de l'onglet) ========== -->
-    <!-- 🔧 CORRECTION : favicon complet -->
-    <link rel="icon" type="image/x-icon" href="/src/logo.png" />
-    <link rel="apple-touch-icon" href="/src/logo.png" />
-
-    <!-- ========== CSS ========== -->
-    <link href="./dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/style.css" />
-
-    <!-- ========== FORCER LE MODE CLAIR ========== -->
-    <meta name="color-scheme" content="light only" />
-
-    <!-- ========== VÉRIFICATION (Google / Facebook) ========== -->
-    <!-- 🔧 Décommentez quand vous aurez les codes -->
-    <!-- 
-  <meta name="google-site-verification" content="VOTRE_CODE_GOOGLE" />
-  <meta name="facebook-domain-verification" content="VOTRE_CODE_FACEBOOK" />
-  -->
+  </style>
 </head>
+<body>
 
-<body class="bg-slate-50">
-    <!-- NAVBAR -->
-    <nav id="navbar"
-        class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
-
-        <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-            <!-- LOGO -->
-            <a href="/" class="flex items-center space-x-3">
-                <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK">
-                <span class="self-center text-xl font-bold text-white hidden sm:block">
-                    <span class="text-yellow-400">UPK</span>
-                </span>
-            </a>
-
-            <!-- BOUTONS DROITE (CTA + Hamburger) -->
-            <div class="flex md:order-2 space-x-3">
-                <a href="/admission.html"
-                    class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
-                    S'inscrire
-                </a>
-                <button id="menuToggle" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
-                    <span class="sr-only">Menu</span>
-                    <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                    <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- MENU DESKTOP -->
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-                    <li><a href="/"
-                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a>
-                    </li>
-                    <li><a href="/about.html"
-                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À
-                            propos</a></li>
-                    <li>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
-                            Facultés
-                            <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-xl border border-gray-100 shadow-xl w-56 mt-2">
-                            <ul class="py-2 text-sm text-gray-700">
-                                <li><a href="/facultes/sante.html"
-                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Santé</a>
-                                </li>
-                                <li><a href="/facultes/agronomie.html"
-                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie &
-                                        Environnement</a></li>
-                                <li><a href="/facultes/droit"
-                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
-                                        Juridiques</a></li>
-                                <li><a href="/facultes/theologie.html"
-                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie &
-                                        Numérique</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="/admission.html"
-                            class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Admissions</a>
-                    </li>
-                    <li><a href="/actualites.html"
-                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a>
-                    </li>
-                    <li><a href="/partenariat.html"
-                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a>
-                    </li>
-                    <li><a href="/contact.html"
-                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- MENU MOBILE DÉROULANT -->
-    <div id="mobileMenuOverlay"
-        class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
-        <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
-            <!-- Bouton de fermeture (X) -->
-            <button id="closeMobileMenu"
-                class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-
-            <!-- Logo -->
-            <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK">
-
-            <!-- Liens -->
-            <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
-                <li><a href="/" class="hover:text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
-                <li><a href="/about.html" class="text-yellow-400" onclick="closeMobileMenu()">À
-                        propos</a></li>
-                <li class="relative">
-                    <button id="mobileFacultesOverlayToggle"
-                        class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
-                        Facultés
-                        <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <ul id="mobileFacultesOverlaySub"
-                        class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
-                        <li><a href="/facultes/sante.html" onclick="closeMobileMenu()"
-                                class="hover:text-yellow-400 transition-colors">Santé</a></li>
-                        <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()"
-                                class="hover:text-yellow-400 transition-colors">Agronomie & Environnement</a></li>
-                        <li><a href="/facultes/droit.html" onclick="closeMobileMenu()"
-                                class="hover:text-yellow-400 transition-colors">Sciences Juridiques</a></li>
-                        <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()"
-                                class="hover:text-yellow-400 transition-colors">Théologie & Numérique</a></li>
-                    </ul>
-                </li>
-                <li><a href="/admission.html" class="text-yellow-400 transition-colors"
-                        onclick="closeMobileMenu()">Admissions</a></li>
-                <li><a href="/actualites.html" class="hover:text-yellow-400 transition-colors"
-                        onclick="closeMobileMenu()">Actualités</a></li>
-                <li><a href="/partenariat.html" class="hover:text-yellow-400 transition-colors"
-                        onclick="closeMobileMenu()">Partenariats</a></li>
-                <li><a href="/contact.html" class="hover:text-yellow-400 transition-colors"
-                        onclick="closeMobileMenu()">Contact</a>
-                </li>
-            </ul>
-
-            <!-- CTA -->
-            <div class="mt-10">
-                <a href="/admission.html"
-                    class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
-                    onclick="closeMobileMenu()">
-                    S'inscrire maintenant
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ============================================ -->
-    <!-- SECTION 1: HERO                             -->
-    <!-- ============================================ -->
-    <section class="relative text-white pt-32 pb-24 overflow-hidden"
-        style="background: url('./src/images/hero.jpg') no-repeat center center; background-size: cover;">
-
-        <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
-
-        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
-            <span
-                class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6">
-                Admission
-            </span>
-
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-                Intégrer l'UPK
-            </h1>
-            <p class="text-xl md:text-2xl text-yellow-300 mb-6 font-light">
-                L'excellence académique au cœur du Kongo Central
-            </p>
-            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed pb-4">
-                Rejoignez une communauté d'étudiants passionnés et engagés dans la construction d'une Afrique
-                meilleure. L'UPK accueille les candidats sérieux de tous horizons.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#parcours"
-                    class="inline-flex items-center justify-center rounded-lg bg-yellow-400 px-8 py-3.5 text-base font-bold text-blue-900 shadow-lg hover:bg-yellow-300 transition duration-200">
-                    Commencer ma candidature
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </a>
-                <a href="/src/prospectus-upk.pdf" target="_blank"
-                    class="inline-flex items-center justify-center rounded-lg border border-blue-400 px-8 py-3.5 text-base font-medium text-white hover:bg-blue-700/50 transition duration-200">
-
-                    <!-- SVG TÉLÉCHARGEMENT -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 17V3" />
-                        <path d="m6 11 6 6 6-6" />
-                        <path d="M19 21H5" />
-                    </svg>
-
-                    <!-- TEXTE -->
-                    <span class="ml-2">Télécharger la brochure</span>
-                </a>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- SECTION 2: QUICK-LINKS                      -->
-    <!-- ============================================ -->
-    <section class="py-12 bg-white shadow-sm">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <!-- Card 1: Parcours -->
-                <a href="#parcours"
-                    class="group block bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 hover:shadow-lg hover:border-yellow-400 transition duration-200 cursor-pointer">
-                    <div class="text-3xl mb-3">📋</div>
-                    <h3 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-yellow-500">Parcours d'admission
-                    </h3>
-                    <p class="text-sm text-blue-700">5 étapes simples et claires</p>
-                </a>
-
-                <!-- Card 2: Frais -->
-                <a href="#frais"
-                    class="group block bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200 hover:shadow-lg hover:border-yellow-400 transition duration-200 cursor-pointer">
-                    <div class="text-3xl mb-3">💰</div>
-                    <h3 class="text-lg font-bold text-green-900 mb-2 group-hover:text-yellow-500">Frais & Bourses</h3>
-                    <p class="text-sm text-green-700">Tarifs et options d'aide financière</p>
-                </a>
-
-                <!-- Card 3: Modalités -->
-                <a href="#modalites"
-                    class="group block bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200 hover:shadow-lg hover:border-yellow-400 transition duration-200 cursor-pointer">
-                    <div class="text-3xl mb-3">🎓</div>
-                    <h3 class="text-lg font-bold text-purple-900 mb-2 group-hover:text-yellow-500">Modalités</h3>
-                    <p class="text-sm text-purple-700">Présentiel, en ligne, hybride</p>
-                </a>
-
-                <!-- Card 4: FAQ -->
-                <a href="#faq"
-                    class="group block bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200 hover:shadow-lg hover:border-yellow-400 transition duration-200 cursor-pointer">
-                    <div class="text-3xl mb-3">❓</div>
-                    <h3 class="text-lg font-bold text-orange-900 mb-2 group-hover:text-yellow-500">Questions fréquentes
-                    </h3>
-                    <p class="text-sm text-orange-700">Réponses à vos doutes</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- SECTION 3: PARCOURS D'ADMISSION            -->
-    <!-- ============================================ -->
-    <section id="parcours" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">5 Étapes simples</h2>
-                <p class="text-lg text-blue-700">Suivez ce parcours clair pour candidater à l'UPK</p>
-            </div>
-
-            <!-- Stepper Desktop -->
-            <div class="hidden md:block">
-                <div class="flex items-center justify-between mb-12">
-                    <!-- Étape 1 -->
-                    <div class="flex flex-col items-center flex-1">
-                        <div
-                            class="bg-yellow-400 text-blue-900 rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
-                            1</div>
-                        <h3 class="font-bold text-blue-900 text-center">Vérifier les conditions</h3>
-                    </div>
-                    <div class="flex-1 bg-yellow-300 h-1 mb-10"></div>
-
-                    <!-- Étape 2 -->
-                    <div class="flex flex-col items-center flex-1">
-                        <div
-                            class="bg-yellow-400 text-blue-900 rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
-                            2</div>
-                        <h3 class="font-bold text-blue-900 text-center">Constituer dossier</h3>
-                    </div>
-                    <div class="flex-1 bg-yellow-300 h-1 mb-10"></div>
-
-                    <!-- Étape 3 -->
-                    <div class="flex flex-col items-center flex-1">
-                        <div
-                            class="bg-yellow-400 text-blue-900 rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
-                            3</div>
-                        <h3 class="font-bold text-blue-900 text-center">Passer l'examen (opt.)</h3>
-                    </div>
-                    <div class="flex-1 bg-yellow-300 h-1 mb-10"></div>
-
-                    <!-- Étape 4 -->
-                    <div class="flex flex-col items-center flex-1">
-                        <div
-                            class="bg-yellow-400 text-blue-900 rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
-                            4</div>
-                        <h3 class="font-bold text-blue-900 text-center">Candidater en ligne</h3>
-                    </div>
-                    <div class="flex-1 bg-yellow-300 h-1 mb-10"></div>
-
-                    <!-- Étape 5 -->
-                    <div class="flex flex-col items-center flex-1">
-                        <div
-                            class="bg-yellow-400 text-blue-900 rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-lg">
-                            5</div>
-                        <h3 class="font-bold text-blue-900 text-center">Résultats & Inscription</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Étapes détaillées (Accordéon) -->
-            <div class="space-y-4 mt-12">
-                <!-- Étape 1 -->
-                <div class="bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
-                    <button
-                        class="step-toggle w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition"
-                        data-step="1">
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="bg-yellow-400 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">1</span>
-                            <span class="font-bold text-blue-900">Vérifier les conditions d'admission</span>
-                        </div>
-                        <svg class="step-icon w-5 h-5 text-blue-900 transition transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </button>
-                    <div class="step-content hidden px-6 py-4 bg-blue-50 text-blue-900 space-y-3">
-                        <p><strong>Pour la Licence:</strong> BAC ou équivalent, aucune limite d'âge</p>
-                        <p><strong>Pour le Master:</strong> Licence obtenue, notes minimales 14/20</p>
-                        <p><strong>Pour le DEA/Doctorat:</strong> Master obtenu, notes minimales 15/20</p>
-                        <p class="text-sm text-blue-700">⚠️ Les candidats avec diplômes étrangers doivent fournir une
-                            attestation d'équivalence.</p>
-                        <a href="#conditions"
-                            class="inline-block mt-2 text-yellow-600 font-bold hover:text-yellow-700">→ Voir détails
-                            complets</a>
-                    </div>
-                </div>
-
-                <!-- Étape 2 -->
-                <div class="bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
-                    <button
-                        class="step-toggle w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition"
-                        data-step="2">
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="bg-yellow-400 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">2</span>
-                            <span class="font-bold text-blue-900">Constituer votre dossier</span>
-                        </div>
-                        <svg class="step-icon w-5 h-5 text-blue-900 transition transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </button>
-                    <div class="step-content hidden px-6 py-4 bg-blue-50 text-blue-900 space-y-4">
-                        <p><strong>Pièces obligatoires (tous cycles):</strong></p>
-                        <ul class="list-disc list-inside space-y-1 text-blue-800 ml-2">
-                            <li>Photocopie diplôme(s) en couleur</li>
-                            <li>Bulletins de notes 3 dernières années</li>
-                            <li>Extrait de naissance (récent)</li>
-                            <li>Certificat de nationalité</li>
-                            <li>Fiche d'identification UPK (télécharger en bas)</li>
-                            <li>4 photos d'identité</li>
-                        </ul>
-                        <div class="bg-yellow-50 border border-yellow-200 p-3 rounded mt-4">
-                            <p class="text-sm"><strong>Étapes suivantes:</strong> Rassemblez tous les documents en
-                                fichier PDF unique. Vous les téléchargerez dans le formulaire à l'étape 4.</p>
-                        </div>
-                        <a href="#pieces" class="inline-block mt-2 text-yellow-600 font-bold hover:text-yellow-700">→
-                            Télécharger checklist complète</a>
-                    </div>
-                </div>
-
-                <!-- Étape 3 -->
-                <div class="bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
-                    <button
-                        class="step-toggle w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition"
-                        data-step="3">
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="bg-yellow-400 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">3</span>
-                            <span class="font-bold text-blue-900">Passer l'examen d'entrée (optionnel)</span>
-                        </div>
-                        <svg class="step-icon w-5 h-5 text-blue-900 transition transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </button>
-                    <div class="step-content hidden px-6 py-4 bg-blue-50 text-blue-900 space-y-3">
-                        <p><strong>L'examen d'entrée est OPTIONNEL pour la Licence.</strong> Il peut augmenter votre
-                            chance d'admission et de bourse.</p>
-                        <p><strong>Format:</strong> QCM (Math, Français, Sciences) + entretien oral</p>
-                        <p><strong>Calendrier 2025-2026:</strong></p>
-                        <ul class="list-disc list-inside text-blue-800 ml-2">
-                            <li>Dates: 15-18 juillet 2025 (Kimpese)</li>
-                            <li>Inscription exam: sur ce formulaire, avant 10 juillet</li>
-                            <li>Frais: $15 USD</li>
-                        </ul>
-                        <a href="#calendrier"
-                            class="inline-block mt-2 text-yellow-600 font-bold hover:text-yellow-700">→ Voir calendrier
-                            détaillé</a>
-                    </div>
-                </div>
-
-                <!-- Étape 4 -->
-                <div class="bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
-                    <button
-                        class="step-toggle w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition"
-                        data-step="4">
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="bg-yellow-400 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">4</span>
-                            <span class="font-bold text-blue-900">Candidater en ligne</span>
-                        </div>
-                        <svg class="step-icon w-5 h-5 text-blue-900 transition transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </button>
-                    <div class="step-content hidden px-6 py-4 bg-blue-50 text-blue-900 space-y-4">
-                        <p><strong>Remplir le formulaire UPK:</strong></p>
-                        <ul class="list-disc list-inside space-y-1 text-blue-800 ml-2">
-                            <li>Nom, prénoms, date de naissance</li>
-                            <li>Adresse email et téléphone</li>
-                            <li>Faculté et cycle souhaités</li>
-                            <li>Modalité formation (Présentiel/En ligne/Hybride)</li>
-                            <li>Upload documents PDF</li>
-                        </ul>
-                        <p class="bg-yellow-50 border border-yellow-200 p-3 rounded mt-4 text-sm"><strong>Frais de
-                                dossier:</strong> $25 USD (payable avant soumission)</p>
-                        <p class="text-sm text-blue-700 mt-3">➡️ Le formulaire sera activé à partir du <strong>1er mai
-                                2025</strong>. Revenez à cette date !</p>
-                    </div>
-                </div>
-
-                <!-- Étape 5 -->
-                <div class="bg-white rounded-lg border border-blue-200 shadow-sm overflow-hidden">
-                    <button
-                        class="step-toggle w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition"
-                        data-step="5">
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="bg-yellow-400 text-blue-900 rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm">5</span>
-                            <span class="font-bold text-blue-900">Résultats et inscription définitive</span>
-                        </div>
-                        <svg class="step-icon w-5 h-5 text-blue-900 transition transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                    </button>
-                    <div class="step-content hidden px-6 py-4 bg-blue-50 text-blue-900 space-y-3">
-                        <p>Vous recevrez un email avec vos résultats aux alentours du <strong>15 août 2025</strong>.</p>
-                        <p><strong>Si admis:</strong></p>
-                        <ul class="list-disc list-inside text-blue-800 ml-2">
-                            <li>Email de bienvenue avec code d'accès portail étudiant</li>
-                            <li>Payer frais inscription ($450 Licence, $600 Master, etc.)</li>
-                            <li>Compléter inscription en ligne (emploi du temps, résidence, etc.)</li>
-                            <li>Accès à l'espace étudiant (notes, documents, etc.)</li>
-                        </ul>
-                        <p class="text-sm text-blue-700 mt-3">🎓 <strong>Rentrée académique:</strong> 3 septembre 2025
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- SECTION 4: CONDITIONS PAR CYCLE            -->
-    <!-- ============================================ -->
-    <section id="conditions" class="py-20 bg-white">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Conditions spécifiques par cycle</h2>
-                <p class="text-lg text-blue-700">Vérifiez les exigences pour votre diplôme visé</p>
-            </div>
-
-            <!-- Tabs Navigation -->
-            <div class="flex flex-wrap gap-2 justify-center mb-8">
-                <button
-                    class="cycle-tab active px-6 py-2 rounded-full font-bold border-2 border-yellow-400 bg-yellow-400 text-blue-900 transition"
-                    data-cycle="licence">
-                    🎓 Licence (LMD)
-                </button>
-                <button
-                    class="cycle-tab px-6 py-2 rounded-full font-bold border-2 border-blue-200 text-blue-900 hover:border-yellow-400 transition"
-                    data-cycle="master">
-                    📚 Master
-                </button>
-                <button
-                    class="cycle-tab px-6 py-2 rounded-full font-bold border-2 border-blue-200 text-blue-900 hover:border-yellow-400 transition"
-                    data-cycle="dea">
-                    🔬 DEA
-                </button>
-                <button
-                    class="cycle-tab px-6 py-2 rounded-full font-bold border-2 border-blue-200 text-blue-900 hover:border-yellow-400 transition"
-                    data-cycle="doctorat">
-                    🏆 Doctorat
-                </button>
-            </div>
-
-            <!-- Tab Content -->
-            <div class="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <!-- Licence -->
-                <div class="cycle-content active" id="content-licence">
-                    <table class="w-full text-blue-900">
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Diplôme requis</td>
-                            <td class="py-3">BAC ou équivalent (tout domaine)</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Âge minimum</td>
-                            <td class="py-3">Aucune limite (18+ recommandé)</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Notes minimales</td>
-                            <td class="py-3">12/20 recommandé (pas de minimum strict)</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Durée</td>
-                            <td class="py-3">3 ans (LMD)</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 font-bold">Frais annuels</td>
-                            <td class="py-3 text-yellow-600 font-bold">$450 USD</td>
-                        </tr>
-                    </table>
-                    <p class="mt-6 text-blue-800 bg-yellow-50 p-4 rounded">
-                        💡 <strong>Conseil:</strong> L'examen d'entrée est optionnel pour la Licence, mais peut
-                        améliorer votre classement et vos chances de bourse. Nous recommandons de le passer si votre
-                        moyenn au BAC est inférieure à 14/20.
-                    </p>
-                </div>
-
-                <!-- Master -->
-                <div class="cycle-content hidden" id="content-master">
-                    <table class="w-full text-blue-900">
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Diplôme requis</td>
-                            <td class="py-3">Licence obtenue (même domaine préféré)</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Notes minimales</td>
-                            <td class="py-3">14/20 en Licence</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Durée</td>
-                            <td class="py-3">2 ans</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Documents spéciaux</td>
-                            <td class="py-3">Lettre de motivation + 2 recommandations de profs</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 font-bold">Frais annuels</td>
-                            <td class="py-3 text-yellow-600 font-bold">$600 USD</td>
-                        </tr>
-                    </table>
-                    <p class="mt-6 text-blue-800 bg-yellow-50 p-4 rounded">
-                        💡 <strong>Étudiants internationaux:</strong> Les diplômes étrangers doivent être légalisés et
-                        accompagnés d'une attestation d'équivalence (CAMES, par ex.).
-                    </p>
-                </div>
-
-                <!-- DEA -->
-                <div class="cycle-content hidden" id="content-dea">
-                    <table class="w-full text-blue-900">
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Diplôme requis</td>
-                            <td class="py-3">Master obtenu</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Notes minimales</td>
-                            <td class="py-3">15/20 en Master</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Durée</td>
-                            <td class="py-3">2 ans + mémoire</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Entrevue</td>
-                            <td class="py-3">Entrevue avec directeur de recherche</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 font-bold">Frais annuels</td>
-                            <td class="py-3 text-yellow-600 font-bold">$700 USD</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- Doctorat -->
-                <div class="cycle-content hidden" id="content-doctorat">
-                    <table class="w-full text-blue-900">
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Diplôme requis</td>
-                            <td class="py-3">DEA ou Master 2 Recherche</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Notes minimales</td>
-                            <td class="py-3">15/20</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Durée</td>
-                            <td class="py-3">3-4 ans + thèse de doctorat</td>
-                        </tr>
-                        <tr class="border-b-2 border-blue-300">
-                            <td class="py-3 font-bold">Sélection</td>
-                            <td class="py-3">Très compétitive + projet de recherche</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 font-bold">Frais annuels</td>
-                            <td class="py-3 text-yellow-600 font-bold">$750 USD</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!-- STICKY CTA BUTTON (Fixed bottom-right)     -->
-    <!-- ============================================ -->
-    <div class="fixed bottom-6 right-6 z-30 flex flex-col gap-3">
-        <a href="#formulaire"
-            class="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition transform hover:scale-105">
-            S'inscrire
+  <!-- ===== NAVBAR (identique à vos autres pages) ===== -->
+  <nav id="navbar" class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="./src/logo.png" class="h-12 w-auto" alt="Logo UPK" />
+        <span class="self-center text-xl font-bold text-white hidden sm:block">
+          <span class="text-yellow-400">UPK</span>
+        </span>
+      </a>
+      <div class="flex md:order-2 space-x-3">
+        <a href="/admission.html" class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
+          S'inscrire
         </a>
-        <button id="chat-btn"
-            class="bg-blue-900 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:bg-blue-800 transition transform hover:scale-105 flex items-center gap-2">
-            💬 Chat
+        <button id="menuToggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
+          <span class="sr-only">Menu</span>
+          <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+          <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+          <li><a href="/" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a></li>
+          <li><a href="/about.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À propos</a></li>
+          <li><button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Facultés
+            <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg>
+          </button>
+          <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-56 mt-2">
+            <ul class="py-2 text-sm text-gray-700">
+              <li><a href="/facultes/medecine.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Médecine</a></li>
+              <li><a href="/facultes/agronomie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie</a></li>
+              <li><a href="/facultes/droit.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Droit</a></li>
+              <li><a href="/facultes/theologie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie</a></li>
+              <li><a href="/facultes/economie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Économie</a></li>
+              <li><a href="/facultes/sciences-social.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences Sociales</a></li>
+              <li><a href="/facultes/psychologie.html" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Psychologie</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="/admission.html" class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Admissions</a></li>
+        <li><a href="/actualites.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
+        <li><a href="/partenariat.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
+        <li><a href="/contact.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MENU MOBILE (copiez celui de vos autres pages) -->
+<div id="mobileMenuOverlay" class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
+  <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
+    <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK" />
+    <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
+      <li><a href="/" onclick="closeMobileMenu()">Accueil</a></li>
+      <li><a href="/about.html" onclick="closeMobileMenu()">À propos</a></li>
+      <li class="relative">
+        <button id="mobileFacultesOverlayToggle" class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
+          Facultés
+          <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul id="mobileFacultesOverlaySub" class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
+          <li><a href="/facultes/medecine.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Médecine</a></li>
+          <li><a href="/facultes/agronomie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Agronomie</a></li>
+          <li><a href="/facultes/droit.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Droit</a></li>
+          <li><a href="/facultes/theologie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Théologie</a></li>
+          <li><a href="/facultes/economie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Économie</a></li>
+          <li><a href="/facultes/sciences-social.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Sciences Sociales</a></li>
+          <li><a href="/facultes/psychologie.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Psychologie</a></li>
+        </ul>
+      </li>
+      <li><a href="/admission.html" class="text-yellow-400" onclick="closeMobileMenu()">Admissions</a></li>
+      <li><a href="/actualites.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Actualités</a></li>
+      <li><a href="/partenariat.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Partenariats</a></li>
+      <li><a href="/contact.html" onclick="closeMobileMenu()" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+    <div class="mt-10">
+      <a href="/admission.html" class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors" onclick="closeMobileMenu()">
+        S'inscrire maintenant
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE ADMISSIONS – VERSION ÉPURÉE                              -->
+<!-- ============================================================ -->
+
+<!-- HERO -->
+<section class="relative bg-blue-900 pt-28 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"></div>
+  <div class="relative max-w-screen-xl mx-auto px-4 text-center z-10">
+    <span class="inline-block text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-4">Admissions</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+      Rejoindre <span class="text-yellow-400">l'UPK</span>
+    </h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+      Conditions, pièces à fournir, calendrier et frais pour l'année académique 2026-2027.
+    </p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<nav class="flex-wrap md:flex justify-between mx-auto px-4 max-w-screen-xl mt-4" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center mb-3 space-x-2.5">
+    <li><a href="/" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a></li>
+    <li><span class="text-sm font-medium text-yellow-400">Admissions</span></li>
+  </ol>
+</nav>
+
+<!-- CONTENU PRINCIPAL -->
+<section class="py-12 bg-white">
+  <div class="max-w-screen-xl mx-auto px-4">
+
+    <!-- 1. CONDITIONS -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Conditions d'admission</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+          <h3 class="font-bold text-blue-900">Licence</h3>
+          <p class="text-gray-700 text-sm">Diplôme d'État ou équivalent</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+          <h3 class="font-bold text-blue-900">Master</h3>
+          <p class="text-gray-700 text-sm">Licence dans un domaine compatible</p>
+        </div>
+      </div>
     </div>
 
-    <!-- JavaScript pour les accordéons -->
-    <script>
-        document.querySelectorAll('.step-toggle').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const content = this.nextElementSibling;
-                const icon = this.querySelector('.step-icon');
+    <!-- 2. PIÈCES À FOURNIR -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Pièces à fournir</h2>
+      <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700">
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Formulaire d'inscription</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Photocopie du Diplôme d'État</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Bulletins de 3e & 4e Humanités</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Attestation de naissance</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Attestation de bonne conduite</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Certificat d'aptitude physique</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 4 photos passeport</div>
+        <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Une farde chemise</div>
+      </div>
+    </div>
 
-                // Toggle content visibility
-                content.classList.toggle('hidden');
+    <!-- 3. CALENDRIER -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Calendrier</h2>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-gray-50 p-4 rounded-lg text-center">
+          <p class="text-gray-500">Ouverture</p>
+          <p class="font-semibold text-blue-900">En cours</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg text-center">
+          <p class="text-gray-500">Clôture</p>
+          <p class="font-semibold text-blue-900">Fin octobre 2026</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg text-center sm:col-span-2">
+          <p class="text-gray-500">Rentrée académique</p>
+          <p class="font-semibold text-blue-900">5 octobre 2026</p>
+        </div>
+      </div>
+    </div>
 
-                // Rotate icon
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            });
-        });
+    <!-- 4. FRAIS -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Frais</h2>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+          <span class="text-gray-600">Inscription</span>
+          <span class="font-semibold text-blue-900">10 USD</span>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+          <span class="text-gray-600">Concours</span>
+          <span class="font-semibold text-blue-900">10 USD</span>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+          <span class="text-gray-600">Logement (trimestriel)</span>
+          <span class="font-semibold text-blue-900">100 USD</span>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between border-2 border-yellow-400">
+          <span class="text-gray-600">Frais annuels <span class="text-xs text-gray-400 block">(Médecine)</span></span>
+          <span class="font-semibold text-yellow-600">550 USD</span>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between sm:col-span-2">
+          <span class="text-gray-600">Frais annuels <span class="text-xs text-gray-400 block">(Autres facultés)</span></span>
+          <span class="font-semibold text-blue-900">450 USD</span>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg flex justify-between sm:col-span-2 text-xs text-gray-500">
+          <span>Paiement des frais académiques en 2 tranches.</span>
+        </div>
+      </div>
+    </div>
 
-        // Tabs functionality
-        document.querySelectorAll('.cycle-tab').forEach(tab => {
-            tab.addEventListener('click', function () {
-                const cycle = this.dataset.cycle;
+    <!-- 5. CONTACTS -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Contact</h2>
+      <div class="bg-gray-50 p-4 rounded-lg text-sm space-y-2">
+        <p><span class="font-semibold">📍</span> UPK, B.P. 67, CECO/Kimpese, Kongo-Central, RDC</p>
+        <p><span class="font-semibold">✉️</span> <a href="mailto:universiteprotestantedekimpese@gmail.com" class="text-blue-900 hover:text-yellow-400">universiteprotestantedekimpese@gmail.com</a></p>
+        <p><span class="font-semibold">📞</span> <a href="tel:+243846831140" class="hover:text-yellow-400">+243 846 831 140</a> · <a href="tel:+243897136777" class="hover:text-yellow-400">+243 89 71 367 77</a> · <a href="tel:+243858751797" class="hover:text-yellow-400">+243 85 87 51 797</a></p>
+      </div>
+    </div>
 
-                // Update active tab
-                document.querySelectorAll('.cycle-tab').forEach(t => {
-                    t.classList.remove('active', 'bg-yellow-400', 'border-yellow-400');
-                    t.classList.add('border-blue-200');
-                });
-                this.classList.add('active', 'bg-yellow-400', 'border-yellow-400');
-                this.classList.remove('border-blue-200');
+  </div>
+</section>
 
-                // Update content
-                document.querySelectorAll('.cycle-content').forEach(c => c.classList.add('hidden'));
-                document.getElementById('content-' + cycle).classList.remove('hidden');
-            });
-        });
-    </script>
+<!-- CTA FINAL -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <div class="bg-blue-900 rounded-2xl p-8 text-white">
+      <h2 class="text-2xl font-bold">Prêt à rejoindre l'UPK ?</h2>
+      <p class="text-gray-300 mt-2 text-sm">Téléchargez votre dossier et commencez votre inscription.</p>
+      <a href="#" class="inline-block mt-4 bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition">
+        Télécharger le dossier
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- Flowbite JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+<!-- FOOTER (identique à vos autres pages) -->
+<footer class="bg-blue-900">
+  <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 md:mb-0">
+        <a href="/" class="flex items-center">
+          <img src="/src/logo.png" class="h-12 w-auto me-3" alt="Logo UPK" />
+          <span class="self-center text-2xl font-semibold text-white"><span class="text-yellow-400">UPK</span></span>
+        </a>
+        <p class="text-gray-400 text-sm mt-2">Université Protestante de Kimpese<br />Foi - Science - Excellence</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Navigation</h2>
+          <ul class="text-gray-300 font-medium space-y-3">
+            <li><a href="/" class="hover:text-yellow-400">Accueil</a></li>
+            <li><a href="/about.html" class="hover:text-yellow-400">À propos</a></li>
+            <li><a href="/faculte.html" class="hover:text-yellow-400">Facultés</a></li>
+            <li><a href="/actualites.html" class="hover:text-yellow-400">Actualités</a></li>
+            <li><a href="/contact.html" class="hover:text-yellow-400">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Admissions</h2>
+          <ul class="text-gray-300 font-medium space-y-3">
+            <li><a href="/admission.html" class="hover:text-yellow-400">Inscription</a></li>
+            <li><a href="/admission.html#conditions" class="hover:text-yellow-400">Conditions</a></li>
+            <li><a href="/admission.html#formulaire" class="hover:text-yellow-400">Formulaire</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Contact</h2>
+          <ul class="text-gray-300 font-medium space-y-3">
+            <li><a href="/contact.html" class="hover:text-yellow-400">Nous contacter</a></li>
+            <li class="text-gray-400 text-sm">Kimpese, Kongo Central</li>
+            <li class="text-gray-400 text-sm">RDC</li>
+            <li><a href="mailto:contact@upk.cd" class="hover:text-yellow-400 text-sm">contact@upk.cd</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-6 border-blue-800" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-gray-400">© 2026 UPK. Tous droits réservés.</span>
+      <div class="flex mt-4 sm:mt-0 space-x-5">
+        <a href="#" class="text-gray-400 hover:text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"/></svg></a>
+        <a href="#" class="text-gray-400 hover:text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Z"/></svg></a>
+        <a href="#" class="text-gray-400 hover:text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"/></svg></a>
+        <a href="#" class="text-gray-400 hover:text-yellow-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 10 10A10.009 10.009 0 0 0 12 2Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.093 20.093 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM10 3.707a8.82 8.82 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.755 45.755 0 0 0 10 3.707Zm-6.358 6.555a8.57 8.57 0 0 1 4.73-5.981 53.99 53.99 0 0 1 3.168 4.941 32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.641 31.641 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM12 20.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 15.113 13a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile (identique à vos autres pages)
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileOverlay = document.getElementById('mobileMenuOverlay');
+  const closeBtn = document.getElementById('closeMobileMenu');
+  const hamburgerIcon = document.getElementById('hamburgerIcon');
+  const closeIcon = document.getElementById('closeIcon');
+
+  function openMobileMenu() {
+    mobileOverlay.classList.remove('pointer-events-none', 'opacity-0');
+    mobileOverlay.classList.add('pointer-events-auto', 'opacity-100');
+    hamburgerIcon.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+  }
+
+  function closeMobileMenu() {
+    mobileOverlay.classList.add('pointer-events-none', 'opacity-0');
+    mobileOverlay.classList.remove('pointer-events-auto', 'opacity-100');
+    hamburgerIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  }
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      if (mobileOverlay.classList.contains('pointer-events-auto')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMobileMenu);
+  }
+
+  document.querySelectorAll('#mobileMenuOverlay a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Sous-menu facultés mobile
+  const facToggle = document.getElementById('mobileFacultesOverlayToggle');
+  const facSub = document.getElementById('mobileFacultesOverlaySub');
+  const arrow = document.getElementById('mobileArrowOverlay');
+  if (facToggle) {
+    facToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      facSub.classList.toggle('hidden');
+      arrow.style.transform = facSub.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  }
+</script>
 
 </body>
-
 </html>
