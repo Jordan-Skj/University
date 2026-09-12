@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nos Facultés - Université Protestante de Kimpese</title>
+    <link rel="canonical" href="https://www.upk.cd/faculte.html" />
+    <link rel="icon" type="image/x-icon" href="/src/logo.png" />
+    <link rel="apple-touch-icon" href="/src/logo.png" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <meta name="description" content="Découvrez les facultés de l'Université Protestante de Kimpese : Médecine, Agronomie, Droit, Théologie, Économie, Sciences sociales et plus." />
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav id="navbar" class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
+      <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/src/logo.png" class="h-12 w-auto" alt="Logo UPK" />
+          <span class="self-center text-xl font-bold text-white hidden sm:block">
+            <span class="text-yellow-400">UPK</span>
+          </span>
+        </a>
+        <div class="flex md:order-2 space-x-3">
+          <a href="/admission.html" class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">S'inscrire</a>
+          <button id="menuToggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
+            <span class="sr-only">Menu</span>
+            <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+            <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+            <li><a href="/" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a></li>
+            <li><a href="/about.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À propos</a></li>
+            <li><a href="/faculte.html" class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Facultés</a></li>
+            <li><a href="/admission.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a></li>
+            <li><a href="/actualites.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a></li>
+            <li><a href="/partenariat.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a></li>
+            <li><a href="/contact.html" class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobileMenuOverlay" class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
+      <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
+        <button id="closeMobileMenu" class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <img src="/src/logo.png" class="h-16 w-auto mb-10" alt="Logo UPK" />
+        <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
+          <li><a href="/" onclick="closeMobileMenu()">Accueil</a></li>
+          <li><a href="/about.html" onclick="closeMobileMenu()">À propos</a></li>
+          <li><a href="/faculte.html" class="text-yellow-400" onclick="closeMobileMenu()">Facultés</a></li>
+          <li><a href="/admission.html" onclick="closeMobileMenu()">Admissions</a></li>
+          <li><a href="/actualites.html" onclick="closeMobileMenu()">Actualités</a></li>
+          <li><a href="/partenariat.html" onclick="closeMobileMenu()">Partenariats</a></li>
+          <li><a href="/contact.html" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <section class="relative bg-blue-900 pt-28 pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"></div>
+        <div class="relative max-w-screen-xl mx-auto px-4 text-center z-10">
+          <span class="inline-block text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-4">Nos facultés</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Formations et parcours <span class="text-yellow-400">d'excellence</span></h1>
+          <p class="text-lg text-gray-300 max-w-3xl mx-auto">L'Université Protestante de Kimpese propose des parcours de qualité dans plusieurs domaines, pour former des leaders engagés, compétents et responsables.</p>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up">
+            <div class="bg-blue-900 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Santé</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Médecine</h2>
+              <p class="text-gray-600 text-sm mb-5">Formation spécialisée en santé humaine, sciences cliniques et pratique professionnelle.</p>
+              <a href="/facultes/medecine.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-green-800 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Environnement</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Agronomie</h2>
+              <p class="text-gray-600 text-sm mb-5">Développement rural, gestion des ressources naturelles et innovations agricoles.</p>
+              <a href="/facultes/agronomie.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-red-700 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Justice</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Droit</h2>
+              <p class="text-gray-600 text-sm mb-5">Accompagnement des futurs juristes, gestionnaires et acteurs du droit.</p>
+              <a href="/facultes/droit.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-violet-800 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Foi</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Théologie</h2>
+              <p class="text-gray-600 text-sm mb-5">Études bibliques, pensée théologique, leadership spirituel et culture numérique.</p>
+              <a href="/facultes/theologie.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-yellow-500 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-blue-900">Finance</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Économie</h2>
+              <p class="text-gray-600 text-sm mb-5">Analyse économique, gestion, entrepreneuriat et développement durable.</p>
+              <a href="/facultes/economie.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-cyan-700 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Société</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Sciences Sociales</h2>
+              <p class="text-gray-600 text-sm mb-5">Sociologie, relations humaines, gouvernance, développement social et culturelle.</p>
+              <a href="/facultes/sciences-social.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-pink-700 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Cerveau</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Psychologie</h2>
+              <p class="text-gray-600 text-sm mb-5">Connaissance de l'humain, santé mentale, accompagnement et développement personnel.</p>
+              <a href="/facultes/psychologie.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="700">
+            <div class="bg-sky-700 text-white p-5">
+              <span class="text-sm uppercase tracking-[0.2em] text-yellow-400">Innovation</span>
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-blue-900 mb-3">Sciences & Technologies</h2>
+              <p class="text-gray-600 text-sm mb-5">Informatique, sciences appliquées, innovation et transformation numérique.</p>
+              <a href="/facultes/sciences-technologies.html" class="inline-flex items-center font-semibold text-blue-900 hover:text-yellow-500">Découvrir la faculté →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-white py-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+          <h2 class="text-3xl font-bold text-blue-900 mb-4">Prêt à postuler ?</h2>
+          <p class="text-gray-600 mb-8">Découvrez les conditions d’admission et commencez votre parcours à l’UPK.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="/admission.html" class="bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition">Voir les admissions</a>
+            <a href="/contact.html" class="bg-blue-900 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-800 transition">Nous contacter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-blue-900">
+      <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="/" class="flex items-center">
+              <img src="/src/logo.png" class="h-12 w-auto me-3" alt="Logo UPK" />
+              <span class="self-center text-2xl font-semibold text-white"><span class="text-yellow-400">UPK</span></span>
+            </a>
+            <p class="text-gray-400 text-sm mt-2">Université Protestante de Kimpese<br />Foi - Science - Excellence</p>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Navigation</h2>
+              <ul class="text-gray-300 font-medium space-y-3">
+                <li><a href="/" class="hover:text-yellow-400">Accueil</a></li>
+                <li><a href="/about.html" class="hover:text-yellow-400">À propos</a></li>
+                <li><a href="/faculte.html" class="hover:text-yellow-400">Facultés</a></li>
+                <li><a href="/actualites.html" class="hover:text-yellow-400">Actualités</a></li>
+                <li><a href="/contact.html" class="hover:text-yellow-400">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Admissions</h2>
+              <ul class="text-gray-300 font-medium space-y-3">
+                <li><a href="/admission.html" class="hover:text-yellow-400">Inscription</a></li>
+                <li><a href="/admission.html#conditions" class="hover:text-yellow-400">Conditions</a></li>
+                <li><a href="/admission.html#formulaire" class="hover:text-yellow-400">Formulaire</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-yellow-400 uppercase tracking-wider">Contact</h2>
+              <ul class="text-gray-300 font-medium space-y-3">
+                <li><a href="/contact.html" class="hover:text-yellow-400">Nous contacter</a></li>
+                <li class="text-gray-400 text-sm">Kimpese, Kongo Central</li>
+                <li class="text-gray-400 text-sm">RDC</li>
+                <li><a href="mailto:universiteprotestantedekimpese@gmail.com" class="hover:text-yellow-400 text-sm">universiteprotestantedekimpese@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/script.js"></script>
+    <script>
+      AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 120 });
+    </script>
+  </body>
+</html>
