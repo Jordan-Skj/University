@@ -14,7 +14,7 @@
 
   <!-- ========== CANONICAL ========== -->
   <!-- 🔧 À modifier une fois le domaine acheté -->
-  <link rel="canonical" href="https://www.upk.cd/" />
+  <link rel="canonical" href="https://university.jorkaskj.workers.dev/" />
 
   <meta http-equiv="Content-Language" content="fr, fr-CD" />
   <meta name="language" content="French" />
@@ -32,11 +32,11 @@
   <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
   <meta property="og:description"
     content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
-  <meta property="og:url" content="https://www.upk.cd/" />
+  <meta property="og:url" content="https://university.jorkaskj.workers.dev/" />
   <meta property="og:locale" content="fr_FR" />
 
   <!-- 🔧 Image OG : utilisez un chemin relatif temporairement -->
-  <meta property="og:image" content="/src/og-upk-social.jpg" />
+  <meta property="og:image" content="/src/og-upk-social.jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Logo de l'Université Protestante de Kimpese (UPK) et campus" />
@@ -80,8 +80,8 @@
         "https://www.linkedin.com/school/UPK",
         "https://www.youtube.com/UPK"
       ],
-      "telephone": "+243XXXXXXXX",
-      "email": "contact@upk.cd",
+      "telephone": "+243846831140",
+      "email": "universiteprotestantedekimpese@gmail.com",
       "motto": "Foi – Science – Excellence",
       "numberOfStudents": "2000+",
       "parentOrganization": {
@@ -93,8 +93,8 @@
 
   <!-- ========== FAVICON (icône de l'onglet) ========== -->
   <!-- 🔧 CORRECTION : favicon complet -->
-  <link rel="icon" type="image/x-icon" href="src/logo.png" />
-  <link rel="apple-touch-icon" href="src/logo.png" />
+  <link rel="icon" type="image/x-icon" href="/src/logo.png" />
+  <link rel="apple-touch-icon" href="/src/logo.png" />
 
   <!-- ========== CSS ========== -->
   <link href="dist/output.css" rel="stylesheet" />
@@ -113,19 +113,6 @@
   <meta name="facebook-domain-verification" content="VOTRE_CODE_FACEBOOK" />
   -->
 </head>
-<!-- Netlify Identity Widget -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 
 <body>
 
@@ -135,7 +122,7 @@
 
     <!-- Logo avec animation pulse -->
     <div class="logo-reveal">
-      <img src="src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
+      <img src="/src/logo.png" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
     </div>
 
     <!-- Barre de progression -->
@@ -162,7 +149,7 @@
 
         <!-- LOGO -->
         <a href="/" class="flex items-center space-x-3" data-aos="fade-down" data-aos-duration="800">
-          <img src="src/logo.png" class="h-12 w-auto" alt="Logo UPK">
+          <img src="/src/logo.png" class="h-12 w-auto" alt="Logo UPK">
           <span class="self-center text-xl font-bold text-white hidden sm:block">
             <span class="text-yellow-400">UPK</span>
           </span>
@@ -316,8 +303,8 @@
 
 
     <!-- ===== HERO ===== -->
-    <section class="relative text-white pt-20 min-h-screen"
-      style="background: url('./src/images/hero.jpg') no-repeat center center; background-size: cover;">
+    <section class="relative text-white pt-20 min-h-screen overflow-hidden"
+      style="background: url('/src/images/hero.jpg') no-repeat center center; background-size: cover;">
 
 
       <div class="absolute inset-0 bg-black/40"></div>
@@ -375,7 +362,7 @@
               <p class="text-sm text-blue-200">Hectares de campus</p>
             </div>
             <div>
-              <p class="text-3xl md:text-4xl font-bold text-yellow-400">4</p>
+              <p class="text-3xl md:text-4xl font-bold text-yellow-400">8</p>
               <p class="text-sm text-blue-200">Facultés actives</p>
             </div>
             <div>
@@ -394,8 +381,8 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8">
           <div class="md:w-1/3" data-aos="fade-right" data-aos-duration="800">
-            <img src="/src/images/Recteur.jpeg" alt="Prof. Dr Jean-Claude MVEMBA N'SAMBA, Recteur de l'UPK"
-              class="rounded-full w-48 h-48 object-cover border-4 border-yellow-400 shadow-lg">
+            <img src="/src/images/Recteur.webp" alt="Prof. Dr Jean-Claude MVEMBA N'SAMBA, Recteur de l'UPK"
+              class="rounded-full w-48 h-48 object-cover border-4 border-yellow-400 shadow-lg" loading="lazy">
           </div>
           <div class="md:w-2/3 text-center md:text-left" data-aos="fade-left" data-aos-duration="800"
             data-aos-delay="100">
@@ -476,7 +463,7 @@
           <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
             data-aos-duration="600" data-aos-delay="0">
             <div class="flex items-start gap-4">
-              <img src="/src/images/etudiant1.jpeg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
+              <img src="/src/images/etudiant1.jpeg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover" loading="lazy">
               <div>
                 <p class="text-gray-700 italic text-sm leading-relaxed">
                   « L'UPK m'a donné les outils pour devenir médecin, mais aussi l'humanité pour servir. »
@@ -489,7 +476,7 @@
           <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
             data-aos-duration="600" data-aos-delay="100">
             <div class="flex items-start gap-4">
-              <img src="/src/images/etudiant2.jpeg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover">
+              <img src="/src/images/etudiant2.jpeg" alt="Étudiant" class="w-16 h-16 rounded-full object-cover" loading="lazy">
               <div>
                 <p class="text-gray-700 italic text-sm leading-relaxed">
                   « Ici, j'ai appris à allier ma foi et ma passion pour le numérique. Une expérience unique. »
@@ -502,7 +489,7 @@
           <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition" data-aos="zoom-in"
             data-aos-duration="600" data-aos-delay="200">
             <div class="flex items-start gap-4">
-              <img src="/src/images/etudiant3.jpeg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover">
+              <img src="/src/images/etudiant3.jpeg" alt="Étudiante" class="w-16 h-16 rounded-full object-cover" loading="lazy">
               <div>
                 <p class="text-gray-700 italic text-sm leading-relaxed">
                   « L'UPK est une famille. Les professeurs nous accompagnent, les étudiants s'entraident. »
@@ -540,11 +527,11 @@
           </div>
           <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
             <img src="/src/images/Campus.jpg" alt="Campus" class="rounded-xl shadow-lg h-48 w-full object-cover"
-              data-aos="fade-up" data-aos-delay="0">
+              data-aos="fade-up" data-aos-delay="0" loading="lazy">
             <img src="/src/images/Auditorium.jpg" alt="Auditorium" class="rounded-xl shadow-lg h-48 w-full object-cover"
-              data-aos="fade-up" data-aos-delay="150">
+              data-aos="fade-up" data-aos-delay="150" loading="lazy">
             <img src="/src/images/Bibliothèque.jpg" alt="Bibliothèque"
-              class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2" data-aos="fade-up" data-aos-delay="300">
+              class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2" data-aos="fade-up" data-aos-delay="300" loading="lazy">
           </div>
         </div>
       </div>
@@ -570,7 +557,7 @@
             <div class="flex flex-col md:flex-row">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/medecine.jpeg" alt="Faculté de Médecine Humaine"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -606,7 +593,7 @@
             <div class="flex flex-col md:flex-row-reverse">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/agronomie.jpeg" alt="Sciences Agronomiques"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -642,7 +629,7 @@
             <div class="flex flex-col md:flex-row">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/science_juridique.jpeg" alt="Sciences Juridiques"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -677,7 +664,7 @@
             <div class="flex flex-col md:flex-row-reverse">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/théologie.jpeg" alt="Théologie"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -711,7 +698,7 @@
             <div class="flex flex-col md:flex-row">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/economie.jpeg" alt="Sciences Economiques"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -745,7 +732,7 @@
             <div class="flex flex-col md:flex-row-reverse">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/science-technologie.jpeg" alt="Sciences et Technologies"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -780,7 +767,7 @@
             <div class="flex flex-col md:flex-row">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/sciences-sociales.jpeg" alt="Sciences Sociales"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
@@ -810,13 +797,13 @@
           </div>
 
           <!-- ===== CARTE 8 : PSYCHOLOGIE ===== -->
-          <div
+          <div  
             class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-400"
             data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">
             <div class="flex flex-col md:flex-row-reverse">
               <div class="md:w-1/3 overflow-hidden">
                 <img src="/src/images/psychologie.jpg.jpeg" alt="Psychologie"
-                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                  class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
               </div>
               <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                 <div>
