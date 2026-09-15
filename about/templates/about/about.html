@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | À propos{% endblock %}
+
+{% block main %}
+
+{% include 'about/partials/hero.html' %}
+<!-- Breadcrumb -->
+<nav class="flex flex-wrap items-center mx-auto px-4 max-w-7xl py-4" aria-label="Breadcrumb" data-aos="fade-in"
+    data-aos-duration="800">
+    <ol class="inline-flex items-center space-x-2.5 rtl:space-x-reverse">
+        <li>
+            <div class="flex items-center">
+                <a href="/index.html" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a>
+            </div>
+        </li>
+        <li aria-current="page">
+            <div class="flex items-center space-x-2.5">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                </svg>
+                <span class="text-sm font-medium text-yellow-500">À propos</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+{% include 'about/partials/missions-values.html' %}
+
+{% include 'about/partials/key-numbers.html' %}
+
+{% include 'about/partials/environment.html' %}
+
+{% include 'about/partials/manage-team.html' %}
+
+{% include 'about/partials/development.html' %}
+
+<!-- ===== CTA FINAL ===== -->
+<section class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl" data-aos="zoom-in-up"
+            data-aos-duration="800">
+            <div aria-hidden="true"
+                class="absolute left-1/2 top-0 -z-10 aspect-square w-2xl -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]">
+            </div>
+            <div class="px-6 py-24 text-center sm:px-16">
+                <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                    Rejoignez la communauté UPK
+                </h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">Formez-vous dans une université d'excellence,
+                    ancrée
+                    dans les valeurs chrétiennes.
+                </p>
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+                    <a href="{% url 'adminission' %}"
+                        class="rounded-md bg-yellow-400 px-8 py-3.5 text-base font-semibold text-blue-900 hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
+                        S'inscrire maintenant
+                    </a>
+                    <a href="{% url 'contact' %}"
+                        class="text-sm font-semibold leading-6 text-white hover:text-yellow-400 transition-colors">
+                        Nous contacter →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

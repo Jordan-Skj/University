@@ -1,0 +1,37 @@
+{% load static %}
+<!-- ========== 1. HERO ========== -->
+  <section class="relative text-white pt-32 pb-24 overflow-hidden"
+    style="background: url('{% static 'images/hero.jpg' %}') no-repeat center center; background-size: cover;">
+
+    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+      <span
+        class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6"
+        data-aos="fade-down" data-aos-duration="800">
+        À propos de l'UPK
+      </span>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6" data-aos="fade-up"
+        data-aos-duration="1000">
+        Une université <br />
+        <span class="text-yellow-400">au service de la RDC</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
+        data-aos-duration="1000" data-aos-delay="200">
+        Fondée en 1995, l'Université Protestante de Kimpese forme des leaders
+        et entrepreneurs pour l'Afrique, ancrée dans les valeurs chrétiennes.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4" data-aos="fade-up"
+        data-aos-duration="800" data-aos-delay="400">
+        <a href="{% url 'adminission' %}"
+          class="bg-yellow-400 text-blue-900 font-bold px-8 py-3.5 rounded-lg hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
+          S'inscrire maintenant
+        </a>
+        <a href="#histoire"
+          class="group inline-flex items-center gap-2 text-white/90 hover:text-yellow-400 font-medium transition-colors">
+          Découvrir notre histoire
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
