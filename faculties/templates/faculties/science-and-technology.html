@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Science and Technology{% endblock %}
+
+{% block content %}
+<main>
+    <section class="relative text-white pt-32 pb-24 overflow-hidden"
+        style="background: url('{% static 'images/science-technologie.jpeg' %}') no-repeat center center; background-size: cover;">
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <span
+                class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6"
+                data-aos="fade-down">Faculté</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" data-aos="fade-up">Sciences
+                et<br><span class="text-yellow-400">Technologies</span></h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up"
+                data-aos-delay="200">Former des spécialistes capables d'explorer, d'analyser et de valoriser durablement
+                les ressources naturelles grâce aux sciences et aux technologies modernes.</p>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="{% url 'admission' %}"
+                    class="bg-yellow-400 text-blue-900 font-bold px-8 py-3.5 rounded-lg hover:bg-yellow-300 transition-colors shadow-lg">S'inscrire</a>
+                <a href="#formation" class="text-white/90 hover:text-yellow-400 font-medium transition-colors">Découvrir
+                    la formation ↓</a>
+            </div>
+        </div>
+    </section>
+
+    <nav class="flex flex-wrap items-center mx-auto px-4 max-w-7xl py-4" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-2.5">
+            <li><a href="{% url 'index' %}" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a></li>
+            <li aria-current="page"><span class="text-sm font-medium text-yellow-500"> / Sciences et Technologies</span>
+            </li>
+        </ol>
+    </nav>
+
+    <section id="formation" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-yellow-500 text-sm font-semibold tracking-[0.2em] uppercase">Notre formation</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mt-3 mb-6">Comprendre et innover pour un avenir
+                    durable</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">La formation associe les sciences fondamentales,
+                    l'observation de terrain et l'utilisation des technologies modernes pour répondre aux défis liés aux
+                    ressources naturelles et au développement.</p>
+                <p class="text-gray-600 leading-relaxed">Les étudiants développent des compétences en géologie, mines,
+                    environnement, cartographie, télédétection et analyse des données.</p>
+            </div>
+            <div data-aos="fade-left"><img src="{% static 'images/science-technologie.jpeg' %}"
+                    alt="Sciences et Technologies à l'UPK" class="w-full h-80 object-cover rounded-2xl shadow-xl"></div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900">Informations clés</h2>
+                <p class="text-gray-600 mt-3">Un parcours orienté vers la science, la pratique et l'innovation.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-blue-900 mb-3">Niveaux</h3>
+                    <p class="text-gray-600">Licence et parcours spécialisés selon les filières ouvertes.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-blue-900 mb-3">Domaines</h3>
+                    <p class="text-gray-600">Sciences de la Terre, environnement, mines et technologies.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-blue-900 mb-3">Méthodes</h3>
+                    <p class="text-gray-600">Cours, travaux pratiques, terrain, cartographie et projets.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-blue-900 mb-3">Débouchés</h3>
+                    <p class="text-gray-600">Bureaux d'études, mines, environnement, recherche et innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold">Prêt à rejoindre la formation ?</h2>
+            <p class="text-gray-300 mt-4">Consultez les conditions d'admission et commencez votre inscription à l'UPK.
+            </p>
+            <a href="{% url 'admission' %}"
+                class="inline-block mt-8 bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors">Voir
+                les admissions</a>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
