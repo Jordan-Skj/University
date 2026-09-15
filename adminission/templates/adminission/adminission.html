@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<section class="relative bg-blue-900 pt-28 pb-16 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"></div>
+    <div class="relative max-w-screen-xl mx-auto px-4 text-center z-10">
+        <span
+            class="inline-block text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-4">Admissions</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Rejoindre <span class="text-yellow-400">l'UPK</span>
+        </h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            Conditions, pièces à fournir, calendrier et frais pour l'année académique 2026-2027.
+        </p>
+    </div>
+</section>
+
+<!-- BREADCRUMB -->
+<nav class="flex-wrap md:flex justify-between mx-auto px-4 max-w-screen-xl mt-4" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center mb-3 space-x-2.5">
+        <li><a href="/" class="text-sm font-medium text-gray-500 hover:text-yellow-400">Accueil</a></li>
+        <li><span class="text-sm font-medium text-yellow-400">Admissions</span></li>
+    </ol>
+</nav>
+
+<!-- CONTENU PRINCIPAL -->
+<section class="py-12 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4">
+
+        <!-- 1. CONDITIONS -->
+        <div id="conditions" class="mb-12 section-admission">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Conditions d'admission</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h3 class="font-bold text-blue-900">Licence</h3>
+                    <p class="text-gray-700 text-sm">Diplôme d'État ou équivalent</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h3 class="font-bold text-blue-900">Master</h3>
+                    <p class="text-gray-700 text-sm">Licence dans un domaine compatible</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. PIÈCES À FOURNIR -->
+        <div id="formulaire" class="mb-12 section-admission">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Pièces à fournir</h2>
+            <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700">
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Formulaire d'inscription
+                </div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Photocopie du Diplôme d'État
+                </div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Bulletins de 3e & 4e
+                    Humanités</div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Attestation de naissance
+                </div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Attestation de bonne
+                    conduite</div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Certificat d'aptitude
+                    physique</div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> 4 photos passeport</div>
+                <div class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Une farde chemise</div>
+            </div>
+        </div>
+
+        <!-- 3. CALENDRIER -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Calendrier</h2>
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                    <p class="text-gray-500">Ouverture</p>
+                    <p class="font-semibold text-blue-900">En cours</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                    <p class="text-gray-500">Clôture</p>
+                    <p class="font-semibold text-blue-900">Fin octobre 2026</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center sm:col-span-2">
+                    <p class="text-gray-500">Rentrée académique</p>
+                    <p class="font-semibold text-blue-900">5 octobre 2026</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. FRAIS -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Frais</h2>
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+                    <span class="text-gray-600">Inscription</span>
+                    <span class="font-semibold text-blue-900">10 USD</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+                    <span class="text-gray-600">Concours</span>
+                    <span class="font-semibold text-blue-900">10 USD</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between">
+                    <span class="text-gray-600">Logement (trimestriel)</span>
+                    <span class="font-semibold text-blue-900">100 USD</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between border-2 border-yellow-400">
+                    <span class="text-gray-600">Frais annuels <span
+                            class="text-xs text-gray-400 block">(Médecine)</span></span>
+                    <span class="font-semibold text-yellow-600">550 USD</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between sm:col-span-2">
+                    <span class="text-gray-600">Frais annuels <span class="text-xs text-gray-400 block">(Autres
+                            facultés)</span></span>
+                    <span class="font-semibold text-blue-900">450 USD</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg flex justify-between sm:col-span-2 text-xs text-gray-500">
+                    <span>Paiement des frais académiques en 2 tranches.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. CONTACTS -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Contact</h2>
+            <div class="bg-gray-50 p-4 rounded-lg text-sm space-y-2">
+                <p><span class="font-semibold">📍</span> UPK, B.P. 67, CECO/Kimpese, Kongo-Central, RDC</p>
+                <p><span class="font-semibold">✉️</span> <a href="mailto:universiteprotestantedekimpese@gmail.com"
+                        class="text-blue-900 hover:text-yellow-400">universiteprotestantedekimpese@gmail.com</a></p>
+                <p><span class="font-semibold">📞</span> <a href="tel:+243846831140" class="hover:text-yellow-400">+243
+                        846 831 140</a> · <a href="tel:+243897136777" class="hover:text-yellow-400">+243 89 71 367
+                        77</a> · <a href="tel:+243858751797" class="hover:text-yellow-400">+243 85 87 51 797</a></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+        <div class="bg-blue-900 rounded-2xl p-8 text-white">
+            <h2 class="text-2xl font-bold">Prêt à rejoindre l'UPK ?</h2>
+            <p class="text-gray-300 mt-2 text-sm">Téléchargez votre dossier et commencez votre inscription.</p>
+            <a href="#"
+                class="inline-block mt-4 bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition">
+                Télécharger le dossier
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
