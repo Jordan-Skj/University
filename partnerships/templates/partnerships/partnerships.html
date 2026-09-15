@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} | Partneriats{% endblock %}
+
+{% block main %}
+<!-- HERO -->
+<section class="relative text-white pt-32 pb-24 overflow-hidden"
+    style="background: url('{% static 'images/hero.jpg' %}') no-repeat center center; background-size: cover;">
+
+    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+        <span
+            class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6"
+            data-aos="fade-down" data-aos-duration="800">
+            Partenariat
+        </span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6" data-aos="fade-up"
+            data-aos-duration="1000">
+            Coopération <span class="text-yellow-400">et ouvertures</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
+            data-aos-duration="1000" data-aos-delay="200">
+            L'UPK est ouverte au monde. Découvrez nos partenariats et notre réseau d'alumni.
+        </p>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<nav class="flex-warp md:flex justify-betwee mx-auto px-4 max-w-screen-xl mt-4" aria-label="Breadcrumb"
+    data-aos="fade-in" data-aos-duration="800">
+    <ol class="inline-flex items-center mb-3 space-x-2.5 md:space-x-2 rtl:space-x-reverse sm:mb-0">
+        <li>
+            <div class="flex items-center">
+                <a href="{% url 'index' %}" class="text-sm font-medium text-gray-500 hover:text-yellow-400 ">Accueil</a>
+            </div>
+        </li>
+        <li aria-current="page">
+            <div class="flex items-center space-x-2.5">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                </svg>
+                <a href="{% url 'partnerships' %}"
+                    class="text-sm font-medium text-yellow-400 pointer-events-none cursor-not-allowed ">Partenariat</a>
+            </div>
+        </li>
+
+    </ol>
+
+</nav>
+
+<!-- CONTENU -->
+<section class="py-10 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-right" data-aos-duration="800">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Notre vision</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Depuis sa création, l'UPK entretient une tradition de coopération avec les institutions publiques,
+                    les
+                    entreprises, les organisations ecclésiastiques et les partenaires nationaux et internationaux. Nous
+                    croyons que l'ouverture et le partage sont des moteurs essentiels de l'excellence académique.
+                </p>
+                <h3 class="text-xl font-bold text-blue-900 mb-3">Domaines prioritaires</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="0">
+                        <span class="text-yellow-400">✓</span> Recherche scientifique
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="100">
+                        <span class="text-yellow-400">✓</span> Formations diplômantes et certifiantes
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="200">
+                        <span class="text-yellow-400">✓</span> Échanges académiques et doubles diplômes
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="300">
+                        <span class="text-yellow-400">✓</span> Innovation et entrepreneuriat
+                    </li>
+                    <li class="flex items-start gap-2" data-aos="fade-up" data-aos-delay="400">
+                        <span class="text-yellow-400">✓</span> Infrastructures universitaires
+                    </li>
+                </ul>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Réseau Alumni</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Les anciens étudiants de l'UPK constituent un capital humain précieux. La cellule de coopération met
+                    en
+                    place un réseau structuré des Alumni pour maintenir un lien permanent et favoriser le mentorat,
+                    l'insertion professionnelle et le développement de l'université.
+                </p>
+                <a href="#" class="inline-block bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-300 transition hover:shadow-lg hover:-translate-y-0.5">Rejoindre
+                    le réseau</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
