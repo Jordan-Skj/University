@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
+from news.models import News
 
 # Create your views here.
 def  index(request: HttpRequest) -> HttpResponse:
-    return render(request, 'home/index.html', {})
+    news_items = News.objects.all().order_by('-published_date')[:5]  # Récupère les 5 dernières actualités
+    return render(request, 'home/index.html', {'news_items': news_items})
