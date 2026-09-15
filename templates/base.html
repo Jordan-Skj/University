@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPK - Université Protestante de Kimpese{ % block title %} | Foi – Science – Excellence{ % endblock %}</title>
+    <meta name="description"
+        content="L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Formez-vous dans une institution d'excellence en RDC. Découvrez nos facultés, admissions et formations." />
+    <meta name="keywords"
+        content="Université Kimpese, UPK, enseignement supérieur RDC, Kongo Central, facultés, Foi Science Excellence, Université protestante, Kimpese, études supérieures RDC, campus Kimpese" />
+    <meta name="author" content="Université Protestante de Kimpese (UPK)" />
+    <meta name="robots" content="index, follow" />
+    {% block extra_head %}
+    {% endblock %}
+
+    <!-- ========== CANONICAL ========== -->
+    <!-- 🔧 À modifier une fois le domaine acheté -->
+    <link rel="canonical" href="https://university.jorkaskj.workers.dev/" />
+
+    <meta http-equiv="Content-Language" content="fr, fr-CD" />
+    <meta name="language" content="French" />
+
+    <meta name="geo.region" content="CD-KN" />
+    <meta name="geo.placename" content="Kimpese, Kongo Central" />
+
+    <!-- 🔧 AJOUT : Coordonnées GPS -->
+    <meta name="geo.position" content="-5.5549;14.4159" />
+    <meta name="ICBM" content="-5.5549, 14.4159" />
+
+    <!-- ========== OPEN GRAPH (OG) – Partage social ========== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
+    <meta property="og:title" content="UPK - Université Protestante de Kimpese | Foi – Science – Excellence" />
+    <meta property="og:description"
+        content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Fondée en 1995, notre université chrétienne propose des formations d'excellence au Kongo Central." />
+    <meta property="og:url" content="https://university.jorkaskj.workers.dev/" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- 🔧 Image OG : utilisez un chemin relatif temporairement -->
+    <meta property="og:image" content="/src/og-upk-social.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo de l'Université Protestante de Kimpese (UPK) et campus" />
+
+    <!-- ========== TWITTER CARDS ========== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UPK - Université Protestante de Kimpese" />
+    <meta name="twitter:description"
+        content="L'UPK forme des leaders et entrepreneurs pour la RDC et l'Afrique. Foi - Science - Excellence." />
+    <meta name="twitter:image" content="/src/og-upk-social.jpeg" />
+
+    <!-- 🔧 AJOUT : Comptes Twitter (si vous en avez) -->
+    <meta name="twitter:site" content="@UPK" />
+    <meta name="twitter:creator" content="@UPK" />
+
+    <!-- ========== THÈME / COULEUR (mobile) ========== -->
+    <meta name="theme-color" content="#1e3a8a" /> <!-- Bleu UPK (blue-900) -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- ========== DONNÉES STRUCTURÉES JSON-LD ========== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Université Protestante de Kimpese (UPK)",
+      "alternateName": "UPK",
+      "description": "L'UPK est une université chrétienne protestante fondée en 1995 à Kimpese, Kongo Central. Elle forme des leaders et entrepreneurs pour la RDC et l'Afrique.",
+      "url": "https://university.jorkaskj.workers.dev",
+      "logo": "https://university.jorkaskj.workers.dev/src/logo.png",
+      "foundingDate": "1995",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kimpese",
+        "addressRegion": "Kongo Central",
+        "addressCountry": "CD"
+      },
+      "sameAs": [
+        "https://www.facebook.com/UPK",
+        "https://twitter.com/UPK",
+        "https://www.linkedin.com/school/UPK",
+        "https://www.youtube.com/UPK"
+      ],
+      "telephone": "+243846831140",
+      "email": "universiteprotestantedekimpese@gmail.com",
+      "motto": "Foi – Science – Excellence",
+      "numberOfStudents": "2000+",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Église Protestante de la RDC"
+      }
+    }
+  </script>
+
+    <!-- ========== FAVICON (icône de l'onglet) ========== -->
+    <!-- 🔧 CORRECTION : favicon complet -->
+    <link rel="icon" type="image/png" href="{% static 'logo/logo.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'logo/logo.png' %}" />
+
+    <!-- ========== CSS ========== -->
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- ========== AOS (Animate On Scroll) ========== -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- ========== FORCER LE MODE CLAIR ========== -->
+    <meta name="color-scheme" content="light only" />
+
+    <!-- ========== VÉRIFICATION (Google / Facebook) ========== -->
+    <!-- 🔧 Décommentez quand vous aurez les codes -->
+    <!-- 
+  <meta name="google-site-verification" content="VOTRE_CODE_GOOGLE" />
+  <meta name="facebook-domain-verification" content="VOTRE_CODE_FACEBOOK" />
+  -->
+</head>
+
+<body>
+
+    <!-- ===== SCREEN LOADER ===== -->
+    <div id="screen-loader"
+        class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-blue-900 transition-opacity duration-700">
+
+        <!-- Logo avec animation pulse -->
+        <div class="logo-reveal">
+            <img src="{% static 'logo/logo.png' %}" class="h-24 w-auto animate-pulse" alt="Université Protestante de Kimpese - Logo">
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="w-48 sm:w-64 h-1 bg-blue-700 rounded-full mt-6 overflow-hidden">
+            <div id="progress-bar" class="h-full bg-yellow-400 rounded-full transition-all duration-300 ease-out"
+                style="width: 0%"></div>
+        </div>
+
+        <!-- Pourcentage -->
+        <p id="progress-text" class="text-sm text-yellow-400 mt-2 font-light tracking-[0.3em]">0%</p>
+
+        <!-- Sous-titre institutionnel -->
+        <p class="text-xs text-blue-300 mt-4 font-light tracking-[0.2em] uppercase">Université Protestante de Kimpese
+        </p>
+        <p class="text-[10px] text-blue-400/70 mt-1 font-light tracking-[0.3em]">Foi · Science · Excellence</p>
+    </div>
+
+    <div class="page-content">
+
+        {% include 'partials/header.html' %}
+
+        {% block main %}
+        {% endblock %}
+
+        {% include 'partials/footer.html' %}
+
+    </div>
+
+    <!-- JavaScript AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JavaScript Flowbite -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script>
+        // ============================================================
+        // INITIALISER AOS (Animate On Scroll)
+        // ============================================================
+        AOS.init({
+            duration: 800,       // durée de l'animation en ms
+            easing: 'ease-in-out', // courbe d'animation
+            once: true,          // ne jouer l'animation qu'une seule fois
+            offset: 100,         // déclencher après 100px de scroll
+        });
+
+        // ============================================================
+        // CHARGER AU CHARGEMENT DE LA PAGE
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', loadHomeArticles);
+    </script>
+
+
+</body>

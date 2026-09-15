@@ -1,0 +1,190 @@
+{% load static %}
+<!-- ===== HEADER ===== -->
+<header>
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar"
+        class="bg-blue-900 fixed w-full z-20 top-0 inset-s-0 border-b border-blue-800 shadow-lg transition-transform duration-300 ease-in-out">
+
+        <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+            <!-- LOGO -->
+            <a href="{% url 'index' %}" class="flex items-center space-x-3" data-aos="fade-down" data-aos-duration="800">
+                <img src="{% static 'logo/logo.png' %}" class="h-12 w-auto" alt="Logo UPK">
+                <span class="self-center text-xl font-bold text-white hidden sm:block">
+                    <span class="text-yellow-400">UPK</span>
+                </span>
+            </a>
+
+            <!-- BOUTONS DROITE (CTA + Hamburger) -->
+            <div class="flex md:order-2 space-x-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+                <a href="{% url 'adminission' %}"
+                    class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
+                    S'inscrire
+                </a>
+                <button id="menuToggle" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-lg md:hidden hover:bg-blue-800 focus:ring-2 focus:ring-yellow-400">
+                    <span class="sr-only">Menu</span>
+                    <svg id="hamburgerIcon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                    <svg id="closeIcon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MENU DESKTOP -->
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky"
+                data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li><a href="{% url 'index' %}"
+                            class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Accueil</a>
+                    </li>
+                    <li><a href="{% url 'about' %}"
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À
+                            propos</a></li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
+                            Facultés
+                            <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-56 mt-2">
+                            <ul class="py-2 text-sm text-gray-700">
+                                <li><a href="{% url 'faculties:medicine' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Médecine
+                                        Humaine</a>
+                                </li>
+                                <li><a href="{% url 'faculties:agronomy' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Agronomie
+                                        &
+                                        Environnement</a></li>
+                                <li><a href="{% url 'faculties:law' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
+                                        Juridiques</a></li>
+                                <li><a href="{% url 'faculties:theology' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Théologie</a>
+                                </li>
+                                <li><a href="{% url 'faculties:economics' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
+                                        Economiques</a></li>
+                                <li><a href="{% url 'faculties:science_and_technology' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
+                                        et
+                                        Technologies</a></li>
+                                <li><a href="{% url 'faculties:social_sciences' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Sciences
+                                        Sociales</a>
+                                </li>
+                                <li><a href="{% url 'faculties:psychology' %}"
+                                        class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700">Psychologie</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="{% url 'adminission' %}"
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a>
+                    </li>
+                    <li><a href="{% url 'news' %}"
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Actualités</a>
+                    </li>
+                    <li><a href="{% url 'partnerships' %}"
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Partenariats</a>
+                    </li>
+                    <li><a href="{% url 'contact' %}"
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MENU MOBILE DÉROULANT -->
+    <div id="mobileMenuOverlay"
+        class="fixed inset-0 z-50 bg-blue-900/95 backdrop-blur-sm transition-all duration-500 ease-in-out pointer-events-none opacity-0">
+        <div class="flex flex-col items-center justify-center h-full w-full px-6 py-10">
+            <!-- Bouton de fermeture (X) -->
+            <button id="closeMobileMenu"
+                class="absolute top-6 right-6 text-white hover:text-yellow-400 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Logo -->
+            <img src="{% static 'logo/logo.png' %}" class="h-16 w-auto mb-10" alt="Logo UPK">
+
+            <!-- Liens -->
+            <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
+                <li><a href="/" class="text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
+                <li><a href="{% url 'about' %}" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">À
+                        propos</a></li>
+                <li class="relative">
+                    <button id="mobileFacultesOverlayToggle"
+                        class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
+                        Facultés
+                        <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="mobileFacultesOverlaySub"
+                        class="hidden flex-col items-center gap-3 mt-3 text-lg text-gray-300">
+                        <li><a href="{% url 'faculties:medicine' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Médecine
+                                Humaine</a></li>
+                        <li><a href="{% url 'faculties:agronomy' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Sciences
+                                Agronomiques</a></li>
+                        <li><a href="{% url 'faculties:law' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Sciences
+                                Juridiques</a></li>
+                        <li><a href="{% url 'faculties:theology' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Théologie</a>
+                        </li>
+                        <li><a href="{% url 'faculties:economics' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Sciences
+                                Economiques</a></li>
+                        <li><a href="{% url 'faculties:science_and_technology' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Sciences
+                                et Technologies</a></li>
+                        <li><a href="{% url 'faculties:social_sciences' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Sciences
+                                Sociales</a></li>
+                        <li><a href="{% url 'faculties:psychology' %}" onclick="closeMobileMenu()"
+                                class="hover:text-yellow-400 transition-colors">Psychologie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'adminission' %}" class="hover:text-yellow-400 transition-colors"
+                        onclick="closeMobileMenu()">Admissions</a></li>
+                <li><a href="{% url 'news' %}" class="hover:text-yellow-400 transition-colors"
+                        onclick="closeMobileMenu()">Actualités</a></li>
+                <li><a href="{% url 'partnerships' %}" class="hover:text-yellow-400 transition-colors"
+                        onclick="closeMobileMenu()">Partenariats</a></li>
+                <li><a href="{% url 'contact' %}" class="hover:text-yellow-400 transition-colors"
+                        onclick="closeMobileMenu()">Contact</a>
+                </li>
+            </ul>
+
+            <!-- CTA -->
+            <div class="mt-10">
+                <a href="{% url 'adminission' %}"
+                    class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
+                    onclick="closeMobileMenu()">
+                    S'inscrire maintenant
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
