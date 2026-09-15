@@ -1,0 +1,27 @@
+/* 1. Importer les polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* 2. Importer le thème Flowbite */
+@import "flowbite/src/themes/minimal";
+
+/* 3. Importer Tailwind */
+@import 'tailwindcss';
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+/* 4. Définir la police par défaut (Open Sans pour le corps) */
+@theme {
+  --font-family: 'Open Sans', sans-serif;
+}
+
+/* 5. Appliquer Merriweather aux titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+/* 6. (Optionnel) Personnaliser les couleurs */
+@theme {
+  --color-primary: #1a69f5;
+  --color-secondary: #f5c31a;
+}
