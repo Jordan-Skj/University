@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | Actualités{% endblock %}
+
+{% block main %}
+<!-- ========== HERO ========== -->
+<section class="relative text-white pt-32 pb-24 overflow-hidden"
+    style="background: url('{% static 'images/hero.jpg' %}') no-repeat center center; background-size: cover;">
+
+    <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
+
+
+    <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+        <span
+            class="inline-flex items-center gap-2 border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 text-xs font-semibold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6">
+            Actualités
+        </span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+            L'UPK <span class="text-yellow-400">en mouvement</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+            Retrouvez toutes les actualités de l'Université Protestante de Kimpese.
+        </p>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<nav class="flex-warp md:flex justify-betwee mx-auto px-4 max-w-7xl mt-4" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center mb-3 space-x-2.5 md:space-x-2 rtl:space-x-reverse sm:mb-0">
+        <li>
+            <div class="flex items-center">
+                <a href="{% url 'index' %}" class="text-sm font-medium text-gray-500 hover:text-yellow-400 ">Accueil</a>
+            </div>
+        </li>
+        <li aria-current="page">
+            <div class="flex items-center space-x-2.5">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m9 5 7 7-7 7" />
+                </svg>
+                <a href="#"
+                    class="text-sm font-medium text-yellow-400 pointer-events-none cursor-not-allowed ">Actualités</a>
+            </div>
+        </li>
+
+    </ol>
+
+</nav>
+
+
+
+<!-- ========== LISTE DES ARTICLES ========== -->
+<section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        {% for news_item in news_items %}
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ news_item.title }}</h2>
+                <p class="text-gray-600 leading-relaxed">{{ news_item.content }}</p>
+                <p class="text-sm text-gray-500 mt-4">{{ news_item.published_date|date:"d/m/Y" }}</p>
+            </div>
+            {% empty %}
+            <p class="text-gray-600">Aucune actualité disponible pour le moment.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
