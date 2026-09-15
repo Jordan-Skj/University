@@ -1,0 +1,38 @@
+{% load static %}
+<!-- ===== LA VIE SUR LE CAMPUS ===== -->
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div data-aos="fade-right" data-aos-duration="800">
+                <span class="text-yellow-400 text-sm font-semibold tracking-widest uppercase">La vie sur le
+                    campus</span>
+                <h2 class="text-3xl font-bold text-blue-900 mt-2">Bien plus qu'une université</h2>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    À l'UPK, chaque jour est une occasion d'apprendre, de partager et de grandir.
+                    Entre les cours, les activités sportives, les moments de prière et les rencontres,
+                    nos étudiants vivent une expérience humaine inoubliable.
+                </p>
+                <ul class="mt-4 space-y-2 text-gray-600">
+                    <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Auditorium de 3000 places
+                    </li>
+                    <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Résidences universitaires
+                        confortables</li>
+                    <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Bibliothèque riche en
+                        ressources</li>
+                    <li class="flex items-center gap-2"><span class="text-yellow-400">✓</span> Clubs et associations
+                        étudiantes</li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                <img src="{% static 'images/Campus.jpg' %}" alt="Campus" class="rounded-xl shadow-lg h-48 w-full object-cover"
+                    data-aos="fade-up" data-aos-delay="0" loading="lazy">
+                <img src="{% static 'images/Auditorium.jpg' %}" alt="Auditorium"
+                    class="rounded-xl shadow-lg h-48 w-full object-cover" data-aos="fade-up" data-aos-delay="150"
+                    loading="lazy">
+                <img src="{% static 'images/Bibliothèque.jpg' %}" alt="Bibliothèque"
+                    class="rounded-xl shadow-lg h-48 w-full object-cover col-span-2" data-aos="fade-up"
+                    data-aos-delay="300" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>

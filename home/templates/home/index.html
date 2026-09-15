@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+{% include 'home/partials/hero.html' %}
+
+{% include 'home/partials/message.html' %}
+
+{% include 'home/partials/why-us.html' %}
+
+{% include 'home/partials/testimonials.html' %}
+
+{% include 'home/partials/campus-life.html' %}
+
+{% include 'home/partials/recent-news.html' %}
+
+<!-- ===== CTA FINAL ===== -->
+<section class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="relative isolate overflow-clip bg-blue-900 shadow-2xl sm:rounded-3xl" data-aos="zoom-in-up"
+            data-aos-duration="800">
+            <div aria-hidden="true"
+                class="absolute left-1/2 top-0 -z-10 aspect-square w-2xl -translate-x-1/2 -translate-y-3/4 rounded-full bg-yellow-400/30 blur-[10rem]">
+            </div>
+            <div class="px-6 py-24 text-center sm:px-16">
+                <h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                    Prêt à construire votre avenir ?
+                </h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">
+                    Rejoignez plus de <span class="text-yellow-400 font-bold">2 000 étudiants</span> qui ont choisi
+                    l'UPK
+                    pour leur formation. Une université qui forme des leaders pour la RDC et l'Afrique.
+                </p>
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+                    <a href="/admission.html"
+                        class="rounded-md bg-yellow-400 px-8 py-3.5 text-base font-semibold text-blue-900 hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
+                        S'inscrire maintenant
+                    </a>
+                    <a href="/about.html"
+                        class="text-sm font-semibold leading-6 text-white hover:text-yellow-400 transition-colors">
+                        En savoir plus sur l'UPK →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
