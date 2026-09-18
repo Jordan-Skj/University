@@ -105,3 +105,33 @@ section, .page-content, .max-w-7xl {
 }
 
 
+
+/* Le dropdown doit dépasser du conteneur de la navbar sans être coupé. */
+#navbar > .max-w-7xl {
+  overflow: visible;
+}
+
+.desktop-faculties {
+  position: relative;
+}
+
+#dropdownNavbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-height: calc(100dvh - 7rem);
+  overflow-y: auto;
+}
+
+#dropdownNavbarLink svg {
+  transition: transform 0.2s ease;
+}
+
+#dropdownNavbarLink[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+#dropdownNavbar a:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: -2px;
+}

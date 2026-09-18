@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'faculties',
-    'adminission',
+    'admission',
     'news',
     'partnerships',
     'contact'

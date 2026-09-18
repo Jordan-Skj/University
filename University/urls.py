@@ -20,7 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from home.views import index
 from about.views import about
-from adminission.views import adminission
+from admission.views import admission
 from contact.views import contact
 from news.views import news
 from partnerships.views import partnerships
@@ -30,7 +30,7 @@ from partnerships.views import partnerships
 urlpatterns = [
     path('', index, name='index'),
     path('about/', about, name='about'),
-    path('adminission/', adminission, name='adminission'),
+    path('admission/', admission, name='admission'),
     path('admin/', admin.site.urls),
     path('contact/', contact, name='contact'),
     path('news/', news, name='news'),

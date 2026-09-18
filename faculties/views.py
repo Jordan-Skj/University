@@ -18,7 +18,7 @@ def theology(request : HttpRequest) -> HttpResponse:
     return render(request, 'faculties/theology.html', {})
 
 def economics(request : HttpRequest) -> HttpResponse:
-    return render(request, 'faculties/economics.html', {})
+    return render(request, 'faculties/econimics.html', {})
 
 def science_and_technology(request : HttpRequest) -> HttpResponse:
     return render(request, 'faculties/science-and-technology.html', {})

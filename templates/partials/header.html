@@ -17,7 +17,7 @@
 
             <!-- BOUTONS DROITE (CTA + Hamburger) -->
             <div class="flex md:order-2 space-x-3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
-                <a href="{% url 'adminission' %}"
+                <a href="{% url 'admission' %}"
                     class="bg-yellow-400 hover:bg-yellow-300 font-bold rounded-lg text-sm px-4 py-2.5 transition duration-200 text-blue-900">
                     S'inscrire
                 </a>
@@ -43,13 +43,15 @@
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-700 rounded-lg bg-blue-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                     <li><a href="{% url 'index' %}"
-                            class="block py-2 px-3 text-yellow-400 bg-blue-800 rounded md:bg-transparent md:text-yellow-400 md:p-0">Accueil</a>
+                            class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Accueil</a>
                     </li>
                     <li><a href="{% url 'about' %}"
                             class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">À
                             propos</a></li>
-                    <li>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                    <li class="desktop-faculties">
+                        <button id="dropdownNavbarLink" type="button"
+                            aria-expanded="false" aria-controls="dropdownNavbar"
+                            data-nav-section="{% url 'faculties:index' %}"
                             class="flex items-center py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">
                             Facultés
                             <svg class="w-2.5 h-2.5 ms-2.5" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -92,7 +94,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="{% url 'adminission' %}"
+                    <li><a href="{% url 'admission' %}"
                             class="block py-2 px-3 text-gray-200 rounded hover:text-yellow-400 md:p-0">Admissions</a>
                     </li>
                     <li><a href="{% url 'news' %}"
@@ -126,11 +128,12 @@
 
             <!-- Liens -->
             <ul class="flex flex-col items-center gap-6 text-white text-2xl font-light">
-                <li><a href="/" class="text-yellow-400" onclick="closeMobileMenu()">Accueil</a></li>
+                <li><a href="{% url 'index' %}" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">Accueil</a></li>
                 <li><a href="{% url 'about' %}" class="hover:text-yellow-400 transition-colors" onclick="closeMobileMenu()">À
                         propos</a></li>
                 <li class="relative">
                     <button id="mobileFacultesOverlayToggle"
+                        data-nav-section="{% url 'faculties:index' %}"
                         class="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                         Facultés
                         <svg id="mobileArrowOverlay" class="w-4 h-4 transition-transform duration-300" fill="none"
@@ -166,7 +169,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="{% url 'adminission' %}" class="hover:text-yellow-400 transition-colors"
+                <li><a href="{% url 'admission' %}" class="hover:text-yellow-400 transition-colors"
                         onclick="closeMobileMenu()">Admissions</a></li>
                 <li><a href="{% url 'news' %}" class="hover:text-yellow-400 transition-colors"
                         onclick="closeMobileMenu()">Actualités</a></li>
@@ -179,7 +182,7 @@
 
             <!-- CTA -->
             <div class="mt-10">
-                <a href="{% url 'adminission' %}"
+                <a href="{% url 'admission' %}"
                     class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors"
                     onclick="closeMobileMenu()">
                     S'inscrire maintenant

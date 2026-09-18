@@ -1,68 +1,4 @@
 // ============================================================ //
-// SCREEN LOADER - Option 1                                     //
-// ============================================================ //
-
-function hideLoaderAndShowContent() {
-  // 1. Afficher le contenu
-  const content = document.querySelector('.page-content');
-  if (content) content.classList.add('loaded');
-
-  // 2. Disparaître le loader en fondu
-  const loader = document.getElementById('screen-loader');
-  if (loader) {
-    loader.style.opacity = '0';
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 700);
-  }
-}
-
-// ===== PROGRESSION DE LA BARRE =====
-function startLoaderProgress() {
-  let progress = 0;
-  const progressBar = document.getElementById('progress-bar');
-  const progressText = document.getElementById('progress-text');
-
-  if (!progressBar || !progressText) return null;
-
-  // Simulation de progression aléatoire mais réaliste
-  const interval = setInterval(() => {
-    // Plus on approche de 100%, plus la progression ralentit
-    const increment = Math.random() * 12 + 3;
-    progress = Math.min(progress + increment, 100);
-    
-    progressBar.style.width = progress + '%';
-    progressText.textContent = Math.round(progress) + '%';
-
-    // Si on atteint 100%, on arrête
-    if (progress >= 100) {
-      clearInterval(interval);
-    }
-  }, 150);
-
-  // Sécurité : si la page est chargée avant 100%, on force la fin
-  return interval;
-}
-
-// ===== LANCEMENT =====
-window.addEventListener('load', function() {
-  // Laisser le loader visible 1,5s minimum pour une expérience fluide
-  setTimeout(function() {
-    // Forcer la barre à 100% si ce n'est pas déjà fait
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-    if (progressBar && progressBar.style.width !== '100%') {
-      progressBar.style.width = '100%';
-      progressText.textContent = '100%';
-    }
-    // Attendre 300ms pour que l'utilisateur voie le 100%
-    setTimeout(hideLoaderAndShowContent, 300);
-  }, 1500);
-});
-
-// Démarrer la progression dès que la page commence à charger
-const progressInterval = startLoaderProgress();
-// ============================================================ //
 // 1. BARRE DE PROGRESSION DE DÉFILEMENT                         //
 // ============================================================ //
 function updateScrollProgress() {
@@ -89,7 +25,10 @@ const threshold = 10; // seuil pour éviter les micro-mouvements
 function handleNavbarVisibility() {
   const currentScrollY = window.scrollY;
 
-  if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+  if (document.getElementById('dropdownNavbarLink')?.getAttribute('aria-expanded') === 'true') {
+    navbar.classList.remove('hidden-nav');
+    navbar.classList.add('visible-nav');
+  } else if (currentScrollY > lastScrollY && currentScrollY > threshold) {
     // Descente → masquer
     navbar.classList.remove('visible-nav');
     navbar.classList.add('hidden-nav');
@@ -171,5 +110,82 @@ if (mobileFacultesOverlayToggle) {
     } else {
       mobileArrowOverlay.style.transform = 'rotate(180deg)';
     }
+  });
+}
+
+// Mettre en évidence la page courante dans les deux menus.
+document.addEventListener('DOMContentLoaded', () => {
+  const normalizePath = path => path.replace(/\/+$/, '') || '/';
+  const currentPath = normalizePath(window.location.pathname);
+  const links = document.querySelectorAll('#navbar-sticky a, #mobileMenuOverlay li a');
+
+  links.forEach(link => {
+    const url = new URL(link.href, window.location.href);
+    const isActive = url.origin === window.location.origin &&
+      normalizePath(url.pathname) === currentPath;
+    const isDropdownLink = link.closest('#dropdownNavbar') !== null;
+
+    // Éviter les couleurs de texte concurrentes sur les liens desktop.
+    if (link.matches('#navbar-sticky > ul > li > a')) {
+      link.classList.toggle('text-gray-200', !isActive);
+    }
+    link.classList.toggle('text-yellow-400', isActive && !isDropdownLink);
+    link.classList.toggle('text-blue-700', isActive && isDropdownLink);
+    link.classList.toggle('bg-blue-50', isActive && isDropdownLink);
+
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+
+  document.querySelectorAll('[data-nav-section]').forEach(button => {
+    const sectionPath = normalizePath(button.dataset.navSection);
+    const isActive = currentPath === sectionPath || currentPath.startsWith(sectionPath + '/');
+    button.classList.toggle('text-yellow-400', isActive);
+    if (button.id === 'dropdownNavbarLink') {
+      button.classList.toggle('text-gray-200', !isActive);
+    }
+  });
+});
+
+// Dropdown desktop : une seule gestion locale, indépendante de Flowbite.
+const facultiesToggle = document.getElementById('dropdownNavbarLink');
+const facultiesDropdown = document.getElementById('dropdownNavbar');
+
+if (facultiesToggle && facultiesDropdown) {
+  const container = facultiesToggle.closest('li');
+  const setDropdownOpen = open => {
+    facultiesToggle.setAttribute('aria-expanded', String(open));
+    facultiesDropdown.classList.toggle('hidden', !open);
+  };
+
+  facultiesToggle.addEventListener('click', () => {
+    setDropdownOpen(facultiesToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  container.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setDropdownOpen(false);
+      facultiesToggle.focus();
+    } else if (event.target === facultiesToggle && event.key === 'ArrowDown') {
+      event.preventDefault();
+      setDropdownOpen(true);
+      facultiesDropdown.querySelector('a')?.focus();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!container.contains(event.target)) setDropdownOpen(false);
+  });
+  container.addEventListener('focusout', event => {
+    if (!container.contains(event.relatedTarget)) setDropdownOpen(false);
+  });
+  facultiesDropdown.addEventListener('click', event => {
+    if (event.target.closest('a')) setDropdownOpen(false);
+  });
+  window.matchMedia('(min-width: 768px)').addEventListener('change', () => {
+    setDropdownOpen(false);
   });
 }
