@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Faculté des Sciences Agronomiques{% endblock %}
+{% block title %} | Faculté des Sciences agronomiques{% endblock %}
+
+{% block extra_head %}
+<meta name="description"
+    content="Découvrez la Faculté des Sciences agronomiques de l'UPK : formation en agriculture, gestion des ressources naturelles et protection de l'environnement." />
+{% endblock %}
 
 {% block main %}
 <section class="relative text-white pt-32 pb-24 overflow-hidden"

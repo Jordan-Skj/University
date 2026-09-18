@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} | Faculté de Théologie et sciences connexes{% endblock %}
-
+{% block title %} | Faculté de Psychologie et des Sciences de l'éducation{% endblock %}
 
 {% block extra_head %}
 <meta name="description"
-    content="Découvrez la Faculté de Théologie et sciences connexes de l'UPK : formation à la réflexion, à l'enseignement et au service de l'Église et de la société." />
+    content="Découvrez la Faculté de Psychologie et des Sciences de l'éducation de l'UPK : comportements humains, éducation et accompagnement des personnes." />
 {% endblock %}
 
 {% block main %}
-
 <!-- ========== 1. HERO ========== -->
 <section class="relative text-white pt-32 pb-24 overflow-hidden"
-    style="background: url('{% static 'src/images/théologie.jpeg' %}') no-repeat center center; background-size: cover;">
+    style="background: url('{% static 'images/psychologie.jpg.jpeg' %}') no-repeat center center; background-size: cover;">
 
     <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-black/30"></div>
 
@@ -22,20 +20,20 @@
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6" data-aos="fade-up"
             data-aos-duration="1000">
             Faculté de<br />
-            <span class="text-yellow-400">Théologie et Sciences Connexes</span>
+            <span class="text-yellow-400">Psychologie et Sciences de l'Éducation</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
             data-aos-duration="1000" data-aos-delay="200">
-            Former des cadres engagés dans la réflexion, l'enseignement et le service au sein de l'Église et de la
-            société.
+            Former des professionnels capables de comprendre les comportements humains et de contribuer à
+            l'éducation, à l'accompagnement et au développement des personnes.
         </p>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4" data-aos="fade-up"
             data-aos-duration="800" data-aos-delay="400">
-            <a href="{% url 'admission' %}#admission"
+            <a href="#admission"
                 class="bg-yellow-400 text-blue-900 font-bold px-8 py-3.5 rounded-lg hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
                 S'inscrire
             </a>
-            <a href="{% url 'admission' %}#infos"
+            <a href="#infos"
                 class="group inline-flex items-center gap-2 text-white/90 hover:text-yellow-400 font-medium transition-colors">
                 En savoir plus
                 <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -70,7 +68,7 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m9 5 7 7-7 7" />
                 </svg>
-                <span class="text-sm font-medium text-yellow-500">Faculté de Théologie</span>
+                <span class="text-sm font-medium text-yellow-500">Faculté de Psychologie</span>
             </div>
         </li>
     </ol>
@@ -83,21 +81,20 @@
 
             <!-- Texte -->
             <div data-aos="fade-right" data-aos-duration="800">
-                <h2 class="text-3xl font-bold text-blue-900 mb-4">Théologie et Sciences Connexes</h2>
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">Psychologie et Sciences de l'Éducation</h2>
                 <p class="text-gray-700 mb-4">
-                    La Faculté de Théologie et Sciences Connexes propose une formation permettant aux étudiants
-                    d'approfondir les connaissances bibliques, théologiques et éthiques, tout en développant une
-                    capacité de réflexion sur les enjeux contemporains de l'Église et de la société.
+                    Formation scientifique consacrée à l'étude du comportement humain, des processus psychologiques
+                    et des phénomènes éducatifs.
                 </p>
                 <p class="text-gray-700">
-                    Elle vise à former des responsables capables d'assumer des fonctions d'enseignement, d'encadrement,
-                    de recherche et de service.
+                    Elle permet aux étudiants de développer des compétences en psychologie, en pédagogie, en
+                    orientation, en accompagnement et en recherche.
                 </p>
             </div>
 
             <!-- Image -->
             <div data-aos="fade-left" data-aos-duration="800">
-                <img src="{% static 'src/images/théologie.jpeg' %}" alt="Faculté de Théologie"
+                <img src="{% static 'images/psychologie.jpg.jpeg' %}" alt="Faculté de Psychologie"
                     class="w-full h-auto rounded-lg shadow-lg">
             </div>
 
@@ -114,7 +111,7 @@
                 Informations clés
             </h2>
             <p class="text-gray-700 mb-4">
-                Tout ce qu'il faut savoir sur la formation en Théologie et Sciences Connexes à l'UPK.
+                Tout ce qu'il faut savoir sur la formation en Psychologie et Sciences de l'Éducation à l'UPK.
             </p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -125,9 +122,9 @@
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div
                             class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-yellow-400">
-                            <svg class="w-5 h-5 text-blue-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg class="w-5 h-5 text-blue-900" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                             </svg>
@@ -136,8 +133,7 @@
                     </dt>
                     <dd class="mt-2 text-base/7 text-gray-600">
                         Licence (3 ans)<br>
-                        Master (2 ans)<br>
-                        Doctorat (3 ans)
+                        Master (2 ans)
                     </dd>
                 </div>
 
@@ -159,7 +155,7 @@
                         Filières
                     </dt>
                     <dd class="mt-2 text-base/7 text-gray-600">
-                        Théologie · Sciences connexes
+                        Psychologie · Sciences de l'Éducation
                     </dd>
                 </div>
 
@@ -178,7 +174,7 @@
                         Stages et pratique
                     </dt>
                     <dd class="mt-2 text-base/7 text-gray-600">
-                        Églises · Organisations confessionnelles · ONG · Communautés religieuses
+                        Établissements scolaires · Centres d'orientation · ONG · Institutions sociales
                     </dd>
                 </div>
 
@@ -202,7 +198,7 @@
                         Débouchés
                     </dt>
                     <dd class="mt-2 text-base/7 text-gray-600">
-                        Ministère pastoral · Enseignement · Recherche · Administration ecclésiastique · ONG
+                        Psychologue · Enseignant · Conseiller d'orientation · Formateur · Chercheur
                     </dd>
                 </div>
 
@@ -215,7 +211,7 @@
 
 </section>
 
-<!-- ===== PAGE THÉOLOGIE - VERSION MINIMALISTE ===== -->
+<!-- ===== PAGE PSYCHOLOGIE - VERSION MINIMALISTE ===== -->
 <section class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4">
 
@@ -230,7 +226,6 @@
                         <li>1. Diplôme d'État</li>
                         <li>2. Dossier d'inscription</li>
                         <li>3. Certificat médical</li>
-                        <li>4. Lettre de motivation</li>
                     </ul>
                 </div>
                 <div>
@@ -327,6 +322,4 @@
 
     </div>
 </section>
-
-
 {% endblock %}
