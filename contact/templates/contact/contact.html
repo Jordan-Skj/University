@@ -149,39 +149,40 @@
             <!-- ===== FORMULAIRE ===== -->
             <div class="sm:rounded-2xl sm:bg-gray-50 sm:px-8 sm:py-10" data-aos="fade-left" data-aos-duration="800"
                 data-aos-delay="200">
-                <form action="{% url 'contact' %}" method="POST">
+                <form id="contact-form" action="{% url 'send_email' %}" method="POST">
+                    {% csrf_token %}
                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                             <label for="first-name"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Prénom</label>
-                            <input type="text" name="first-name" id="first-name" placeholder="Votre prénom"
+                            <input type="text" name="first-name" id="first-name" maxlength="100" required placeholder="Votre prénom"
                                 autocomplete="given-name"
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300" />
                         </div>
                         <div>
                             <label for="last-name"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Nom</label>
-                            <input type="text" name="last-name" id="last-name" placeholder="Votre nom"
+                            <input type="text" name="last-name" id="last-name" maxlength="100" required placeholder="Votre nom"
                                 autocomplete="family-name"
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300" />
                         </div>
                         <div class="sm:col-span-2">
                             <label for="email"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Email</label>
-                            <input type="email" name="email" id="email" placeholder="votre@email.com"
+                            <input type="email" name="email" id="email" maxlength="254" required placeholder="votre@email.com"
                                 autocomplete="email"
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300" />
                         </div>
                         <div class="sm:col-span-2">
                             <label for="phone"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Téléphone</label>
-                            <input type="tel" name="phone" id="phone" placeholder="+243 XX XXX XXXX"
+                            <input type="tel" name="phone" id="phone" maxlength="50" placeholder="+243 XX XXX XXXX"
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300" />
                         </div>
                         <div class="sm:col-span-2">
                             <label for="subject"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Sujet</label>
-                            <select name="subject" id="subject"
+                            <select name="subject" id="subject" required
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300">
                                 <option value="">Choisissez un sujet</option>
                                 <option value="admission">Demande d'admission</option>
@@ -194,7 +195,7 @@
                         <div class="sm:col-span-2">
                             <label for="message"
                                 class="block select-none text-sm font-semibold leading-6 text-gray-900">Message</label>
-                            <textarea name="message" id="message" rows="4" placeholder="Votre message..."
+                            <textarea name="message" id="message" maxlength="10000" required rows="4" placeholder="Votre message..."
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300"></textarea>
                         </div>
                     </div>
@@ -204,6 +205,7 @@
                             Envoyer le message
                         </button>
                     </div>
+                    <p id="contact-status" role="status" aria-live="polite" class="mt-4 text-sm text-gray-900"></p>
                     <p class="mt-4 text-sm text-gray-500 text-center">
                         Nous vous répondrons dans les <strong>48 heures</strong>.
                     </p>
@@ -224,4 +226,8 @@
     </div>
 </section>
 
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'contact/js/contact.js' %}" defer></script>
 {% endblock %}

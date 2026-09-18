@@ -21,7 +21,7 @@ from django.urls import path, include
 from home.views import index
 from about.views import about
 from admission.views import admission
-from contact.views import contact
+from contact.views import contact, send_email
 from news.views import news
 from partnerships.views import partnerships
 
@@ -33,6 +33,7 @@ urlpatterns = [
     path('admission/', admission, name='admission'),
     path('admin/', admin.site.urls),
     path('contact/', contact, name='contact'),
+    path('contact/send-email/', send_email, name='send_email'),
     path('news/', news, name='news'),
     path('partnerships/', partnerships, name='partnerships'),
     path('faculties/', include('faculties.urls')),
