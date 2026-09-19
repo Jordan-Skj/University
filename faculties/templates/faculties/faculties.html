@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | Nos facultés{% endblock %}
+
+{% block extra_head %}
+<meta name="description"
+    content="Découvrez les huit facultés de l'Université Protestante de Kimpese : médecine, agronomie, droit, théologie, économie, sciences et technologies, sciences sociales et psychologie." />
+{% endblock %}
+
+{% block main %}
+<section class="relative text-white pt-32 pb-24 overflow-hidden"
+    style="background: url('{% static 'images/hero.jpg' %}') no-repeat center center; background-size: cover;">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 text-center z-10">
+        <p class="text-sm font-semibold tracking-widest uppercase text-yellow-400 mb-6">Nos formations</p>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
+            Découvrez nos <span class="text-yellow-400">facultés</span>
+        </h1>
+        <p class="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
+            Huit facultés pour développer vos talents et construire votre avenir.
+            Explorez les domaines de formation de l'Université Protestante de Kimpese.
+        </p>
+        <div class="mt-10">
+            <a href="#faculties-list"
+                class="inline-block rounded-lg bg-yellow-400 px-8 py-3.5 font-semibold text-blue-900 hover:bg-yellow-300 transition-colors">
+                Explorer les facultés
+            </a>
+        </div>
+    </div>
+</section>
+
+<nav class="mx-auto max-w-7xl px-4 py-4" aria-label="Fil d'Ariane">
+    <ol class="flex flex-wrap items-center gap-2 text-sm">
+        <li><a href="{% url 'index' %}" class="text-gray-500 hover:text-blue-700">Accueil</a></li>
+        <li aria-hidden="true" class="text-gray-400">/</li>
+        <li><span aria-current="page" class="font-medium text-blue-700">Facultés</span></li>
+    </ol>
+</nav>
+
+<section id="faculties-list" class="bg-white py-16" aria-labelledby="faculties-heading" style="scroll-margin-top: 6rem;">
+    <div class="mx-auto max-w-7xl px-4">
+        <div class="max-w-2xl mb-12">
+            <h2 id="faculties-heading" class="text-3xl sm:text-4xl font-bold text-blue-900">Choisissez votre domaine</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+                Retrouvez la présentation de chaque faculté, ses formations et les informations utiles pour préparer votre parcours à l'UPK.
+            </p>
+        </div>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% include 'faculties/partials/faculty-card.html' with name='Médecine humaine' route='faculties:medicine' image='images/medecine.jpeg' description='Se former à la prévention, aux soins et à la promotion de la santé des populations.' only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Sciences agronomiques' route='faculties:agronomy' image='images/agronomie.jpeg' description="Explorer l'agriculture, la gestion des ressources naturelles et la protection de l'environnement." only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Sciences juridiques' route='faculties:law' image='images/science_juridique.jpeg' description='Comprendre le droit et les institutions pour contribuer à la justice et à la vie en société.' only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Théologie et sciences connexes' route='faculties:theology' image='images/théologie.jpeg' description="Approfondir la réflexion théologique pour servir l'Église et la société." only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Sciences économiques et de gestion' route='faculties:economics' image='images/economie.jpeg' description="Étudier l'économie, la gestion et l'administration des organisations." only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Sciences et technologies' route='faculties:science_and_technology' image='images/science-technologie.jpeg' description='Développer des connaissances scientifiques et techniques pour répondre aux défis de notre société.' only %}
+            {% include 'faculties/partials/faculty-card.html' with name='Sciences sociales' route='faculties:social_sciences' image='images/sciences-sociales.jpeg' description='Comprendre les réalités sociales, administratives et politiques et les enjeux de la gouvernance.' only %}
+            {% include 'faculties/partials/faculty-card.html' with name="Psychologie et sciences de l'éducation" route='faculties:psychology' image='images/psychologie.jpg.jpeg' description="Étudier les comportements humains, l'éducation et l'accompagnement des personnes." only %}
+        </ul>
+    </div>
+</section>
+
+<section class="bg-blue-900 py-16" aria-labelledby="orientation-heading">
+    <div class="mx-auto max-w-7xl px-4 text-center">
+        <h2 id="orientation-heading" class="text-3xl font-bold text-white">Préparez votre prochain chapitre</h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-200">
+            Vous avez choisi votre faculté ou souhaitez être accompagné dans votre orientation ?
+            Consultez les modalités d'admission ou contactez notre équipe.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+            <a href="{% url 'admission' %}"
+                class="rounded-lg bg-yellow-400 px-8 py-3.5 font-semibold text-blue-900 hover:bg-yellow-300 transition-colors">
+                Préparer mon admission
+            </a>
+            <a href="{% url 'contact' %}" class="font-semibold text-white hover:text-yellow-400 transition-colors">
+                Contactez-nous <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
