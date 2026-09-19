@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -146,4 +147,11 @@ MAILERS = {
             'timeout': 20,
         },
     },
+}
+
+UNFOLD = {
+    'SITE_TITLE' : 'UPK Administration',
+    'SITE_HEADER' : 'Université Protestante de Kimpese',
+    'SITE_HEADER' : 'Administration',
+    'SITE_URL' : '/'
 }
