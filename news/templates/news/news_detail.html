@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UPK - {{ news_item.title }}</title>
+
+    <meta name="description" content="{{ news_item.content|striptags|truncatewords:25 }}" />
+    <meta name="keywords" content="Université Kimpese, UPK, actualités UPK, Université Protestante de Kimpese, Kongo Central" />
+    <meta name="author" content="Université Protestante de Kimpese (UPK)" />
+    <meta name="robots" content="index, follow" />
+
+    <meta http-equiv="Content-Language" content="fr, fr-CD" />
+    <meta name="language" content="French" />
+
+    <!-- ========== OPEN GRAPH ========== -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Université Protestante de Kimpese (UPK)" />
+    <meta property="og:title" content="{{ news_item.title }}" />
+    <meta property="og:description" content="{{ news_item.content|striptags|truncatewords:25 }}" />
+
+    {% if news_item.image %}
+    <meta property="og:image" content="{{ news_item.image.url }}" />
+    {% endif %}
+
+    <!-- ========== THÈME / COULEUR ========== -->
+    <meta name="theme-color" content="#1e3a8a" />
+    <meta name="color-scheme" content="light only" />
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" type="image/png" href="{% static 'logo/logo.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'logo/logo.png' %}" />
+
+    <!-- ========== CSS ========== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- ========== AOS ========== -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body class="bg-gray-50 text-slate-900 font-sans antialiased">
+
+    <div class="page-content flex flex-col min-h-screen">
+
+        {% include 'partials/header.html' %}
+
+        <main class="flex-grow pb-20">
+
+            <!-- ========== IMAGE PRINCIPALE ========== -->
+            <section class="relative">
+
+                {% if news_item.image %}
+
+                <div class="h-[420px] md:h-[520px] lg:h-[600px] w-full overflow-hidden">
+                    <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-full h-full object-cover" />
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
+
+                {% else %}
+
+                <div class="h-[420px] md:h-[520px] lg:h-[600px] w-full bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900"></div>
+
+                {% endif %}
+
+                <!-- Informations sur l'image -->
+                <div class="absolute left-0 right-0 bottom-36 md:bottom-44 z-10">
+                    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-white/90">
+                            <span class="inline-flex px-3 py-1 rounded-full bg-yellow-400 text-gray-950 text-xs font-bold uppercase tracking-wider shadow-sm">
+                                Actualité
+                            </span>
+                            <span class="font-medium drop-shadow-md">{{ news_item.published_date|date:"d F Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ========== CARTE DE L'ARTICLE ========== -->
+            <section class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 md:-mt-40">
+
+                <article class="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-gray-100 overflow-hidden" data-aos="fade-up">
+
+                    <!-- En-tête de l'article -->
+                    <header class="px-6 sm:px-10 md:px-14 lg:px-16 pt-10 md:pt-14 pb-9">
+
+                        <div class="flex flex-wrap items-center gap-x-5 gap-y-3 mb-7 text-sm text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
+                                </svg>
+                                <time datetime="{{ news_item.published_date|date:'Y-m-d' }}">
+                                    Publié le {{ news_item.published_date|date:"d F Y" }}
+                                </time>
+                            </div>
+
+                            <span class="hidden sm:block w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+
+                            <span class="font-medium text-gray-600">Université Protestante de Kimpese</span>
+                        </div>
+
+                        <h1 class="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight font-extrabold text-slate-900">
+                            {{ news_item.title }}
+                        </h1>
+
+                        <div class="flex items-center gap-2 mt-8">
+                            <div class="w-14 h-1.5 rounded-full bg-yellow-400"></div>
+                            <div class="w-2.5 h-1.5 rounded-full bg-yellow-400/40"></div>
+                        </div>
+
+                    </header>
+
+
+                    <div class="mx-6 sm:mx-10 md:mx-14 lg:mx-16 border-t border-gray-100"></div>
+
+
+                    <!-- ========== CONTENU ========== -->
+                    <div class="px-6 sm:px-10 md:px-14 lg:px-16 py-10 md:py-14">
+                        <div class="prose prose-lg md:prose-xl max-w-3xl text-gray-700 leading-relaxed whitespace-pre-line">
+                            {{ news_item.content }}
+                        </div>
+                    </div>
+
+
+                    <!-- ========== PIED DE L'ARTICLE ========== -->
+                    <footer class="px-6 sm:px-10 md:px-14 lg:px-16 py-7 bg-gray-50 border-t border-gray-200">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                            <a href="{% url 'news' %}" class="group inline-flex items-center gap-3 text-sm font-semibold text-slate-700 hover:text-yellow-600 transition-colors">
+                                <span class="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm group-hover:border-yellow-400 group-hover:shadow transition-all">
+                                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </span>
+                                Retour aux actualités
+                            </a>
+
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                Foi • Science • Excellence
+                            </span>
+                        </div>
+                    </footer>
+
+                </article>
+
+            </section>
+
+        </main>
+
+        {% include 'partials/footer.html' %}
+
+    </div>
+
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100,
+            });
+        });
+    </script>
+
+</body>
+</html>

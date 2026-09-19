@@ -22,7 +22,7 @@ from home.views import index
 from about.views import about
 from admission.views import admission
 from contact.views import contact, send_email
-from news.views import news
+from news.views import news, news_detail
 from partnerships.views import partnerships
 
 
@@ -35,6 +35,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('contact/send-email/', send_email, name='send_email'),
     path('news/', news, name='news'),
+    path('news_detail/<int:pk>/', news_detail, name='news_detail'),
     path('partnerships/', partnerships, name='partnerships'),
     path('faculties/', include('faculties.urls')),
 ]
