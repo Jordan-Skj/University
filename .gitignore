@@ -50,3 +50,4 @@ htmlcov/
 .env
 .env.*
 !.env.example
+node_modules/
