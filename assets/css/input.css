@@ -7,7 +7,7 @@
 /* 3. Importer Tailwind */
 @import 'tailwindcss';
 @plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
+@source "../../node_modules/flowbite";
 
 /* 4. Définir la police par défaut (Open Sans pour le corps) */
 @theme {
