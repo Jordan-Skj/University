@@ -24,6 +24,7 @@ from admission.views import admission
 from contact.views import contact, send_email
 from news.views import news, news_detail
 from partnerships.views import partnerships
+from gallery.views import gallery
 
 
 
@@ -37,6 +38,7 @@ urlpatterns = [
     path('news/', news, name='news'),
     path('news_detail/<int:pk>/', news_detail, name='news_detail'),
     path('partnerships/', partnerships, name='partnerships'),
+    path('galerie/', gallery, name='gallery'),
     path('faculties/', include('faculties.urls')),
 ]
 

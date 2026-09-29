@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'admission',
     'news',
     'partnerships',
-    'contact'
+    'contact',
+    'gallery',
 ]
 
 MIDDLEWARE = [

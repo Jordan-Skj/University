@@ -1,0 +1,1 @@
+"""Application Django de la galerie photo."""

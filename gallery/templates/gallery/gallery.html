@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} | Galerie{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Découvrez en images la vie et les activités de l’Université Protestante de Kimpese." />
+{% endblock %}
+
+{% block main %}
+<section class="bg-white px-4 pb-20 pt-32">
+    <div class="mx-auto max-w-7xl">
+        <header class="mb-10">
+            <p class="mb-3 text-sm font-semibold uppercase text-yellow-500">Université Protestante de Kimpese</p>
+            <h1 class="text-4xl font-bold text-blue-900">Galerie photos</h1>
+        </header>
+
+        {% if photos %}
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {% for photo in photos %}
+            <figure class="overflow-hidden rounded-md bg-gray-100" data-aos="fade-up">
+                <img src="{{ photo.image.url }}" alt="{{ photo.title|default:'Photo de l’UPK' }}"
+                    class="aspect-[4/3] w-full object-cover" loading="lazy">
+                {% if photo.title %}
+                <figcaption class="px-4 py-3 text-sm text-gray-700">{{ photo.title }}</figcaption>
+                {% endif %}
+            </figure>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="border-l-4 border-yellow-400 bg-gray-50 px-5 py-4 text-gray-600">
+            Aucune photo n’a encore été publiée.
+        </p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
