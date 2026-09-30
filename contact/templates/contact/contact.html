@@ -183,6 +183,14 @@
                                 class="mt-2 w-full rounded-md border-0 bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400 sm:text-sm sm:leading-6 transition-all duration-300 hover:shadow-md hover:ring-yellow-300"></textarea>
                         </div>
                     </div>
+                    <div class="mt-6 flex items-start gap-3 text-sm text-gray-600">
+                        <input type="checkbox" name="privacy_consent" id="privacy-consent" required
+                            class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 text-blue-700 focus:ring-yellow-400" />
+                        <label for="privacy-consent">
+                            J’accepte que l’UPK utilise ces informations pour répondre à ma demande. Consultez notre
+                            <a href="{% url 'confidentialite' %}" class="text-blue-700 underline">politique de confidentialité</a>.
+                        </label>
+                    </div>
                     <div class="mt-10">
                         <button type="submit"
                             class="block w-full rounded-md bg-yellow-400 px-3.5 py-2.5 text-sm font-semibold text-blue-900 hover:bg-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]">

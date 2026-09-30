@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %} | {{ page_info.title }}{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="{{ page_info.description }}" />
+{% endblock %}
+
+{% block main %}
+<main class="bg-gray-50 py-12 sm:py-20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <nav class="mb-8 text-sm text-gray-500" aria-label="Fil d’Ariane">
+            <a href="{% url 'index' %}" class="hover:text-blue-700">Accueil</a>
+            <span class="mx-2">/</span>
+            <span class="text-blue-900" aria-current="page">{{ page_info.title }}</span>
+        </nav>
+
+        <article class="rounded-lg bg-white px-6 py-8 shadow-sm ring-1 ring-gray-200 sm:px-10 sm:py-12">
+            <header class="border-b border-gray-200 pb-8">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-yellow-500">UPK · Informations officielles</p>
+                <h1 class="mt-3 text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl">{{ page_info.title }}</h1>
+                <p class="mt-4 max-w-2xl leading-7 text-gray-600">{{ page_info.description }}</p>
+                <p class="mt-4 text-sm text-gray-500">Dernière mise à jour : 29 septembre 2026</p>
+            </header>
+
+            {% if page == 'mentions' %}
+            <div class="legal-content mt-10 space-y-10 text-gray-700">
+                <section><h2>1. Éditeur du site</h2>
+                    <dl class="grid gap-4 sm:grid-cols-[190px_1fr]">
+                        <dt>Nom</dt><dd>Université Protestante de Kimpese (UPK)</dd>
+                        <dt>Adresse</dt><dd>B.P. 67, CECO, Kimpese, Kongo-Central, République Démocratique du Congo</dd>
+                        <dt>Téléphone</dt><dd><a href="tel:+243895464633">+243 89 54 64 633</a></dd>
+                        <dt>Email</dt><dd><a href="mailto:universiteprotestantedekimpese@gmail.com">universiteprotestantedekimpese@gmail.com</a></dd>
+                        <dt>RCCM / NIF</dt><dd>Informations à compléter par l’administration de l’UPK</dd>
+                    </dl>
+                </section>
+                <section><h2>2. Directeur de la publication</h2><p>Le nom et la qualité du directeur de la publication doivent être confirmés et complétés par l’administration de l’UPK.</p></section>
+                <section><h2>3. Hébergement</h2><p>Le nom, l’adresse et le pays de l’hébergeur doivent être renseignés dès confirmation par l’administrateur technique du site.</p></section>
+                <section><h2>4. Conception et développement</h2><p>Ce site a été conçu et développé par <strong>Jourdain Shongo — Jorka.Dev</strong>.</p><p>Contact : <a href="mailto:contact@jorka.dev">contact@jorka.dev</a> · <a href="https://jorka.dev" target="_blank" rel="noopener noreferrer">jorka.dev</a></p></section>
+                <section><h2>5. Propriété intellectuelle</h2><p>Les textes, photographies, logos, graphismes et éléments présents sur ce site sont protégés par les règles applicables en matière de propriété intellectuelle. Toute reproduction ou réutilisation non autorisée est interdite.</p></section>
+                <section><h2>6. Responsabilité</h2><p>L’UPK s’efforce de maintenir des informations exactes et à jour. Elle ne peut toutefois garantir l’exhaustivité ou l’absence d’erreur dans les contenus publiés. Les liens vers des sites tiers relèvent de la responsabilité de leurs éditeurs.</p></section>
+                <section><h2>7. Données personnelles</h2><p>Les modalités de collecte et de protection des données sont détaillées dans la <a href="{% url 'confidentialite' %}">politique de confidentialité</a>.</p></section>
+                <section><h2>8. Droit applicable</h2><p>Le site est soumis au droit applicable en République Démocratique du Congo. Les informations administratives de cette page doivent être validées par l’UPK avant publication définitive.</p></section>
+            </div>
+            {% elif page == 'confidentialite' %}
+            <div class="legal-content mt-10 space-y-10 text-gray-700">
+                <section><h2>1. Responsable du traitement</h2><p>L’Université Protestante de Kimpese (UPK), située à B.P. 67, CECO, Kimpese, Kongo-Central, est responsable des données transmises via ce site.</p><p>Contact : <a href="mailto:universiteprotestantedekimpese@gmail.com">universiteprotestantedekimpese@gmail.com</a>.</p></section>
+                <section><h2>2. Données collectées</h2><p>Le formulaire de contact peut recueillir votre prénom, votre nom, votre adresse email, votre téléphone, le sujet et le contenu de votre message.</p><p>Ces données sont utilisées uniquement pour répondre à votre demande et assurer le suivi de nos échanges. Le site ne collecte pas volontairement de données sensibles.</p></section>
+                <section><h2>3. Base et durée de conservation</h2><p>La transmission de vos données repose sur votre consentement. Les données du formulaire sont conservées le temps nécessaire au traitement de la demande, puis supprimées dans un délai raisonnable, sauf obligation légale ou nécessité de conserver une trace de l’échange.</p></section>
+                <section><h2>4. Destinataires et sécurité</h2><p>Les données sont accessibles uniquement aux personnes habilitées de l’UPK et aux prestataires techniques strictement nécessaires au fonctionnement du site. Elles ne sont ni vendues ni louées à des fins commerciales.</p><p>L’UPK met en place des mesures raisonnables pour protéger les données contre l’accès, la modification ou la divulgation non autorisés.</p></section>
+                <section><h2>5. Cookies</h2><p>Le site peut utiliser des cookies techniques nécessaires à son fonctionnement. Aucun cookie de traçage ou d’analyse n’est déclaré dans la présente politique. Cette section devra être actualisée si un outil d’analyse ou un service tiers est ajouté.</p></section>
+                <section><h2>6. Vos droits</h2><p>Vous pouvez demander l’accès, la rectification ou la suppression de vos données, vous opposer à leur traitement ou retirer votre consentement en écrivant à <a href="mailto:universiteprotestantedekimpese@gmail.com">universiteprotestantedekimpese@gmail.com</a>.</p></section>
+                <section><h2>7. Mise à jour</h2><p>Cette politique peut être modifiée pour tenir compte de l’évolution du site, des services utilisés ou de la réglementation applicable.</p></section>
+            </div>
+            {% else %}
+            <div class="legal-content mt-10 space-y-10 text-gray-700">
+                <section><h2>1. Objet</h2><p>Les présentes conditions encadrent l’accès et l’utilisation du site de l’Université Protestante de Kimpese (UPK). En consultant le site, vous acceptez de les respecter.</p></section>
+                <section><h2>2. Accès au site</h2><p>Le site est accessible gratuitement, hors frais de connexion et d’équipement à la charge de l’utilisateur. L’UPK peut interrompre temporairement l’accès pour maintenance, sécurité ou mise à jour.</p></section>
+                <section><h2>3. Utilisation autorisée</h2><p>Les contenus peuvent être consultés pour un usage personnel, informatif et non commercial. Il est interdit de perturber le fonctionnement du site, d’extraire massivement ses contenus ou d’utiliser les informations à des fins frauduleuses.</p></section>
+                <section><h2>4. Contenus et propriété intellectuelle</h2><p>Les contenus du site restent protégés par les règles applicables en matière de propriété intellectuelle. Toute reproduction, adaptation ou diffusion sans autorisation préalable de l’UPK est interdite.</p></section>
+                <section><h2>5. Formulaire de contact</h2><p>L’utilisateur s’engage à transmettre des informations exactes et à ne pas envoyer de contenu illicite, menaçant, diffamatoire ou portant atteinte aux droits d’autrui.</p></section>
+                <section><h2>6. Liens externes</h2><p>Le site peut contenir des liens vers des services tiers. L’UPK ne contrôle pas ces services et ne garantit ni leur disponibilité ni leur contenu.</p></section>
+                <section><h2>7. Droit applicable</h2><p>Les présentes conditions sont soumises au droit applicable en République Démocratique du Congo. Toute question peut être adressée à <a href="mailto:universiteprotestantedekimpese@gmail.com">universiteprotestantedekimpese@gmail.com</a>.</p></section>
+            </div>
+            {% endif %}
+        </article>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<style>
+    .legal-content h2 { margin-bottom: 0.75rem; color: #1e3a8a; font-size: 1.25rem; font-weight: 700; }
+    .legal-content a { color: #1d4ed8; text-decoration: underline; text-underline-offset: 2px; }
+    .legal-content dt { color: #6b7280; font-weight: 600; }
+    .legal-content dd { margin: 0; }
+</style>
+{% endblock %}

@@ -14,3 +14,4 @@ class ContactForm(forms.Form):
         ('autre', 'Autre'),
     ])
     message = forms.CharField(max_length=10000)
+    privacy_consent = forms.BooleanField(required=True)

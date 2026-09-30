@@ -51,6 +51,11 @@
         <hr class="my-6 border-blue-800">
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-400">© 2026 UPK. Tous droits réservés.</span>
+            <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm sm:mt-0">
+                <a href="{% url 'mentions' %}" class="text-gray-400 hover:text-yellow-400 transition">Mentions légales</a>
+                <a href="{% url 'confidentialite' %}" class="text-gray-400 hover:text-yellow-400 transition">Confidentialité</a>
+                <a href="{% url 'conditions' %}" class="text-gray-400 hover:text-yellow-400 transition">Conditions d’utilisation</a>
+            </div>
             <div class="flex mt-4 sm:mt-0 space-x-5">
                 <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><svg class="w-5 h-5"
                         fill="currentColor" viewBox="0 0 24 24">

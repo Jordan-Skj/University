@@ -25,6 +25,7 @@ from contact.views import contact, send_email
 from news.views import news, news_detail
 from partnerships.views import partnerships
 from gallery.views import gallery
+from legal.views import conditions, confidentialite, mentions
 
 
 
@@ -40,6 +41,9 @@ urlpatterns = [
     path('partnerships/', partnerships, name='partnerships'),
     path('galerie/', gallery, name='gallery'),
     path('faculties/', include('faculties.urls')),
+    path('mentions-legales/', mentions, name='mentions'),
+    path('politique-confidentialite/', confidentialite, name='confidentialite'),
+    path('conditions-utilisation/', conditions, name='conditions'),
 ]
 
 if settings.DEBUG:

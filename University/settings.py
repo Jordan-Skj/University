@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'partnerships',
     'contact',
     'gallery',
+    'legal',
 ]
 
 MIDDLEWARE = [
